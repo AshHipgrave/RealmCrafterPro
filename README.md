@@ -28,7 +28,7 @@ According to the SVN log and file modification times, this code is from 31st May
 * [PhysX 2.8.1 SDK](https://github.com/AshHipgrave/RealmCrafterPro/releases/download/svn-unmodified/PhysX_2.8.1_SDK_Core.msi)
 	* Check the installer created a `PHYSXSDK` environment variable pointing to `C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs` (manually create this if it doesn't exist).
 * [PhysX 9.13.1220 System Software](https://github.com/AshHipgrave/RealmCrafterPro/releases/download/svn-unmodified/PhysX-9.13.1220-SystemSoftware.msi)
-* [irrKlang Pro 1.6.0](https://www.ambiera.com/irrklang/irrklang_pro.html)
+* [irrKlang Pro 1.1.2](https://www.ambiera.com/irrklang/irrklang_pro.html)
 	* Create an `IRRKLANG_SDK` environment variable pointing to your irrKlang installation folder
 	* The free version can be used but you'll need to make the following modifications to the BBDX2 project so that it uses the irrKlang DLL file and not the static library:
 		* Navigate to `Properties` > `Configuration` > `VC++ Directories` > Edit `Library Directories` and replace `$(IRRKLANG_SDK)\bin\win32-visualstudio_lib` with `$(IRRKLANG_SDK)\lib\win32-visualstudio`
