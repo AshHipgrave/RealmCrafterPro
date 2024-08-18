@@ -26,7 +26,7 @@ According to the SVN log and file modification times, this code is from 31st May
 * [Visual Studio 2010 with Service Pack 1](https://archive.org/details/en_vs_2010_ult)
 * [DirectX June 2010 SDK](https://www.microsoft.com/en-gb/download/details.aspx?id=6812)
 * [PhysX 2.8.1 SDK](https://github.com/AshHipgrave/RealmCrafterPro/releases/download/svn-unmodified/PhysX_2.8.1_SDK_Core.msi)
-	* Check the installer created a `PHYSXDK` environment variable pointing to `C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs` (manually create this if it doesn't exist).
+	* Check the installer created a `PHYSXSDK` environment variable pointing to `C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\v2.8.1\SDKs` (manually create this if it doesn't exist).
 * [PhysX 9.13.1220 System Software](https://github.com/AshHipgrave/RealmCrafterPro/releases/download/svn-unmodified/PhysX-9.13.1220-SystemSoftware.msi)
 * [irrKlang Pro 1.6.0](https://www.ambiera.com/irrklang/irrklang_pro.html)
 	* Create an `IRRKLANG_SDK` environment variable pointing to your irrKlang installation folder
