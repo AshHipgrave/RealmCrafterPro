@@ -1,0 +1,4276 @@
+
+        // Collapse ( Marian Voicu ) 
+        /*
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.CREATE;
+            WorldCreateOpen = !WorldCreateOpen;
+            WorldMoveOpen = false;
+            WorldRotateOpen = false;
+            WorldScaleOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldCreateOpen)
+            {
+                GroupCreate.Visible = true;
+                CreateButton.Text = "Create (-)";
+                MoveButton.Location = new Point(25, 292);
+                RotateButton.Location = new Point(25, 322);
+                ScaleButton.Location = new Point(25, 352);
+                ObjectSetupButton.Location = new Point(25, 382);
+                ZoneSetupButton.Location = new Point(25, 412);
+                SunsAndMoonsButton.Location = new Point(25, 442);
+                YearButton.Location = new Point(25, 472);
+            }
+        }
+
+        private void MoveButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.MOVE;
+            WorldMoveOpen = !WorldMoveOpen;
+            WorldCreateOpen = false;
+            WorldRotateOpen = false;
+            WorldScaleOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldMoveOpen)
+            {
+                GroupMove.Visible = true;
+                MoveButton.Text = "Move (-)";
+                RotateButton.Location = new Point(25, 240);
+                ScaleButton.Location = new Point(25, 270);
+                ObjectSetupButton.Location = new Point(25, 300);
+                ZoneSetupButton.Location = new Point(25, 330);
+                SunsAndMoonsButton.Location = new Point(25, 360);
+                YearButton.Location = new Point(25, 390);
+            }
+        }
+
+        private void RotateButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.ROTATE;
+            WorldRotateOpen = !WorldRotateOpen;
+            WorldCreateOpen = false;
+            WorldMoveOpen = false;
+            WorldScaleOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldRotateOpen)
+            {
+                GroupRotate.Visible = true;
+                RotateButton.Text = "Rotate (-)";
+                ScaleButton.Location = new Point(25, 270);
+                ObjectSetupButton.Location = new Point(25, 300);
+                ZoneSetupButton.Location = new Point(25, 330);
+                SunsAndMoonsButton.Location = new Point(25, 360);
+                YearButton.Location = new Point(25, 390);
+            }
+        }
+
+        private void ScaleButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.SCALE;
+            WorldScaleOpen = !WorldScaleOpen;
+            WorldRotateOpen = false;
+            WorldCreateOpen = false;
+            WorldMoveOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldScaleOpen)
+            {
+                GroupScale.Visible = true;
+                ScaleButton.Text = "Scale (-)";
+                ObjectSetupButton.Location = new Point(25, 300);
+                ZoneSetupButton.Location = new Point(25, 330);
+                SunsAndMoonsButton.Location = new Point(25, 360);
+                YearButton.Location = new Point(25, 390);
+            }
+        }
+
+        private void ObjectSetupButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.OBJECT_SETUP;
+            WorldObjectSetupOpen = !WorldObjectSetupOpen;
+            WorldRotateOpen = false;
+            WorldCreateOpen = false;
+            WorldMoveOpen = false;
+            WorldScaleOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldObjectSetupOpen)
+            {
+                GroupObjectSetup.Visible = true;
+                ObjectSetupButton.Text = "Object Setup (-)";
+                ZoneSetupButton.Location = new Point(25, 542);
+                SunsAndMoonsButton.Location = new Point(25, 572);
+                YearButton.Location = new Point(25, 602);
+            }
+        }
+        
+        
+        private void ZoneSetupButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.ZONE_SETUP;
+            WorldZoneSetupOpen = !WorldZoneSetupOpen;
+            WorldCreateOpen = false;
+            WorldMoveOpen = false;
+            WorldRotateOpen = false;
+            WorldScaleOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldZoneSetupOpen)
+            {
+                GroupZoneSetup.Visible = true;
+                ZoneSetupButton.Text = "Zone Setup (-)";
+                SunsAndMoonsButton.Location = new Point(25, 330);
+                YearButton.Location = new Point(25, 360);
+            }
+        }
+
+        private void SunsAndMoonsButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.SUNS_AND_MOONS;
+            WorldSunsAndMoonsOpen = !WorldSunsAndMoonsOpen;
+            WorldCreateOpen = false;
+            WorldMoveOpen = false;
+            WorldRotateOpen = false;
+            WorldScaleOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldYearOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldSunsAndMoonsOpen)
+            {
+                GroupSunsAndMoons.Visible = true;
+                SunsAndMoonsButton.Text = "Suns and Moons (-)";
+                YearButton.Location = new Point(25, 518);
+            }
+        }
+
+        private void YearButton_Click(object sender, EventArgs e)
+        {
+            SetWorldButtonSelection = (int)WorldButtonSelection.YEAR;
+            WorldYearOpen = !WorldYearOpen;
+            WorldCreateOpen = false;
+            WorldMoveOpen = false;
+            WorldRotateOpen = false;
+            WorldScaleOpen = false;
+            WorldObjectSetupOpen = false;
+            WorldZoneSetupOpen = false;
+            WorldSunsAndMoonsOpen = false;
+            WorldEmittersOpen = false;
+            InitGroup();
+
+            if (WorldYearOpen)
+            {
+                GroupYear.Visible = true;
+                YearButton.Text = "Year (-)";
+            }
+        }
+
+        private void InitGroup()
+        {
+            UpdateRenderingPanel(4);
+            RenderingPanel.Focus();
+
+            GroupCreate.Visible = false;
+            GroupMove.Visible = false;
+            GroupRotate.Visible = false;
+            GroupScale.Visible = false;
+            GroupObjectSetup.Visible = false;
+            GroupZoneSetup.Visible = false;
+            GroupSunsAndMoons.Visible = false;
+            GroupYear.Visible = false;
+            CreateButton.Text = "Create (+)";
+            MoveButton.Text = "Move (+)";
+            RotateButton.Text = "Rotate (+)";
+            ScaleButton.Text = "Scale (+)";
+            ObjectSetupButton.Text = "Object Setup (+)";
+            ZoneSetupButton.Text = "Zone Setup (+)";
+            SunsAndMoonsButton.Text = "Suns and Moons (+)";
+            YearButton.Text = "Year (+)";
+
+            WorldPanel.VerticalScroll.Value = 0; // position absolute 0,0 intro control
+
+            MoveButton.Location = new Point(25, 35);
+            RotateButton.Location = new Point(25, 65);
+            ScaleButton.Location = new Point(25, 95);
+            ObjectSetupButton.Location = new Point(25, 125);
+            ZoneSetupButton.Location = new Point(25, 155);
+            SunsAndMoonsButton.Location = new Point(25, 185);
+            YearButton.Location = new Point(25, 215);
+
+            if (SetWorldButtonSelection == (int)WorldButtonSelection.EMITTERS)
+            {
+                EmitterEditorGroup.Show();
+                World3DView.Hide();
+                ZoneSetupPanel.Hide();
+            }
+            else if (SetWorldButtonSelection == (int)WorldButtonSelection.ZONE_SETUP)
+            {
+                World3DView.Hide();
+                ZoneSetupPanel.Show();
+                EmitterEditorGroup.Hide();
+            }
+            else
+            {
+                World3DView.Show();
+                ZoneSetupPanel.Hide();
+                EmitterEditorGroup.Hide();
+            }
+        }
+        */
+        //end (MV)
+
+        // windows dockable (Marian Voicu)
+        private void WorldZonesTreePanelMouseCaptureChanged(object sender, EventArgs e)
+        {
+            /*
+            int moveX = Cursor.Position.X - this.Location.X - 5 - WorldZonesTreePanelPointClick.X;
+            int moveY = Cursor.Position.Y - this.Location.Y - 31 - WorldZonesTreePanelPointClick.Y;
+          //  RightReloadControlsPanel.Visible = false;
+       //     LeftReloadControlsPanel.Visible = false;
+
+            Rectangle tempRectLeft = new Rectangle();
+      //      tempRectLeft.Location = LeftReloadControlsPanel.Location;
+     //       tempRectLeft.Width = LeftReloadControlsPanel.Size.Width;
+       //     tempRectLeft.Height = LeftReloadControlsPanel.Size.Height;
+            Point tempP_Left = new Point();
+            tempP_Left.X = Cursor.Position.X - this.Location.X - 5;
+            tempP_Left.Y = Cursor.Position.Y - this.Location.Y - 31 - 20;
+
+            Rectangle tempRectRight = new Rectangle();
+            tempRectRight.Location = RightReloadControlsPanel.Location;
+            tempRectRight.Width = RightReloadControlsPanel.Size.Width;
+            tempRectRight.Height = RightReloadControlsPanel.Size.Height;
+            Point tempP_Right = new Point();
+            tempP_Right.X = Cursor.Position.X - this.Location.X - 5;
+            tempP_Right.Y = Cursor.Position.Y - this.Location.Y - 31 - 20;
+
+
+            if (this.Controls.Contains(this.WorldZonesTreePanel))   // in Window GE
+            {
+                // move to LeftReloadControlsPanel
+                if (tempRectLeft.Contains(tempP_Left))
+                {
+                    this.Controls.Remove(this.WorldZonesTreePanel);
+                    LeftDynamicControlsPanel.Controls.Add(this.WorldZonesTreePanel);
+                    WorldZonesTreePanel.Location = new Point(1, 2);
+                }
+                // move to RightReloadControlsPanel
+                else if (tempRectRight.Contains(tempP_Right))
+                {
+                    this.Controls.Remove(this.WorldZonesTreePanel);
+              //      RightDynamicControlsPanel.Controls.Add(this.WorldZonesTreePanel);
+                    WorldZonesTreePanel.Location = new Point(1, 2);
+                    WorldZonesTreePanel.BringToFront();
+                }
+                else
+                {
+                    // limits
+                    if (moveX < 0)
+                        moveX = 0;
+                    if (moveY < 0)
+                        moveY = 0;
+                    if (moveX + WorldZonesTreePanel.Size.Width > this.Size.Width - 5)
+                        moveX = this.Size.Width - WorldZonesTreePanel.Size.Width - 5;
+                    if (moveY + WorldZonesTreePanel.Size.Height > this.Size.Height - 31)
+                        moveY = this.Size.Height - WorldZonesTreePanel.Size.Height - 31;
+
+                    WorldZonesTreePanel.Location = new Point(moveX, moveY);
+                }
+            }
+            else if (LeftDynamicControlsPanel.Controls.Contains(this.WorldZonesTreePanel))    // in LeftDynamicControlsPanel
+            {
+
+                if (tempRectLeft.Contains(tempP_Left))
+                    return;
+                // move to RightReloadControlsPanel
+                if (tempRectRight.Contains(tempP_Right))
+                {
+                    this.Controls.Remove(this.WorldZonesTreePanel);
+                    //RightDynamicControlsPanel.Visible = true;
+                   // RightDynamicControlsPanel.Controls.Add(this.WorldZonesTreePanel);
+                    WorldZonesTreePanel.Location = new Point(1, 2);
+                }
+                else // move to GE window
+                {
+                    // limits
+                    if (moveX < 0)
+                        moveX = 0;
+                    if (moveY < 0)
+                        moveY = 0;
+                    if (moveX + WorldZonesTreePanel.Size.Width > this.Size.Width - 5)
+                        moveX = this.Size.Width - WorldZonesTreePanel.Size.Width - 5;
+                    if (moveY + WorldZonesTreePanel.Size.Height > this.Size.Height - 25)
+                        moveY = this.Size.Height - WorldZonesTreePanel.Size.Height - 25;
+
+                    LeftDynamicControlsPanel.Controls.Remove(this.WorldZonesTreePanel);
+                    this.Controls.Add(this.WorldZonesTreePanel);
+                    WorldZonesTreePanel.Location = new Point(moveX, moveY);
+                    WorldZonesTreePanel.BringToFront();
+                }
+            }
+            else // in RightDynamicControlsPanel
+            {
+                if (tempRectRight.Contains(tempP_Right))
+                    return;
+                // move to LeftReloadControlsPanel
+                if (tempRectLeft.Contains(tempP_Left))
+                {
+                    this.Controls.Remove(this.WorldZonesTreePanel);
+                    LeftDynamicControlsPanel.Controls.Add(this.WorldZonesTreePanel);
+                    WorldZonesTreePanel.Location = new Point(1, 2);
+                }
+                else
+                {
+                    // limits
+                    if (moveX < 0)
+                        moveX = 0;
+                    if (moveY < 0)
+                        moveY = 0;
+                    if (moveX + WorldZonesTreePanel.Size.Width > this.Size.Width - 5)
+                        moveX = this.Size.Width - WorldZonesTreePanel.Size.Width - 5;
+                    if (moveY + WorldZonesTreePanel.Size.Height > this.Size.Height - 25)
+                        moveY = this.Size.Height - WorldZonesTreePanel.Size.Height - 25;
+                    LeftDynamicControlsPanel.Controls.Remove(this.WorldZonesTreePanel);
+                    this.Controls.Add(this.WorldZonesTreePanel);
+                    WorldZonesTreePanel.Location = new Point(moveX, moveY);
+                    WorldZonesTreePanel.BringToFront();
+                }
+            }
+            DynamicControlsPanel();
+        }
+        private void WorldZonesTreePanelMouseDown(object sender, MouseEventArgs e)
+        {
+            LeftReloadControlsPanel.Visible = true;
+            LeftReloadControlsPanel.BringToFront();
+            RightReloadControlsPanel.Visible = true;
+            RightReloadControlsPanel.BringToFront();
+            WorldZonesTreePanelPointClick.X = e.X;
+            WorldZonesTreePanelPointClick.Y = e.Y;
+            //Cursor.Current = new Cursor(@"D:\6.Proiect in lucru\Realm Crafter 2\Source Code\Realm Crafter GE\CursorWorldPanel.cur");
+        }
+        private void WorldPanelMouseCaptureChanged(object sender, EventArgs e)
+        {
+            if (WorldPanelClickScroll) // click on scroll
+                return;
+            /*
+            int moveX = Cursor.Position.X - this.Location.X - 5 - WorldPanelPointClick.X;
+            int moveY = Cursor.Position.Y - this.Location.Y - 31 - WorldPanelPointClick.Y;
+            RightReloadControlsPanel.Visible = false;
+            LeftReloadControlsPanel.Visible = false;
+
+            Rectangle tempRectLeft = new Rectangle();
+            tempRectLeft.Location = LeftReloadControlsPanel.Location;
+            tempRectLeft.Width = LeftReloadControlsPanel.Size.Width;
+            tempRectLeft.Height = LeftReloadControlsPanel.Size.Height;
+            Point tempP_Left = new Point();
+            tempP_Left.X = Cursor.Position.X - this.Location.X - 5;
+            tempP_Left.Y = Cursor.Position.Y - this.Location.Y - 31 - 20;
+
+            Rectangle tempRectRight = new Rectangle();
+            tempRectRight.Location = RightReloadControlsPanel.Location;
+            tempRectRight.Width = RightReloadControlsPanel.Size.Width;
+            tempRectRight.Height = RightReloadControlsPanel.Size.Height;
+            Point tempP_Right = new Point();
+            tempP_Right.X = Cursor.Position.X - this.Location.X - 5;
+            tempP_Right.Y = Cursor.Position.Y - this.Location.Y - 31 - 20;
+
+            if (this.Controls.Contains(this.WorldPanel))   // in Window GE
+            {
+                // move to LeftReloadControlsPanel
+                if (tempRectLeft.Contains(tempP_Left))
+                {
+                    this.Controls.Remove(this.WorldPanel);
+                    LeftDynamicControlsPanel.Controls.Add(this.WorldPanel);
+                    WorldPanel.Location = new Point(1, 242);
+                }
+                // move to RightReloadControlsPanel
+                else if (tempRectRight.Contains(tempP_Right))
+                {
+                    this.Controls.Remove(this.WorldPanel);
+                    RightDynamicControlsPanel.Controls.Add(this.WorldPanel);
+                    WorldPanel.Location = new Point(1, 242);
+                }
+                else
+                {
+                    // limits
+                    if (moveX < 0)
+                        moveX = 0;
+                    if (moveY < 0)
+                        moveY = 0;
+                    if (moveX + WorldPanel.Size.Width > this.Size.Width - 5)
+                        moveX = this.Size.Width - WorldPanel.Size.Width - 5;
+                    if (moveY + WorldPanel.Size.Height > this.Size.Height - 25)
+                        moveY = this.Size.Height - WorldPanel.Size.Height - 25;
+
+                    WorldPanel.Location = new Point(moveX, moveY);
+                }
+            }
+            else if (LeftDynamicControlsPanel.Controls.Contains(this.WorldPanel))    // in LeftDynamicControlsPanel
+            {
+
+                if (tempRectLeft.Contains(tempP_Left))
+                {
+                    //DynamicControlsPanel();
+                    return;
+                }
+                // move to RightReloadControlsPanel
+                if (tempRectRight.Contains(tempP_Right))
+                {
+                    this.Controls.Remove(this.WorldPanel);
+                    RightDynamicControlsPanel.Visible = true;
+                    RightDynamicControlsPanel.Controls.Add(this.WorldPanel);
+                    WorldPanel.Location = new Point(1, 242);
+                }
+                else // move to GE window
+                {
+                    // limits
+                    if (moveX < 0)
+                        moveX = 0;
+                    if (moveY < 0)
+                        moveY = 0;
+                    if (moveX + WorldPanel.Size.Width > this.Size.Width - 5)
+                        moveX = this.Size.Width - WorldPanel.Size.Width - 5;
+                    if (moveY + WorldPanel.Size.Height > this.Size.Height - 25)
+                        moveY = this.Size.Height - WorldPanel.Size.Height - 25;
+
+                    LeftDynamicControlsPanel.Controls.Remove(this.WorldPanel);
+                    this.Controls.Add(this.WorldPanel);
+                    WorldPanel.Location = new Point(moveX, moveY);
+                    WorldPanel.BringToFront();
+                }
+            }
+            else // in LeftDynamicControlsPanel
+            {
+                if (tempRectRight.Contains(tempP_Right))
+                {
+                    return;
+                }
+                // move to LeftReloadControlsPanel
+                if (tempRectLeft.Contains(tempP_Left))
+                {
+                    this.Controls.Remove(this.WorldPanel);
+                    LeftDynamicControlsPanel.Controls.Add(this.WorldPanel);
+                    WorldPanel.Location = new Point(1, 242);
+                }
+                else
+                {
+                    // limits
+                    if (moveX < 0)
+                        moveX = 0;
+                    if (moveY < 0)
+                        moveY = 0;
+                    if (moveX + WorldPanel.Size.Width > this.Size.Width - 5)
+                        moveX = this.Size.Width - WorldPanel.Size.Width - 5;
+                    if (moveY + WorldPanel.Size.Height > this.Size.Height - 25)
+                        moveY = this.Size.Height - WorldPanel.Size.Height - 25;
+                    LeftDynamicControlsPanel.Controls.Remove(this.WorldPanel);
+                    this.Controls.Add(this.WorldPanel);
+                    WorldPanel.Location = new Point(moveX, moveY);
+                    WorldPanel.BringToFront();
+                }
+            }*/
+            // this.Update();
+            //   DynamicControlsPanel();
+        }
+
+        private void WorldPanelMouseDown(object sender, MouseEventArgs e)
+        {
+            //    LeftReloadControlsPanel.Visible = true;
+            //     LeftReloadControlsPanel.BringToFront();
+            //      RightReloadControlsPanel.Visible = true;
+            //      RightReloadControlsPanel.BringToFront();
+            WorldPanelClickScroll = false;
+            WorldPanelPointClick = new Point(e.X, e.Y);
+        }
+
+        private void WorldPanelMouseHover(object sender, EventArgs e)
+        {
+            //   WorldPanel.Cursor = System.Windows.Forms.Cursors.SizeAll;
+        }
+
+        private void WorldPanelMouseLeave(object sender, EventArgs e)
+        {
+            // WorldPanel.Cursor = System.Windows.Forms.Cursors.Default;
+        }
+
+        private void WorldPanelScroll(object sender, ScrollEventArgs e)
+        {
+            WorldPanelClickScroll = true;
+        }
+                private void WorldZonesTree_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node.Level == 0)
+            {
+                //              
+                if (!LoadingAZone)
+                {
+                    lastNodeSelect = nodeSelect;
+                    nodeSelect = e.Node.Index;
+                    e.Node.Nodes.Clear();
+                    e.Node.Nodes.Add("Scenery objects");
+                    e.Node.Nodes[0].Name = "Node0";
+                    e.Node.Nodes.Add("Terrains");
+                    e.Node.Nodes[1].Name = "Node1";
+                    e.Node.Nodes.Add("Emitters");
+                    e.Node.Nodes[2].Name = "Node2";
+                    e.Node.Nodes.Add("Water areas");
+                    e.Node.Nodes[3].Name = "Node3";
+                    e.Node.Nodes.Add("Collision boxes");
+                    e.Node.Nodes[4].Name = "Node4";
+                    e.Node.Nodes.Add("Sound zones");
+                    e.Node.Nodes[5].Name = "Node5";
+                    e.Node.Nodes.Add("Dynamic lights");
+                    e.Node.Nodes[6].Name = "Node6";
+                    e.Node.Nodes.Add("Triggers");
+                    e.Node.Nodes[7].Name = "Node7";
+                    e.Node.Nodes.Add("Waypoints");
+                    e.Node.Nodes[8].Name = "Node8";
+                    e.Node.Nodes.Add("Portals");
+                    e.Node.Nodes[9].Name = "Node9";
+                    // Save
+                    if (!WorldSaved)
+                    {
+                        DialogResult Result = MessageBox.Show("Would you like to save changes to this zone first?",
+                                                              "Realm Crafter", MessageBoxButtons.YesNoCancel);
+                        if (Result == DialogResult.Yes)
+                        {
+                            SaveWorld();
+                        }
+                        else if (Result == DialogResult.Cancel)
+                        {
+                            return;
+                        }
+                    }
+                    SetWorldSavedStatus(true);
+
+                    LoadingAZone = true;
+
+                    // Unload old
+                    UnloadCurrentZone();
+
+                    // Load new zone
+
+                    DefalutZoneNoSave = true;
+                    CurrentClientZone = RealmCrafter.ClientZone.Zone.Load(e.Node.Name, Camera, true,
+                                                                          new RealmCrafter.ClientZone.LoadProgressUpdate
+                                                                              (UpdateZoneLoadProgress));
+                    CurrentServerZone = RealmCrafter.ServerZone.Zone.Load(e.Node.Name);
+                   // WorldSetupDefalutZoneCheckBox.Checked = CurrentClientZone.DefaultZone;
+                    DefalutZoneNoSave = false;
+
+                    if (CurrentClientZone == null || CurrentServerZone == null)
+                    {
+                        MessageBox.Show("Error loading zone from file!", "Error");
+                        LoadingAZone = false;
+                        return;
+                    }
+
+                    #region Match water with server water
+                    Water W;
+                    WaterArea SW;
+                    for (int i = 0; i < CurrentClientZone.Waters.Count; ++i)
+                    {
+                        W = (Water)CurrentClientZone.Waters[i];
+                        for (int j = 0; j < WaterArea.WaterList.Count; ++j)
+                        {
+                            SW = (WaterArea)WaterArea.WaterList[j];
+                            if (SW.Zone == CurrentServerZone)
+                            {
+                                float ScaleX = W.EN.ScaleX();
+                                float ScaleZ = W.EN.ScaleZ();
+                                if (Math.Abs(SW.Width - ScaleX) <= float.Epsilon &&
+                                    Math.Abs(SW.Depth - ScaleZ) <= float.Epsilon &&
+                                    Math.Abs(SW.X - (W.EN.X() - (ScaleX * 0.5f))) <= float.Epsilon &&
+                                    Math.Abs(SW.Z - (W.EN.Z() - (ScaleZ * 0.5f))) <= float.Epsilon &&
+                                    Math.Abs(SW.Y - W.EN.Y()) <= float.Epsilon)
+                                {
+                                    W.ServerWater = SW;
+                                    break;
+                                }
+                            }
+                        }
+
+                        // A match could not be found - delete this water area
+                        if (W.ServerWater == null)
+                        {
+                            Media.UnloadTexture(W.TextureID);
+                            Render.FreeTexture(W.TexHandle);
+                            W.EN.Free();
+                            CurrentClientZone.RemoveObject(W);
+                        }
+                    }
+                    #endregion
+
+                    #region Add objects to tree view and set collision types
+                    Media.LockMeshes();
+                    Media.LockTextures();
+                    Media.LockSounds();
+                    string Name;
+                    Scenery S;
+                    Terrain T;
+                    Emitter EM;
+                    ColBox CB;
+                    SoundZone SZ;
+                    for (int i = 0; i < CurrentClientZone.Sceneries.Count; ++i)
+                    {
+                        S = (Scenery)CurrentClientZone.Sceneries[i];
+                        if (Collision.EntityType(S.EN) == (int)CollisionType.Sphere)
+                        {
+                            Collision.SetCollisionMesh(S.EN);
+                            Collision.EntityPickMode(S.EN, PickMode.Polygon);
+                        }
+                        else if (Collision.EntityType(S.EN) == (int)CollisionType.Box)
+                        {
+                            Collision.SetCollisionMesh(S.EN);
+                        }
+                        Name = Media.GetMeshName(S.MeshID);
+                        TreeNode TN =
+                            new TreeNode(System.IO.Path.GetFileNameWithoutExtension(Name.Substring(0, Name.Length - 1)));
+                        TN.Tag = S;
+                        e.Node.Nodes[0].Nodes.Add(TN);
+                    }
+                    for (int i = 0; i < CurrentClientZone.Terrains.Count; ++i)
+                    {
+                        T = (Terrain)CurrentClientZone.Terrains[i];
+                        TreeNode TN = new TreeNode("Terrain " + (i + 1).ToString());
+                        TN.Tag = T;
+                        e.Node.Nodes[1].Nodes.Add(TN);
+                    }
+                    for (int i = 0; i < CurrentClientZone.Emitters.Count; ++i)
+                    {
+                        EM = (Emitter)CurrentClientZone.Emitters[i];
+                        TreeNode TN;
+                        if (EM.Config != null)
+                        {
+                            TN = new TreeNode(EM.Config.Name);
+                        }
+                        else
+                        {
+                            TN = new TreeNode("Unknown emitter");
+                        }
+                        TN.Tag = EM;
+                        e.Node.Nodes[2].Nodes.Add(TN);
+                    }
+                    for (int i = 0; i < CurrentClientZone.Waters.Count; ++i)
+                    {
+                        W = (Water)CurrentClientZone.Waters[i];
+                        Collision.SetCollisionMesh(W.EN);
+                        Collision.EntityPickMode(W.EN, PickMode.Polygon);
+                        Name = Media.GetTextureName(W.TextureID);
+                        TreeNode TN =
+                            new TreeNode(System.IO.Path.GetFileNameWithoutExtension(Name.Substring(0, Name.Length - 1)));
+                        TN.Tag = W;
+                        e.Node.Nodes[3].Nodes.Add(TN);
+                    }
+                    for (int i = 0; i < CurrentClientZone.ColBoxes.Count; ++i)
+                    {
+                        CB = (ColBox)CurrentClientZone.ColBoxes[i];
+                        TreeNode TN = new TreeNode("Collision box " + (i + 1).ToString());
+                        TN.Tag = CB;
+                        e.Node.Nodes[4].Nodes.Add(TN);
+                    }
+                    for (int i = 0; i < CurrentClientZone.SoundZones.Count; ++i)
+                    {
+                        SZ = (SoundZone)CurrentClientZone.SoundZones[i];
+                        SZ.EN.Texture(OrangeTex);
+                        if (SZ.SoundID < 65535)
+                        {
+                            Name = Media.GetSoundName(SZ.SoundID);
+                            Name = Name.Substring(0, Name.Length - 1);
+                        }
+                        else if (SZ.MusicID < 65535)
+                        {
+                            Name = Media.GetMusicName(SZ.MusicID);
+                        }
+                        else
+                        {
+                            Name = "Unknown sound";
+                        }
+                        TreeNode TN = new TreeNode(System.IO.Path.GetFileNameWithoutExtension(Name));
+                        TN.Tag = SZ;
+                        e.Node.Nodes[5].Nodes.Add(TN);
+                    }
+                    Media.UnlockMeshes();
+                    Media.UnlockTextures();
+                    Media.UnlockSounds();
+                    #endregion
+
+                    WorldZonesTree.CollapseAll();
+                    e.Node.Expand();
+                    e.Node.Checked = true;
+
+                    #region Create entities representing server side objects
+                    // Triggers
+                    for (int i = 0; i < 150; ++i)
+                    {
+                        if (!string.IsNullOrEmpty(CurrentServerZone.TriggerScript[i]))
+                        {
+                            Trigger Tr = new Trigger(this, i);
+                            Tr.EN.Position(CurrentServerZone.TriggerX[i], CurrentServerZone.TriggerY[i],
+                                           CurrentServerZone.TriggerZ[i]);
+                            Tr.EN.Scale(CurrentServerZone.TriggerSize[i], CurrentServerZone.TriggerSize[i],
+                                        CurrentServerZone.TriggerSize[i]);
+                            TreeNode TN = new TreeNode(CurrentServerZone.TriggerScript[i]);
+                            TN.Tag = Tr;
+                            e.Node.Nodes[7].Nodes.Add(TN);
+                        }
+                    }
+                    // Portals
+                    for (int i = 0; i < 100; ++i)
+                    {
+                        if (!string.IsNullOrEmpty(CurrentServerZone.PortalName[i]))
+                        {
+                            Portal P = new Portal(this, i);
+                            P.EN.Position(CurrentServerZone.PortalX[i], CurrentServerZone.PortalY[i],
+                                          CurrentServerZone.PortalZ[i]);
+                            P.EN.Rotate(0f, CurrentServerZone.PortalYaw[i], 0f);
+                            P.EN.Scale(CurrentServerZone.PortalSize[i], CurrentServerZone.PortalSize[i],
+                                       CurrentServerZone.PortalSize[i]);
+                            TreeNode TN = new TreeNode(CurrentServerZone.PortalName[i]);
+                            TN.Tag = P;
+                            e.Node.Nodes[9].Nodes.Add(TN);
+                        }
+                    }
+                    // Waypoints/spawn points
+                    for (int i = 0; i < 2000; ++i)
+                    {
+                        if (CurrentServerZone.PrevWaypoint[i] != 2005)
+                        {
+                            Waypoint WP = new Waypoint(this, i);
+                            WP.EN.Position(CurrentServerZone.WaypointX[i], CurrentServerZone.WaypointY[i],
+                                           CurrentServerZone.WaypointZ[i]);
+                            WP.EN.Scale(3f, 3f, 3f);
+                            int SpawnNum = CurrentServerZone.GetSpawnPoint(i);
+                            if (SpawnNum > -1)
+                            {
+                                WP.EN.Scale(CurrentServerZone.SpawnSize[SpawnNum], CurrentServerZone.SpawnSize[SpawnNum],
+                                            CurrentServerZone.SpawnSize[SpawnNum]);
+                                if (CurrentServerZone.SpawnRange[SpawnNum] > 2f)
+                                {
+                                    Entity ChildEN = Entity.CreateSphere();
+                                    ChildEN.Name = "Waypoint Auto-movement Sphere";
+                                    ChildEN.Texture(BlueTex);
+                                    ChildEN.Shader = Shaders.FullbrightAlpha;
+                                    ChildEN.AlphaState = true;
+                                    ChildEN.AlphaNoSolid(0.5f);
+                                    ChildEN.Parent(WP.EN, true);
+                                    ChildEN.Position(0f, 0f, 0f);
+                                    ChildEN.Scale(CurrentServerZone.SpawnRange[SpawnNum],
+                                                  CurrentServerZone.SpawnRange[SpawnNum],
+                                                  CurrentServerZone.SpawnRange[SpawnNum]);
+                                }
+                            }
+                            WaypointEN[i] = WP.EN;
+                            TreeNode TN = new TreeNode("Waypoint " + (i + 1).ToString());
+                            TN.Tag = WP;
+                            e.Node.Nodes[8].Nodes.Add(TN);
+                        }
+                    }
+                    // Waypoint links
+                    for (int i = 0; i < 2000; ++i)
+                    {
+                        if (CurrentServerZone.NextWaypointA[i] < 2000)
+                        {
+                            WaypointLinkAEN[i] = WaypointLinkTemplate.Copy();
+                            WaypointLinkAEN[i].Shader = Shaders.FullbrightAlpha;
+                            WaypointLinkAEN[i].Texture(OrangeTex);
+                        }
+                        if (CurrentServerZone.NextWaypointB[i] < 2000)
+                        {
+                            WaypointLinkBEN[i] = WaypointLinkTemplate.Copy();
+                            WaypointLinkBEN[i].Shader = Shaders.FullbrightAlpha;
+                            WaypointLinkBEN[i].Texture(BlueTex);
+                        }
+                    }
+                    UpdateWaypointLinks();
+                    #endregion
+
+                    #region Initialise zone setup gadgets
+                    ZoneUpdateSetupTab();
+                    WorldZoneOutdoorsCheck.Checked = CurrentClientZone.Outdoors;
+                    WorldZoneSkyButton.Text = NiceTextureName(CurrentClientZone.SkyTexID);
+                    WorldZoneStarsButton.Text = NiceTextureName(CurrentClientZone.StarsTexID);
+                    WorldZoneCloudsButton.Text = NiceTextureName(CurrentClientZone.CloudTexID);
+                    WorldZoneStormCloudsButton.Text = NiceTextureName(CurrentClientZone.StormCloudTexID);
+                    WorldZoneAmbientColourButton.BackColor = Color.FromArgb(CurrentClientZone.AmbientR,
+                                                                            CurrentClientZone.AmbientG,
+                                                                            CurrentClientZone.AmbientB);
+                    WorldZoneFogColourButton.BackColor = Color.FromArgb(CurrentClientZone.FogR, CurrentClientZone.FogG,
+                                                                        CurrentClientZone.FogB);
+                    if (CurrentClientZone.FogNear < -100f)
+                    {
+                        CurrentClientZone.FogNear = -100f;
+                    }
+                    else if (CurrentClientZone.FogNear > 3000f)
+                    {
+                        CurrentClientZone.FogNear = 3000f;
+                    }
+                    if (CurrentClientZone.FogFar < 250f)
+                    {
+                        CurrentClientZone.FogFar = 250f;
+                    }
+                    if (CurrentClientZone.FogFar > 3000f)
+                    {
+                        CurrentClientZone.FogFar = 3000f;
+                    }
+                    WorldZoneFogNearSlider.Value = (int)CurrentClientZone.FogNear;
+                    WorldZoneFogFarSlider.Value = (int)CurrentClientZone.FogFar;
+                    WorldZoneLightPitchSpinner.Value = (decimal)CurrentClientZone.DefaultLightPitch;
+                    WorldZoneLightYawSpinner.Value = (decimal)CurrentClientZone.DefaultLightYaw;
+                    WorldZoneRainSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Rain - 1];
+                    WorldZoneSnowSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Snow - 1];
+                    WorldZoneFogSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Fog - 1];
+                    WorldZoneStormSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Storm - 1];
+                    WorldZoneWindSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Wind - 1];
+                    if (string.IsNullOrEmpty(CurrentServerZone.WeatherLink))
+                    {
+                        WorldZoneWeatherLinkCombo.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        int Idx = WorldZoneWeatherLinkCombo.Items.IndexOf(CurrentServerZone.WeatherLink);
+                        if (Idx > 0)
+                        {
+                            WorldZoneWeatherLinkCombo.SelectedIndex = Idx;
+                        }
+                    }
+                    WorldZoneGravitySpinner.Value = CurrentServerZone.Gravity;
+                    WorldZoneSlopeRestrictSpinner.Value = (decimal)CurrentClientZone.SlopeRestrict;
+                    WorldZonePvPCheck.Checked = CurrentServerZone.PvP;
+                    if (string.IsNullOrEmpty(CurrentServerZone.EntryScript))
+                    {
+                        WorldZoneEntryScriptCombo.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        int Idx = WorldZoneEntryScriptCombo.Items.IndexOf(CurrentServerZone.EntryScript);
+                        if (Idx > 0)
+                        {
+                            WorldZoneEntryScriptCombo.SelectedIndex = Idx;
+                        }
+                    }
+                    if (string.IsNullOrEmpty(CurrentServerZone.ExitScript))
+                    {
+                        WorldZoneExitScriptCombo.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        int Idx = WorldZoneExitScriptCombo.Items.IndexOf(CurrentServerZone.ExitScript);
+                        if (Idx > 0)
+                        {
+                            WorldZoneExitScriptCombo.SelectedIndex = Idx;
+                        }
+                    }
+                    WorldZoneLoadImageButton.Text = NiceTextureName(CurrentClientZone.LoadingTexID);
+                    WorldZoneLoadMusicButton.Text = NiceMusicName(CurrentClientZone.LoadingMusicID);
+                    //WorldZoneMapButton.Text = NiceTextureName(CurrentClientZone.MapTexID);
+                    WorldZoneSetupZoneMapMarkerTextureButton.Text = NiceTextureName(CurrentClientZone.MapMarkerTexID);
+                    WorldZoneSetupZoneMapMapTextureButton.Text = NiceTextureName(CurrentClientZone.MapTexID);
+                    WorldScaleAllSpinner.Value = 1;
+                    #endregion
+
+                    #region Initialise world setup (Marian Voicu)
+                    WorldSetupRianButton.Text = NiceSoundName(CurrentClientZone.WorldSetupRainSoundId);
+                    WorldSetupStromButton.Text =
+                        NiceSoundName(CurrentClientZone.WorldSetupStromSoundId[WorldSetupStormComboBox.SelectedIndex]);
+                    WorldSetupWindButton.Text = NiceSoundName(CurrentClientZone.WorldSetupWindSoundId);
+                    WorldSetupSnowTextureButton.Text = NiceTextureName(CurrentClientZone.WorldSetupSnowTextureId);
+                    WorldSetupRainTextureButton.Text = NiceTextureName(CurrentClientZone.WorldSetupRainTextureId);
+                    #endregion
+
+                    // Reset camera
+                    WorldCamDPitch = 0f;
+                    WorldCamDYaw = 0f;
+                    WorldCamPitch = 0f;
+                    WorldCamYaw = 0f;
+                    WorldCamX = 0f;
+                    WorldCamY = 20f;
+                    WorldCamZ = 0f;
+                    WorldSelectedObjectsLabel.Text = "Selected objects: 0";
+                    GridHeight = 0f;
+                    RepositionGrid();
+                    UpdateRenderingPanel(4);
+                    LoadingAZone = false;
+                }
+            }
+            else if (e.Node.Level == 1) // level 2
+            {
+                if (e.Action.ToString() == "Expand")
+                {
+                    return;
+                }
+                for (int i = 0; i < e.Node.GetNodeCount(false); i++)
+                {
+                    e.Node.Nodes[i].Checked = e.Node.Checked;
+                }
+                return;
+            }
+            else // level 2
+            {
+                ZoneObject Obj = (ZoneObject)e.Node.Tag;
+                if (e.Node.Checked)
+                {
+                    if (!ZoneSelected.Contains(Obj))
+                    {
+                        ZoneSelected.Add(Obj);
+                        AddSelectionBox(Obj.EN);
+                        if (!SuppressZoneUndo)
+                        {
+                            new Undo(Undo.Actions.Select, Obj);
+                        }
+                    }
+                }
+                else
+                {
+                    ZoneSelected.Remove(Obj);
+                    ClearSelectionBox(Obj.EN);
+                    if (!SuppressZoneUndo)
+                    {
+                        new Undo(Undo.Actions.Unselect, Obj);
+                    }
+                }
+
+                // If only a single object is selected, update the position/rotation/scale spinners
+
+                if (ZoneSelected.Count == 1)
+                {
+                    Obj = (ZoneObject)ZoneSelected[0];
+                    WorldMoveXSpinner.Enabled = true;
+                    WorldMoveYSpinner.Enabled = true;
+                    WorldMoveZSpinner.Enabled = true;
+                    WorldRotateXSpinner.Enabled = true;
+                    WorldRotateYSpinner.Enabled = true;
+                    WorldRotateZSpinner.Enabled = true;
+                    WorldScaleXSpinner.Enabled = true;
+                    WorldScaleYSpinner.Enabled = true;
+                    WorldScaleZSpinner.Enabled = true;
+                    SuppressZoneTransforms = true;
+                    WorldMoveXSpinner.Value = (decimal)Obj.EN.X();
+                    WorldMoveYSpinner.Value = (decimal)Obj.EN.Y();
+                    WorldMoveZSpinner.Value = (decimal)Obj.EN.Z();
+                    WorldRotateXSpinner.Value = (decimal)Obj.EN.Pitch();
+                    WorldRotateYSpinner.Value = (decimal)Obj.EN.Yaw();
+                    WorldRotateZSpinner.Value = (decimal)Obj.EN.Roll();
+                    WorldScaleXSpinner.Value = (decimal)(Obj.EN.ScaleX() * 20f);
+                    WorldScaleYSpinner.Value = (decimal)(Obj.EN.ScaleY() * 20f);
+                    WorldScaleZSpinner.Value = (decimal)(Obj.EN.ScaleZ() * 20f);
+                    SuppressZoneTransforms = false;
+                    // If this action was caused by the user clicking the tree view, then
+                    // move the camera for a better view of the selected item.
+                    if (!PanelMouseHover)
+                    {
+                        //Camera.Position(Obj.EN.X(), Obj.EN.Y() + 10, Obj.EN.Z()/* - 2*Obj.EN.MeshDepth * Obj.EN.ScaleZ());
+                        //Camera.Rotate(90, 0, 0);
+                        // WorldCamPitch = 90;
+                        // WorldCamYaw = 0;
+                    }
+                }
+                // Otherwise disable the spinner gadgets
+                else if (ZoneSelected.Count > 1)
+                {
+                    Obj = (ZoneObject)ZoneSelected[0];
+                    WorldMoveXSpinner.Value = 0;
+                    WorldMoveYSpinner.Value = 0;
+                    WorldMoveZSpinner.Value = 0;
+                    WorldRotateXSpinner.Value = 0;
+                    WorldRotateYSpinner.Value = 0;
+                    WorldRotateZSpinner.Value = 0;
+                    WorldScaleXSpinner.Value = 0.001m;
+                    WorldScaleYSpinner.Value = 0.001m;
+                    WorldScaleZSpinner.Value = 0.001m;
+                    WorldMoveXSpinner.Enabled = false;
+                    WorldMoveYSpinner.Enabled = false;
+                    WorldMoveZSpinner.Enabled = false;
+                    WorldRotateXSpinner.Enabled = false;
+                    WorldRotateYSpinner.Enabled = false;
+                    WorldRotateZSpinner.Enabled = false;
+                    WorldScaleXSpinner.Enabled = false;
+                    WorldScaleYSpinner.Enabled = false;
+                    WorldScaleZSpinner.Enabled = false;
+                    // If this action was caused by the user clicking the tree view, then
+                    // move the camera for a better view of the selected item.
+                    if (!PanelMouseHover)
+                    {
+                        //Camera.Position(Obj.EN.X(), Obj.EN.Y() + 10, Obj.EN.Z() /*- 2 * Obj.EN.MeshDepth * Obj.EN.ScaleZ());
+                        float i = Obj.EN.MeshDepth;
+                        //Camera.Rotate(90, 0, 0);
+                        WorldCamPitch = 90;
+                        WorldCamYaw = 0;
+                    }
+                }
+                else
+                {
+                    // If this action was caused by the user clicking the tree view, then
+                    // move the camera for a better view of the selected item.
+                    if (!PanelMouseHover)
+                    {
+                        //Camera.Position(0, 0, 0);
+                        //Camera.Rotate(0, 0, 0);
+                    }
+                }
+                ZoneUpdateSetupTab();
+                WorldSelectedObjectsLabel.Text = "Selected objects: " + ZoneSelected.Count.ToString();
+                RenderingPanel.Focus();
+                return;
+            }
+        } 
+
+        private void WorldZonesTree_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            e.Cancel = true;
+            if (e.Action == TreeViewAction.ByMouse)
+            {
+                e.Node.Checked = !e.Node.Checked;
+            }
+            RenderingPanel.Focus();
+        }
+
+        private void WorldZoneTree_AfterCollapse(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node.Parent == null)
+            {
+                e.Node.Checked = false;
+            }
+        }
+
+        private void WorldZonesTree_NodeMouseDoubleClick(object sender, EventArgs e)
+        {
+            RenderingPanel.Focus();
+        }
+
+        // end (MV)
+
+        // Placement tab events
+        private void WorldPlaceObjectTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Hide all
+            WorldPlaceSceneryLabel.Visible = false;
+            WorldPlaceSceneryButton.Visible = false;
+            WorldPlaceAlignCheck.Visible = false;
+            WorldPlaceGridCheck.Visible = false;
+            WorldPlaceEmitterLabel.Visible = false;
+            WorldPlaceEmitterCombo.Visible = false;
+            WorldPlaceWaterLabel.Visible = false;
+            WorldPlaceWaterButton.Visible = false;
+            WorldPlaceTriggerFunctionCombo.Visible = false;
+            WorldPlaceTriggerFunctionLabel.Visible = false;
+            WorldPlaceTriggerScriptCombo.Visible = false;
+            WorldPlaceTriggerScriptLabel.Visible = false;
+            WorldPlacePortalLinkCombo.Visible = false;
+            WorldPlacePortalLinkLabel.Visible = false;
+            WorldPlacePortalLinkNameCombo.Visible = false;
+            WorldPlacePortalLinkNameLabel.Visible = false;
+            WorldPlacePortalNameLabel.Visible = false;
+            WorldPlacePortalNameText.Visible = false;
+
+            // Show as required
+            switch (WorldPlaceObjectTypeCombo.SelectedIndex)
+            {
+                // Zone placement gadgets
+                case 0:
+                    break;
+                // Scenery object placement gadgets
+                case 1:
+                    WorldPlaceSceneryLabel.Visible = true;
+                    WorldPlaceSceneryButton.Visible = true;
+                    WorldPlaceAlignCheck.Visible = true;
+                    WorldPlaceGridCheck.Visible = true;
+                    break;
+                // Emitter placement gadgets
+                case 3:
+                    WorldPlaceEmitterLabel.Visible = true;
+                    WorldPlaceEmitterCombo.Visible = true;
+                    break;
+                // Water placement gadgets
+                case 4:
+                    WorldPlaceWaterLabel.Visible = true;
+                    WorldPlaceWaterButton.Visible = true;
+                    break;
+                // Trigger placement gadgets
+                case 8:
+                    WorldPlaceTriggerFunctionCombo.Visible = true;
+                    WorldPlaceTriggerFunctionLabel.Visible = true;
+                    WorldPlaceTriggerScriptCombo.Visible = true;
+                    WorldPlaceTriggerScriptLabel.Visible = true;
+                    break;
+                // Portal placement gadgets
+                case 10:
+                    WorldPlacePortalLinkCombo.Visible = true;
+                    WorldPlacePortalLinkLabel.Visible = true;
+                    WorldPlacePortalLinkNameCombo.Visible = true;
+                    WorldPlacePortalLinkNameLabel.Visible = true;
+                    WorldPlacePortalNameLabel.Visible = true;
+                    WorldPlacePortalNameText.Visible = true;
+                    break;
+            }
+            PlaceObject = WorldPlaceObjectTypeCombo.SelectedIndex;
+
+            RenderingPanel.Focus();
+        }
+
+        private void WorldPlaceSceneryButton_Click(object sender, EventArgs e)
+        {
+            PlaceSceneryID = MediaDialogs.GetMesh(false, PlaceSceneryID);
+            WorldPlaceSceneryButton.Text = NiceMeshName(PlaceSceneryID);
+            RenderingPanel.Focus();
+        }
+
+        private void WorldPlaceWaterButton_Click(object sender, EventArgs e)
+        {
+            PlaceWaterID = MediaDialogs.GetTexture(false, PlaceWaterID);
+            WorldPlaceWaterButton.Text = NiceTextureName(PlaceWaterID);
+            RenderingPanel.Focus();
+        }
+
+        private void WorldPlaceTriggerScriptCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Update list of script functions
+            WorldPlaceTriggerFunctionCombo.Items.Clear();
+            WorldPlaceTriggerFunctionCombo.Enabled = false;
+            if (WorldPlaceTriggerScriptCombo.SelectedItem != null)
+            {
+                ListBoxItem[] LBI = GetScriptFunctionsList((string)WorldPlaceTriggerScriptCombo.SelectedItem);
+                if (LBI != null)
+                {
+                    WorldPlaceTriggerFunctionCombo.Items.AddRange(LBI);
+                    WorldPlaceTriggerFunctionCombo.Enabled = true;
+                    WorldPlaceTriggerFunctionCombo.SelectedIndex = 0;
+                }
+            }
+        }
+
+        private void WorldPlacePortalLinkCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Update list of portals within selected zone
+            WorldPlacePortalLinkNameCombo.Items.Clear();
+            WorldPlacePortalLinkNameCombo.Enabled = false;
+            if (WorldPlacePortalLinkCombo.SelectedIndex > 0)
+            {
+                List<string> PortalNames = null;
+                // Selected zone is current zone
+                if (CurrentServerZone != null &&
+                    (string)WorldPlacePortalLinkCombo.SelectedItem == CurrentServerZone.Name)
+                {
+                    PortalNames = ZonePortalNames(CurrentServerZone);
+                }
+                // Or another zone (load it temporarily)
+                else
+                {
+                    RealmCrafter.ServerZone.Zone LoadedZone =
+                        RealmCrafter.ServerZone.Zone.Load((string)WorldPlacePortalLinkCombo.SelectedItem);
+                    if (LoadedZone != null)
+                    {
+                        PortalNames = ZonePortalNames(LoadedZone);
+                        LoadedZone.Delete();
+                    }
+                }
+
+                // Found portal names
+                if (PortalNames != null)
+                {
+                    for (int i = 0; i < PortalNames.Count; ++i)
+                    {
+                        WorldPlacePortalLinkNameCombo.Items.Add(PortalNames[i]);
+                    }
+                    WorldPlacePortalLinkNameCombo.Enabled = true;
+                    WorldPlacePortalLinkNameCombo.SelectedIndex = 0;
+                }
+            }
+        }
+
+        // Move/Rotate/Scale tab events
+        private void WorldMoveSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (ZoneSelected.Count == 1 && !SuppressZoneTransforms)
+            {
+                PositionSelection((float)WorldMoveXSpinner.Value, (float)WorldMoveYSpinner.Value,
+                                  (float)WorldMoveZSpinner.Value);
+            }
+            RenderingPanel.Focus();
+        }
+
+        private void WorldRotateSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (ZoneSelected.Count == 1 && !SuppressZoneTransforms)
+            {
+                RotateSelection((float)WorldRotateXSpinner.Value, (float)WorldRotateYSpinner.Value,
+                                (float)WorldRotateZSpinner.Value);
+            }
+            RenderingPanel.Focus();
+        }
+
+        private void WorldScaleSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (ZoneSelected.Count == 1 && !SuppressZoneTransforms)
+            {
+                ScaleSelectionAbsolute((float)WorldScaleXSpinner.Value, (float)WorldScaleYSpinner.Value,
+                                       (float)WorldScaleZSpinner.Value);
+            }
+            RenderingPanel.Focus();
+        }
+
+        // Object setup events
+        private void WorldPlaceAlignCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (WorldPlaceGridCheck.Checked == true && WorldPlaceAlignCheck.Checked == true)
+            {
+                WorldPlaceGridCheck.Checked = false;
+            }
+        }
+
+        private void WorldPlaceGridCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (WorldPlaceGridCheck.Checked == true && WorldPlaceAlignCheck.Checked == true)
+            {
+                WorldPlaceAlignCheck.Checked = false;
+            }
+        }
+
+        // Emitter
+        private void WorldObjectEmitterTextureButton_Click(object sender, EventArgs e)
+        {
+            ushort TToUse = 65535;
+            Emitter E = (Emitter)ZoneSelected[0];
+            if (E != null)
+            {
+                TToUse = E.TextureID;
+            }
+
+            ushort Result = MediaDialogs.GetTexture(false, "Particles", TToUse);
+            if (Result < 65535)
+            {
+                E = (Emitter)ZoneSelected[0];
+                E.TextureID = Result;
+                uint Tex = Media.GetTexture(Result, false);
+                if (Tex != 0)
+                {
+                    E.Config.ChangeTexture(Tex);
+                }
+                WorldObjectEmitterTextureButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        // Terrain
+        private void WorldObjectTerrainBaseButton_Click(object sender, EventArgs e)
+        {
+            ushort TToUse = 65535;
+            Terrain T = (Terrain)ZoneSelected[0];
+            if (T != null)
+            {
+                TToUse = T.BaseTexID;
+            }
+
+            ushort Result = MediaDialogs.GetTexture(false, "", TToUse);
+            if (Result < 65535)
+            {
+                T = (Terrain)ZoneSelected[0];
+                T.BaseTexID = Result;
+                uint Tex = Media.GetTexture(Result, false);
+                if (Tex != 0)
+                {
+                    Entity ChildEN;
+                    for (int j = 1; j <= T.EN.CountChildren(); ++j)
+                    {
+                        ChildEN = T.EN.GetChild(j);
+                        if (ChildEN.Name != "GE selection box")
+                        {
+                            ChildEN.Texture(Tex);
+                        }
+                    }
+                    Media.UnloadTexture(Result);
+                }
+                WorldObjectTerrainBaseButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectTerrainDetailButton_Click(object sender, EventArgs e)
+        {
+            Terrain T = (Terrain)ZoneSelected[0];
+            ushort Result = MediaDialogs.GetTexture(true, "", T.DetailTexID);
+            // Clear current texture
+            if (T.DetailTex != 0)
+            {
+                Render.FreeTexture(T.DetailTex);
+                T.DetailTex = 0;
+            }
+            // Apply new texture
+            if (Result < 65535)
+            {
+                T.DetailTexID = Result;
+                T.DetailTex = Media.GetTexture(Result, true);
+                if (T.DetailTex != 0)
+                {
+                    Entity ChildEN;
+                    Render.ScaleTexture(T.DetailTex, T.DetailTexScale * 0.01f, T.DetailTexScale * 0.01f);
+                    for (int j = 1; j <= T.EN.CountChildren(); ++j)
+                    {
+                        ChildEN = T.EN.GetChild(j);
+                        if (ChildEN.Name != "GE selection box")
+                        {
+                            ChildEN.Texture(T.DetailTex, 1);
+                        }
+                    }
+                }
+            }
+            WorldObjectTerrainDetailButton.Text = NiceTextureName(Result);
+            SetWorldSavedStatus(false);
+            RenderingPanel.Focus();
+        }
+
+        private void WorldObjectTerrainScaleSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            Terrain T = (Terrain)ZoneSelected[0];
+            if ((decimal)T.DetailTexScale != WorldObjectTerrainScaleSpinner.Value)
+            {
+                T.DetailTexScale = (float)WorldObjectTerrainScaleSpinner.Value;
+                if (T.DetailTex != 0)
+                {
+                    Render.ScaleTexture(T.DetailTex, T.DetailTexScale * 0.01f, T.DetailTexScale * 0.01f);
+                }
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        // Sound
+        private void WorldObjectSoundButton_Click(object sender, EventArgs e)
+        {
+            ushort MToUse = 65535;
+            SoundZone SZ = (SoundZone)ZoneSelected[0];
+            if (SZ != null)
+            {
+                MToUse = SZ.SoundID;
+            }
+
+            ushort Result = MediaDialogs.GetSound(false, "", MToUse);
+            if (Result < 65535)
+            {
+                SZ = (SoundZone)ZoneSelected[0];
+                SZ.SoundID = Result;
+                SZ.MusicID = 65535;
+                WorldObjectSoundLabel.Text = "Sound file: " + NiceSoundName(Result);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectMusicButton_Click(object sender, EventArgs e)
+        {
+            ushort MToUse = 65535;
+            SoundZone SZ = (SoundZone)ZoneSelected[0];
+            if (SZ != null)
+            {
+                MToUse = SZ.SoundID;
+            }
+
+            ushort Result = MediaDialogs.GetMusic(false, "", MToUse);
+            if (Result < 65535)
+            {
+                SZ = (SoundZone)ZoneSelected[0];
+                SZ.SoundID = 65535;
+                SZ.MusicID = Result;
+                WorldObjectSoundLabel.Text = "Sound file: " + NiceMusicName(Result);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectSoundRepeatSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            SoundZone SZ = (SoundZone)ZoneSelected[0];
+            if (SZ.RepeatTime != WorldObjectSoundRepeatSpinner.Value)
+            {
+                SZ.RepeatTime = (int)WorldObjectSoundRepeatSpinner.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectVolumeSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            SoundZone SZ = (SoundZone)ZoneSelected[0];
+            if (SZ.Volume != WorldObjectVolumeSpinner.Value)
+            {
+                SZ.Volume = (byte)WorldObjectVolumeSpinner.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        // Water
+        private void WorldObjectWaterColourButton_Click(object sender, EventArgs e)
+        {
+            DialogResult D = ColourDialog.ShowDialog();
+            if (D == DialogResult.OK)
+            {
+                Water W = (Water)ZoneSelected[0];
+                W.Red = ColourDialog.Color.R;
+                W.Green = ColourDialog.Color.G;
+                W.Blue = ColourDialog.Color.B;
+                WorldObjectWaterColourButton.BackColor = ColourDialog.Color;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaterTextureButton_Click(object sender, EventArgs e)
+        {
+            ushort TToUse = 65535;
+            Water T = (Water)ZoneSelected[0];
+            if (T != null)
+            {
+                TToUse = T.TextureID;
+            }
+
+            ushort Result = MediaDialogs.GetTexture(false, "", TToUse);
+            if (Result < 65535)
+            {
+                Water W = (Water)ZoneSelected[0];
+                W.TextureID = Result;
+                uint Tex = Media.GetTexture(Result, false);
+                if (Tex != 0)
+                {
+                    W.EN.Texture(Tex, 1);
+                }
+                WorldObjectWaterTextureButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaterOpacitySpinner_ValueChanged(object sender, EventArgs e)
+        {
+            Water W = (Water)ZoneSelected[0];
+            if ((decimal)(W.Alpha) / 100m != WorldObjectWaterOpacitySpinner.Value)
+            {
+                W.Alpha = (byte)(WorldObjectWaterOpacitySpinner.Value * 100m);
+                W.EN.AlphaNoSolid((float)WorldObjectWaterOpacitySpinner.Value);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaterTextureScaleSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            Water W = (Water)ZoneSelected[0];
+            if ((decimal)W.TexScale != WorldObjectWaterTextureScaleSpinner.Value)
+            {
+                W.TexScale = (float)WorldObjectWaterTextureScaleSpinner.Value;
+                if (W.TexHandle != 0)
+                {
+                    Render.ScaleTexture(W.TexHandle, 1f / W.TexScale, 1f / W.TexScale);
+                }
+                if (W.NormalTexHandle != 0)
+                {
+                    Render.ScaleTexture(W.NormalTexHandle, 1f / W.TexScale, 1f / W.TexScale);
+                }
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaterDamageSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            Water W = (Water)ZoneSelected[0];
+            if (W.ServerWater.Damage != (ushort)WorldObjectWaterDamageSpinner.Value)
+            {
+                W.ServerWater.Damage = (ushort)WorldObjectWaterDamageSpinner.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaterDamageTypeButton_Click(object sender, EventArgs e)
+        {
+            Water W = (Water)ZoneSelected[0];
+            ushort Result = (ushort)GetDamageType(W.ServerWater.DamageType);
+            if (W.ServerWater.DamageType != Result)
+            {
+                W.ServerWater.DamageType = Result;
+                WorldObjectWaterDamageTypeButton.Text = Item.DamageTypes[W.ServerWater.DamageType];
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectPortalLinkCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string NewZone = "";
+            if (WorldObjectPortalLinkCombo.SelectedIndex > 0)
+            {
+                NewZone = (string)WorldObjectPortalLinkCombo.SelectedItem;
+            }
+            Portal P = (Portal)ZoneSelected[0];
+            if (CurrentServerZone.PortalLinkArea[P.ServerID] != NewZone)
+            {
+                // Set new link zone
+                CurrentServerZone.PortalLinkArea[P.ServerID] = NewZone;
+                // Update link portal names list
+                WorldObjectPortalLinkNameCombo.Items.Clear();
+                WorldObjectPortalLinkNameCombo.Enabled = false;
+                if (WorldObjectPortalLinkCombo.SelectedIndex > 0)
+                {
+                    List<string> PortalNames = null;
+                    // Selected zone is current zone
+                    if (CurrentServerZone != null &&
+                        (string)WorldObjectPortalLinkCombo.SelectedItem == CurrentServerZone.Name)
+                    {
+                        PortalNames = ZonePortalNames(CurrentServerZone);
+                    }
+                    // Or another zone (load it temporarily)
+                    else
+                    {
+                        RealmCrafter.ServerZone.Zone LoadedZone =
+                            RealmCrafter.ServerZone.Zone.Load((string)WorldObjectPortalLinkCombo.SelectedItem);
+                        if (LoadedZone != null)
+                        {
+                            PortalNames = ZonePortalNames(LoadedZone);
+                            LoadedZone.Delete();
+                        }
+                    }
+
+                    // Found portal names
+                    if (PortalNames != null)
+                    {
+                        for (int i = 0; i < PortalNames.Count; ++i)
+                        {
+                            WorldObjectPortalLinkNameCombo.Items.Add(PortalNames[i]);
+                        }
+                        WorldObjectPortalLinkNameCombo.Enabled = true;
+                    }
+                }
+                int Idx = WorldObjectPortalLinkNameCombo.Items.IndexOf(CurrentServerZone.PortalLinkName[P.ServerID]);
+                if (Idx >= 0)
+                {
+                    WorldObjectPortalLinkNameCombo.SelectedIndex = Idx;
+                }
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectPortalLinkNameCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (WorldObjectPortalLinkNameCombo.SelectedIndex >= 0)
+            {
+                Portal P = (Portal)ZoneSelected[0];
+                if (CurrentServerZone.PortalLinkName[P.ServerID] != (string)WorldObjectPortalLinkNameCombo.SelectedItem)
+                {
+                    CurrentServerZone.PortalLinkName[P.ServerID] = (string)WorldObjectPortalLinkNameCombo.SelectedItem;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        // Scenery object
+        private void WorldObjectSceneryCollisionCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Scenery S = (Scenery)ZoneSelected[0];
+            CollisionType ColType = (CollisionType)Collision.EntityType(S.EN);
+            if (ColType == CollisionType.PickableNone)
+            {
+                ColType = CollisionType.None;
+            }
+            if ((int)ColType != WorldObjectSceneryCollisionCombo.SelectedIndex)
+            {
+                ColType = (CollisionType)WorldObjectSceneryCollisionCombo.SelectedIndex;
+                if (ColType == CollisionType.None)
+                {
+                    ColType = CollisionType.PickableNone;
+                }
+                Collision.EntityType(S.EN, (byte)ColType);
+            }
+        }
+
+        private void WorldObjectSceneryCatchRainCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            Scenery S = (Scenery)ZoneSelected[0];
+            if (S.CatchRain != WorldObjectSceneryCatchRainCheck.Checked)
+            {
+                S.CatchRain = WorldObjectSceneryCatchRainCheck.Checked;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectSceneryAnimationCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Scenery S = (Scenery)ZoneSelected[0];
+            if (S.AnimationMode != WorldObjectSceneryAnimationCombo.SelectedIndex)
+            {
+                S.AnimationMode = (byte)WorldObjectSceneryAnimationCombo.SelectedIndex;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectSceneryOwnableCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            /*     Scenery S = (Scenery)ZoneSelected[0];
+            if (WorldObjectSceneryOwnableCheck.Checked == false && S.SceneryID > 0)
+            {
+                if (CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1] != null)
+                    CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1] = null;
+                S.SceneryID = 0;
+                WorldObjectSceneryOwnershipIDLabel.Visible = false;
+                WorldObjectSceneryInventorySpinner.Value = 0;
+                WorldObjectSceneryInventorySpinner.Maximum = 0;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+        
+            }
+            else if (S.SceneryID == 0)
+            {
+                bool Found = false;
+                for (int i = 0; i < 500; ++i)
+                {
+                    if (CurrentServerZone.Instances[0].OwnedScenery[i] == null)
+                    {
+                        CurrentServerZone.Instances[0].OwnedScenery[i] = new OwnedScenery();
+                        S.SceneryID = (byte)(i + 1);
+                        WorldObjectSceneryOwnershipIDLabel.Visible = true;
+                        WorldObjectSceneryOwnershipIDLabel.Text = "Ownership ID: " + i.ToString();
+                        WorldObjectSceneryInventorySpinner.Maximum = 50;
+                        SetWorldSavedStatus(false);
+                        Found = true;
+                        break;
+                    }
+                }
+                if (!Found)
+                    MessageBox.Show("Maximum ownable scenery objects already set in this zone.", "Error");
+                RenderingPanel.Focus();
+            }
+        */
+        }
+
+        private void WorldObjectSceneryInventorySpinner_ValueChanged(object sender, EventArgs e)
+        {
+            Scenery S = (Scenery)ZoneSelected[0];
+            if (S.SceneryID > 0)
+            {
+                if (CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].InventorySize !=
+                    WorldObjectSceneryInventorySpinner.Value)
+                {
+                    CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].InventorySize =
+                        (byte)WorldObjectSceneryInventorySpinner.Value;
+                    if (WorldObjectSceneryInventorySpinner.Value == 0)
+                    {
+                        if (CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].Inventory != null)
+                        {
+                            CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].Inventory = null;
+                        }
+                    }
+                    else if (CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].Inventory == null)
+                    {
+                        CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].Inventory = new Inventory();
+                    }
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+            else if (WorldObjectSceneryInventorySpinner.Value > 0)
+            {
+                MessageBox.Show("Scenery must be ownable in order to have an inventory size above 0.", "Error");
+            }
+        }
+
+        private void WorldObjectRunScriptComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Scenery S = (Scenery)ZoneSelected[0];
+            if (WorldObjectRunScriptComboBox.Text != "")
+            {
+                S.NameScript = WorldObjectRunScriptComboBox.Text;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+            else
+            {
+                WorldObjectRunScriptComboBox.Text = "(None)";
+            }
+        }
+
+        private void ZoneObjectWaypointPause_ValueChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            if (CurrentServerZone.WaypointPause[W.ServerID] != WorldObjectWaypointPause.Value)
+            {
+                CurrentServerZone.WaypointPause[W.ServerID] = (int)WorldObjectWaypointPause.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaypointActor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!SuppressActorChange)
+            {
+                Waypoint W = (Waypoint)ZoneSelected[0];
+                int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+                // Spawn actor set to none and spawn point exists -- remove it
+                if (SP >= 0 && WorldObjectWaypointActor.SelectedIndex == 0)
+                {
+                    CurrentServerZone.SpawnMax[SP] = 0;
+                    W.EN.Scale(3f, 3f, 3f);
+                    SetWorldSavedStatus(false);
+                    ZoneUpdateSetupTab();
+                    RenderingPanel.Focus();
+                }
+                // Spawn actor set to something, and spawn point does not exist -- create it
+                else if (SP < 0 && WorldObjectWaypointActor.SelectedIndex > 0)
+                {
+                    // Find free spawn point
+                    bool Found = false;
+                    for (int i = 0; i < 1000; ++i)
+                    {
+                        if (CurrentServerZone.SpawnMax[i] == 0)
+                        {
+                            ListBoxItem LBI = (ListBoxItem)WorldObjectWaypointActor.SelectedItem;
+                            CurrentServerZone.SpawnActor[i] = (ushort)LBI.Value;
+                            CurrentServerZone.SpawnWaypoint[i] = (ushort)W.ServerID;
+                            CurrentServerZone.SpawnMax[i] = 1;
+                            CurrentServerZone.SpawnScript[i] = "";
+                            CurrentServerZone.SpawnActorScript[i] = "";
+                            CurrentServerZone.SpawnDeathScript[i] = "";
+                            CurrentServerZone.SpawnRange[i] = 0f;
+                            CurrentServerZone.SpawnFrequency[i] = 10;
+                            CurrentServerZone.SpawnSize[i] = 5f;
+                            W.EN.Scale(5f, 5f, 5f);
+                            SetWorldSavedStatus(false);
+                            ZoneUpdateSetupTab();
+                            RenderingPanel.Focus();
+                            Found = true;
+                            break;
+                        }
+                    }
+                    if (!Found)
+                    {
+                        MessageBox.Show("Limit of 1000 spawn points per zone already reached!", "Error");
+                    }
+                }
+                // Spawn actor set to something and spawn point already exists -- update it
+                else if (SP >= 0 && WorldObjectWaypointActor.SelectedIndex > 0)
+                {
+                    ListBoxItem LBI = (ListBoxItem)WorldObjectWaypointActor.SelectedItem;
+                    if (CurrentServerZone.SpawnActor[SP] != LBI.Value)
+                    {
+                        CurrentServerZone.SpawnActor[SP] = (ushort)LBI.Value;
+                        SetWorldSavedStatus(false);
+                        RenderingPanel.Focus();
+                    }
+                }
+            }
+        }
+
+        private void WorldObjectWaypointQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+            if (SP >= 0)
+            {
+                if (CurrentServerZone.SpawnMax[SP] != WorldObjectWaypointQuantity.Value)
+                {
+                    CurrentServerZone.SpawnMax[SP] = (ushort)WorldObjectWaypointQuantity.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldObjectWaypointDelay_ValueChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+            if (SP >= 0)
+            {
+                if (CurrentServerZone.SpawnFrequency[SP] != WorldObjectWaypointDelay.Value)
+                {
+                    CurrentServerZone.SpawnFrequency[SP] = (ushort)WorldObjectWaypointDelay.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldObjectWaypointSpawnScript_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+            if (SP >= 0)
+            {
+                if (!string.IsNullOrEmpty(CurrentServerZone.SpawnScript[SP]) &&
+                    WorldObjectWaypointSpawnScript.SelectedIndex == 0)
+                {
+                    CurrentServerZone.SpawnScript[SP] = "";
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+                else if (CurrentServerZone.SpawnScript[SP] != (string)WorldObjectWaypointSpawnScript.SelectedItem)
+                {
+                    CurrentServerZone.SpawnScript[SP] = (string)WorldObjectWaypointSpawnScript.SelectedItem;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldObjectWaypointInteractScript_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+            if (SP >= 0)
+            {
+                if (!string.IsNullOrEmpty(CurrentServerZone.SpawnActorScript[SP]) &&
+                    WorldObjectWaypointInteractScript.SelectedIndex == 0)
+                {
+                    CurrentServerZone.SpawnActorScript[SP] = "";
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+                else if (CurrentServerZone.SpawnActorScript[SP] !=
+                         (string)WorldObjectWaypointInteractScript.SelectedItem)
+                {
+                    CurrentServerZone.SpawnActorScript[SP] = (string)WorldObjectWaypointInteractScript.SelectedItem;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldObjectWaypointDeathScript_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+            if (SP >= 0)
+            {
+                if (!string.IsNullOrEmpty(CurrentServerZone.SpawnDeathScript[SP]) &&
+                    WorldObjectWaypointDeathScript.SelectedIndex == 0)
+                {
+                    CurrentServerZone.SpawnDeathScript[SP] = "";
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+                else if (CurrentServerZone.SpawnDeathScript[SP] != (string)WorldObjectWaypointDeathScript.SelectedItem)
+                {
+                    CurrentServerZone.SpawnDeathScript[SP] = (string)WorldObjectWaypointDeathScript.SelectedItem;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldObjectWaypointAutoMove_ValueChanged(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+            if (SP >= 0)
+            {
+                if ((decimal)CurrentServerZone.SpawnRange[SP] != WorldObjectWaypointAutoMove.Value)
+                {
+                    CurrentServerZone.SpawnRange[SP] = (float)WorldObjectWaypointAutoMove.Value;
+                    if (CurrentServerZone.SpawnRange[SP] < 2f)
+                    {
+                        Entity ChildEN = W.EN.FindChild("Waypoint Auto-movement Sphere");
+                        if (ChildEN != null)
+                        {
+                            ChildEN.Free();
+                        }
+                    }
+                    else
+                    {
+                        Entity ChildEN = W.EN.FindChild("Waypoint Auto-movement Sphere");
+                        if (ChildEN == null)
+                        {
+                            ChildEN = Entity.CreateSphere();
+                            ChildEN.Name = "Waypoint Auto-movement Sphere";
+                            ChildEN.Texture(BlueTex);
+                            ChildEN.Shader = Shaders.FullbrightAlpha;
+                            ChildEN.AlphaState = true;
+                            ChildEN.AlphaNoSolid(0.5f);
+                            ChildEN.Parent(W.EN, true);
+                            ChildEN.Position(0f, 0f, 0f);
+                        }
+                        ChildEN.Scale(CurrentServerZone.SpawnRange[SP], CurrentServerZone.SpawnRange[SP],
+                                      CurrentServerZone.SpawnRange[SP], true);
+                    }
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldObjectWaypointAButton_Click(object sender, EventArgs e)
+        {
+            WaypointLinkMode = 1;
+            LinkingWaypoint = (Waypoint)ZoneSelected[0];
+        }
+
+        private void WorldObjectWaypointBButton_Click(object sender, EventArgs e)
+        {
+            WaypointLinkMode = 2;
+            LinkingWaypoint = (Waypoint)ZoneSelected[0];
+        }
+
+        private void WorldObjectWaypointANButton_Click(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            if (CurrentServerZone.NextWaypointA[W.ServerID] < 2000)
+            {
+                CurrentServerZone.PrevWaypoint[CurrentServerZone.NextWaypointA[W.ServerID]] = 2000;
+                CurrentServerZone.NextWaypointA[W.ServerID] = 2000;
+                WaypointLinkAEN[W.ServerID].Free();
+                WaypointLinkAEN[W.ServerID] = null;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldObjectWaypointBNButton_Click(object sender, EventArgs e)
+        {
+            Waypoint W = (Waypoint)ZoneSelected[0];
+            if (CurrentServerZone.NextWaypointB[W.ServerID] < 2000)
+            {
+                if (CurrentServerZone.PrevWaypoint[CurrentServerZone.NextWaypointB[W.ServerID]] == W.ServerID)
+                {
+                    CurrentServerZone.PrevWaypoint[CurrentServerZone.NextWaypointB[W.ServerID]] = 2000;
+                }
+                CurrentServerZone.NextWaypointB[W.ServerID] = 2000;
+                WaypointLinkBEN[W.ServerID].Free();
+                WaypointLinkBEN[W.ServerID] = null;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        // Zone setup events        
+        private void WorldZoneOutdoorsCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                if (CurrentClientZone.Outdoors != WorldZoneOutdoorsCheck.Checked)
+                {
+                    CurrentClientZone.Outdoors = WorldZoneOutdoorsCheck.Checked;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneSkyButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void WorldZoneStarsButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(false, "Skies", CurrentClientZone.StarsTexID);
+                CurrentClientZone.StarsTexID = Result;
+                WorldZoneStarsButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneCloudsButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(false, "Skies", CurrentClientZone.CloudTexID);
+
+                CurrentClientZone.CloudTexID = Result;
+                WorldZoneCloudsButton.Text = NiceTextureName(Result);
+                uint Tex = Media.GetTexture(Result, false);
+                if (Tex != 0)
+                {
+                    CurrentClientZone.Cloud.Texture(Tex);
+                    CurrentClientZone.Cloud.AlphaNoSolid(0.4f);
+                }
+                SetWorldSavedStatus(false);
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneStormCloudsButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(false, "Skies", CurrentClientZone.StormCloudTexID);
+                CurrentClientZone.StormCloudTexID = Result;
+                WorldZoneStormCloudsButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneAmbientColourButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                DialogResult D = ColourDialog.ShowDialog();
+                if (D == DialogResult.OK)
+                {
+                    CurrentClientZone.AmbientR = ColourDialog.Color.R;
+                    CurrentClientZone.AmbientG = ColourDialog.Color.G;
+                    CurrentClientZone.AmbientB = ColourDialog.Color.B;
+                    WorldZoneAmbientColourButton.BackColor = ColourDialog.Color;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneFogColourButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                DialogResult D = ColourDialog.ShowDialog();
+                if (D == DialogResult.OK)
+                {
+                    CurrentClientZone.FogR = ColourDialog.Color.R;
+                    CurrentClientZone.FogG = ColourDialog.Color.G;
+                    CurrentClientZone.FogB = ColourDialog.Color.B;
+                    WorldZoneFogColourButton.BackColor = ColourDialog.Color;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneFogNearSlider_Scroll(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                if (CurrentClientZone.FogNear != WorldZoneFogNearSlider.Value)
+                {
+                    CurrentClientZone.FogNear = WorldZoneFogNearSlider.Value;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneFogFarSlider_Scroll(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                if (CurrentClientZone.FogFar != WorldZoneFogFarSlider.Value)
+                {
+                    CurrentClientZone.FogFar = WorldZoneFogFarSlider.Value;
+                    SetWorldSavedStatus(false);
+                    if (CurrentClientZone.FogFar < CurrentClientZone.FogNear + 10f)
+                    {
+                        CurrentClientZone.FogNear = CurrentClientZone.FogFar - 10f;
+                        WorldZoneFogNearSlider.Value = (int)CurrentClientZone.FogNear;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneLightPitchSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                if ((decimal)CurrentClientZone.DefaultLightPitch != WorldZoneLightPitchSpinner.Value)
+                {
+                    CurrentClientZone.DefaultLightPitch = (float)WorldZoneLightPitchSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneLightYawSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                if ((decimal)CurrentClientZone.DefaultLightYaw != WorldZoneLightYawSpinner.Value)
+                {
+                    CurrentClientZone.DefaultLightYaw = (float)WorldZoneLightYawSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneRainSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Rain - 1] !=
+                    WorldZoneRainSpinner.Value)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Rain - 1] =
+                        (byte)WorldZoneRainSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+                // Don't allow total of all weather probabilities to exceed 100%
+                int Total = 0;
+                for (int i = 0; i < 5; ++i)
+                {
+                    Total += CurrentServerZone.WeatherChance[i];
+                }
+                if (Total > 100)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Rain - 1] =
+                        (byte)
+                        (100 -
+                         (Total - (int)CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Rain - 1]));
+
+                    WorldZoneRainSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Rain - 1];
+                }
+            }
+        }
+
+        private void WorldZoneSnowSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Snow - 1] !=
+                    WorldZoneSnowSpinner.Value)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Snow - 1] =
+                        (byte)WorldZoneSnowSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+                // Don't allow total of all weather probabilities to exceed 100%
+                int Total = 0;
+                for (int i = 0; i < 5; ++i)
+                {
+                    Total += CurrentServerZone.WeatherChance[i];
+                }
+                if (Total > 100)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Snow - 1] = (byte)(100 -
+                                                                                                               (Total -
+                                                                                                                (int)
+                                                                                                                CurrentServerZone
+                                                                                                                    .
+                                                                                                                    WeatherChance
+                                                                                                                    [
+                                                                                                                    (int
+                                                                                                                    )
+                                                                                                                    RealmCrafter
+                                                                                                                        .
+                                                                                                                        Environment
+                                                                                                                        .
+                                                                                                                        Weather
+                                                                                                                        .
+                                                                                                                        Snow -
+                                                                                                                    1]));
+                    WorldZoneSnowSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Snow - 1];
+                }
+            }
+        }
+
+        private void WorldZoneFogSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Fog - 1] !=
+                    WorldZoneFogSpinner.Value)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Fog - 1] =
+                        (byte)WorldZoneFogSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+                // Don't allow total of all weather probabilities to exceed 100%
+                int Total = 0;
+                for (int i = 0; i < 5; ++i)
+                {
+                    Total += CurrentServerZone.WeatherChance[i];
+                }
+                if (Total > 100)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Fog - 1]
+                        =
+                        (byte)
+                        (100 -
+                         (Total - (int)CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Fog - 1]));
+                    WorldZoneFogSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Fog - 1];
+                }
+            }
+        }
+
+        private void WorldZoneStormSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Storm - 1] !=
+                    WorldZoneStormSpinner.Value)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Storm - 1] =
+                        (byte)WorldZoneStormSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+                // Don't allow total of all weather probabilities to exceed 100%
+                int Total = 0;
+                for (int i = 0; i < 5; ++i)
+                {
+                    Total += CurrentServerZone.WeatherChance[i];
+                }
+                if (Total > 100)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Storm - 1]
+                        =
+                        (byte)
+                        (100 -
+                         (Total -
+                          (int)CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Storm - 1]));
+                    WorldZoneStormSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Storm - 1];
+                }
+            }
+        }
+
+        private void WorldZoneWindSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Wind - 1] !=
+                    WorldZoneWindSpinner.Value)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Wind - 1] =
+                        (byte)WorldZoneWindSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+                // Don't allow total of all weather probabilities to exceed 100%
+                int Total = 0;
+                for (int i = 0; i < 5; ++i)
+                {
+                    Total += CurrentServerZone.WeatherChance[i];
+                }
+                if (Total > 100)
+                {
+                    CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Wind - 1] =
+                        (byte)
+                        (100 -
+                         (Total - (int)CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Wind - 1]));
+                    WorldZoneWindSpinner.Value =
+                        CurrentServerZone.WeatherChance[(int)RealmCrafter.Environment.Weather.Wind - 1];
+                }
+            }
+        }
+
+        private void WorldZoneWeatherLinkCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (WorldZoneWeatherLinkCombo.SelectedIndex == 1 && !string.IsNullOrEmpty(CurrentServerZone.WeatherLink))
+                {
+                    CurrentServerZone.WeatherLink = "";
+                    CurrentServerZone.WeatherLinkZone = null;
+                    SetWorldSavedStatus(false);
+                }
+                else if (WorldZoneWeatherLinkCombo.SelectedIndex > 1 &&
+                         CurrentServerZone.WeatherLink != (string)WorldZoneWeatherLinkCombo.SelectedItem)
+                {
+                    CurrentServerZone.WeatherLink = (string)WorldZoneWeatherLinkCombo.SelectedItem;
+                    CurrentServerZone.WeatherLinkZone =
+                        RealmCrafter.ServerZone.Zone.Find((string)WorldZoneWeatherLinkCombo.SelectedItem);
+                    SetWorldSavedStatus(false);
+                }
+            }
+        }
+
+        private void WorldZoneGravitySpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.Gravity != WorldZoneGravitySpinner.Value)
+                {
+                    CurrentServerZone.Gravity = (ushort)WorldZoneGravitySpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+            }
+        }
+
+        private void WorldZoneSlopeRestrictSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                if ((decimal)CurrentClientZone.SlopeRestrict != WorldZoneSlopeRestrictSpinner.Value)
+                {
+                    CurrentClientZone.SlopeRestrict = (float)WorldZoneSlopeRestrictSpinner.Value;
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZonePvPCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (CurrentServerZone.PvP != WorldZonePvPCheck.Checked)
+                {
+                    CurrentServerZone.PvP = WorldZonePvPCheck.Checked;
+                    SetWorldSavedStatus(false);
+                }
+            }
+        }
+
+        private void WorldZoneEntryScriptCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (WorldZoneEntryScriptCombo.SelectedIndex > 0)
+                {
+                    if (CurrentServerZone.EntryScript != (string)WorldZoneEntryScriptCombo.SelectedItem)
+                    {
+                        CurrentServerZone.EntryScript = (string)WorldZoneEntryScriptCombo.SelectedItem;
+                        SetWorldSavedStatus(false);
+                    }
+                }
+                else if (!string.IsNullOrEmpty(CurrentServerZone.EntryScript))
+                {
+                    CurrentServerZone.EntryScript = "";
+                    SetWorldSavedStatus(false);
+                }
+            }
+        }
+
+        private void WorldZoneExitScriptCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CurrentServerZone != null)
+            {
+                if (WorldZoneExitScriptCombo.SelectedIndex > 0)
+                {
+                    if (CurrentServerZone.ExitScript != (string)WorldZoneExitScriptCombo.SelectedItem)
+                    {
+                        CurrentServerZone.ExitScript = (string)WorldZoneExitScriptCombo.SelectedItem;
+                        SetWorldSavedStatus(false);
+                    }
+                }
+                else if (!string.IsNullOrEmpty(CurrentServerZone.ExitScript))
+                {
+                    CurrentServerZone.ExitScript = "";
+                    SetWorldSavedStatus(false);
+                }
+            }
+        }
+
+        private void WorldZoneLoadImageButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(true, "", CurrentClientZone.LoadingTexID);
+
+                CurrentClientZone.LoadingTexID = Result;
+                WorldZoneLoadImageButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneLoadMusicButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetMusic(true, "", CurrentClientZone.LoadingMusicID);
+                if (Result < 65535)
+                {
+                    CurrentClientZone.LoadingMusicID = Result;
+                    WorldZoneLoadMusicButton.Text = NiceMusicName(Result);
+                    SetWorldSavedStatus(false);
+                }
+                else
+                {
+                    CurrentClientZone.LoadingMusicID = 65535;
+                    WorldZoneLoadMusicButton.Text = "No music set";
+                    SetWorldSavedStatus(false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void zoneSetupZoneMapMarkerTextureButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(true, "", CurrentClientZone.MapMarkerTexID);
+
+                CurrentClientZone.MapMarkerTexID = Result;
+                WorldZoneSetupZoneMapMarkerTextureButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldZoneMapButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(false, "", CurrentClientZone.MapTexID);
+
+                CurrentClientZone.MapTexID = Result;
+                //WorldZoneMapButton.Text = NiceTextureName(Result);
+                ((Button)sender).Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+            }
+            else
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+        }
+
+        private void WorldScaleAllPerformButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone != null && CurrentServerZone != null)
+            {
+                ScaleEntireZone((float)WorldScaleAllSpinner.Value);
+            }
+        }
+
+        // Suns/moons events
+        private void WorldSunAdd_Click(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = new RealmCrafter.Environment.Sun();
+            RealmCrafter.Environment.Suns.AddLast(S);
+            UpdateSunDisplay(RealmCrafter.Environment.Suns.Count);
+            SetWorldSavedStatus(false);
+            RenderingPanel.Focus();
+        }
+
+        private void WorldSunRemove_Click(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null)
+            {
+                RealmCrafter.Environment.Suns.Remove(S);
+                UpdateSunDisplay(1);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldSunPrevious_Click(object sender, EventArgs e)
+        {
+            SelectedSun--;
+            if (SelectedSun < 1)
+            {
+                SelectedSun = RealmCrafter.Environment.Suns.Count;
+            }
+            UpdateSunDisplay(SelectedSun);
+        }
+
+        private void WorldSunNext_Click(object sender, EventArgs e)
+        {
+            SelectedSun++;
+            if (SelectedSun > RealmCrafter.Environment.Suns.Count)
+            {
+                SelectedSun = 1;
+            }
+            UpdateSunDisplay(SelectedSun);
+        }
+
+        private void WorldSunTextureButton_Click(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null)
+            {
+                ushort Result = MediaDialogs.GetTexture(false, "", S.TextureID);
+
+                S.TextureID = Result;
+                WorldSunTextureButton.Text = NiceTextureName(Result);
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldSunColourButton_Click(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null)
+            {
+                DialogResult D = ColourDialog.ShowDialog();
+                if (D == DialogResult.OK)
+                {
+                    S.LightR = ColourDialog.Color.R;
+                    S.LightG = ColourDialog.Color.G;
+                    S.LightB = ColourDialog.Color.B;
+                    WorldSunColourButton.BackColor = ColourDialog.Color;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunSizeSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null)
+            {
+                if ((decimal)S.Size != WorldSunSizeSpinner.Value)
+                {
+                    S.Size = (float)WorldSunSizeSpinner.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunPathSpinner_ValueChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null)
+            {
+                if ((decimal)S.PathAngle != WorldSunPathSpinner.Value)
+                {
+                    S.PathAngle = (float)WorldSunPathSpinner.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunLensflareCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null)
+            {
+                if (S.ShowFlares != WorldSunLensflareCheck.Checked)
+                {
+                    S.ShowFlares = WorldSunLensflareCheck.Checked;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunRiseSetTimesCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateSunDisplay(SelectedSun);
+        }
+
+        private void WorldSunRiseHour_ValueChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null && WorldSunRiseSetTimesCombo.SelectedIndex >= 0)
+            {
+                if (S.StartH[WorldSunRiseSetTimesCombo.SelectedIndex] != (int)WorldSunRiseHour.Value)
+                {
+                    S.StartH[WorldSunRiseSetTimesCombo.SelectedIndex] = (byte)WorldSunRiseHour.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunRiseMinute_ValueChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null && WorldSunRiseSetTimesCombo.SelectedIndex >= 0)
+            {
+                if (S.StartM[WorldSunRiseSetTimesCombo.SelectedIndex] != (int)WorldSunRiseMinute.Value)
+                {
+                    S.StartM[WorldSunRiseSetTimesCombo.SelectedIndex] = (byte)WorldSunRiseMinute.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunSetHour_ValueChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null && WorldSunRiseSetTimesCombo.SelectedIndex >= 0)
+            {
+                if (S.EndH[WorldSunRiseSetTimesCombo.SelectedIndex] != (int)WorldSunSetHour.Value)
+                {
+                    S.EndH[WorldSunRiseSetTimesCombo.SelectedIndex] = (byte)WorldSunSetHour.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldSunSetMinute_ValueChanged(object sender, EventArgs e)
+        {
+            RealmCrafter.Environment.Sun S = GetSun(SelectedSun);
+            if (S != null && WorldSunRiseSetTimesCombo.SelectedIndex >= 0)
+            {
+                if (S.EndM[WorldSunRiseSetTimesCombo.SelectedIndex] != (int)WorldSunSetMinute.Value)
+                {
+                    S.EndM[WorldSunRiseSetTimesCombo.SelectedIndex] = (byte)WorldSunSetMinute.Value;
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        // Year events
+        private void WorldYearLength_ValueChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.MonthStartDay[0] != WorldYearLength.Value)
+            {
+                RealmCrafter.Environment.MonthStartDay[0] = (int)WorldYearLength.Value;
+                RealmCrafter.Environment.SeasonStartDay[0] = (int)WorldYearLength.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldYearTimeCompression_ValueChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.TimeFactor != WorldYearTimeCompression.Value)
+            {
+                RealmCrafter.Environment.TimeFactor = (int)WorldYearTimeCompression.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldYearCurrentYear_ValueChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.Year != WorldYearCurrentYear.Value)
+            {
+                RealmCrafter.Environment.Year = (int)WorldYearCurrentYear.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldYearCurrentDay_ValueChanged(object sender, EventArgs e)
+        {
+            int NewDay = (int)WorldYearCurrentDay.Value - 1;
+            if (RealmCrafter.Environment.Day != NewDay)
+            {
+                if (NewDay >= RealmCrafter.Environment.MonthStartDay[0])
+                {
+                    NewDay = RealmCrafter.Environment.MonthStartDay[0] - 1;
+                    WorldYearCurrentDay.Value = NewDay + 1;
+                }
+                RealmCrafter.Environment.Day = NewDay;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldYearMonthCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WorldYearMonthName.Text = RealmCrafter.Environment.MonthName[WorldYearMonthCombo.SelectedIndex];
+            if (WorldYearMonthCombo.SelectedIndex < 19)
+            {
+                WorldYearMonthLength.Enabled = true;
+                if (WorldYearMonthCombo.SelectedIndex > 0)
+                {
+                    WorldYearMonthLength.Value =
+                        RealmCrafter.Environment.MonthStartDay[WorldYearMonthCombo.SelectedIndex + 1] -
+                        RealmCrafter.Environment.MonthStartDay[WorldYearMonthCombo.SelectedIndex];
+                }
+                else
+                {
+                    WorldYearMonthLength.Value = RealmCrafter.Environment.MonthStartDay[1];
+                }
+            }
+            else
+            {
+                int Length = RealmCrafter.Environment.MonthStartDay[0] - RealmCrafter.Environment.MonthStartDay[19];
+                if (Length < 1)
+                {
+                    Length = 1;
+                }
+                else if (Length > 10000)
+                {
+                    Length = 10000;
+                }
+                WorldYearMonthLength.Value = Length;
+                WorldYearMonthLength.Enabled = false;
+            }
+        }
+
+        private void WorldYearMonthName_TextChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.MonthName[WorldYearMonthCombo.SelectedIndex] != WorldYearMonthName.Text)
+            {
+                RealmCrafter.Environment.MonthName[WorldYearMonthCombo.SelectedIndex] = WorldYearMonthName.Text;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldYearMonthLength_ValueChanged(object sender, EventArgs e)
+        {
+            int Month = WorldYearMonthCombo.SelectedIndex + 1;
+            if (Month < 20)
+            {
+                int Change = RealmCrafter.Environment.MonthStartDay[Month];
+                int NewValue;
+                if (Month > 1)
+                {
+                    NewValue = RealmCrafter.Environment.MonthStartDay[Month - 1] + (int)WorldYearMonthLength.Value;
+                }
+                else
+                {
+                    NewValue = (int)WorldYearMonthLength.Value;
+                }
+                if (RealmCrafter.Environment.MonthStartDay[Month] != NewValue)
+                {
+                    RealmCrafter.Environment.MonthStartDay[Month] = NewValue;
+                    Change = RealmCrafter.Environment.MonthStartDay[Month] - Change;
+                    // Move the start day along for all months after this one
+                    for (int i = Month + 1; i < 20; ++i)
+                    {
+                        RealmCrafter.Environment.MonthStartDay[i] += Change;
+                        if (RealmCrafter.Environment.MonthStartDay[i] <= RealmCrafter.Environment.MonthStartDay[i - 1])
+                        {
+                            RealmCrafter.Environment.MonthStartDay[i] = RealmCrafter.Environment.MonthStartDay[i - 1] +
+                                                                        1;
+                        }
+                    }
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldYearSeasonCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WorldYearSeasonName.Text = RealmCrafter.Environment.SeasonName[WorldYearSeasonCombo.SelectedIndex];
+            WorldYearSeasonDawn.Value = RealmCrafter.Environment.SeasonDawnH[WorldYearSeasonCombo.SelectedIndex];
+            WorldYearSeasonDusk.Value = RealmCrafter.Environment.SeasonDuskH[WorldYearSeasonCombo.SelectedIndex];
+            if (WorldYearSeasonCombo.SelectedIndex < 11)
+            {
+                WorldYearSeasonLength.Enabled = true;
+                if (WorldYearSeasonCombo.SelectedIndex > 0)
+                {
+                    WorldYearSeasonLength.Value =
+                        RealmCrafter.Environment.SeasonStartDay[WorldYearSeasonCombo.SelectedIndex + 1] -
+                        RealmCrafter.Environment.SeasonStartDay[WorldYearSeasonCombo.SelectedIndex];
+                }
+                else
+                {
+                    WorldYearSeasonLength.Value = RealmCrafter.Environment.SeasonStartDay[1];
+                }
+            }
+            else
+            {
+                int Length = RealmCrafter.Environment.SeasonStartDay[0] - RealmCrafter.Environment.SeasonStartDay[11];
+                if (Length < 1)
+                {
+                    Length = 1;
+                }
+                else if (Length > 10000)
+                {
+                    Length = 10000;
+                }
+                WorldYearSeasonLength.Value = Length;
+                WorldYearSeasonLength.Enabled = false;
+            }
+        }
+
+        private void WorldYearSeasonName_TextChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.SeasonName[WorldYearSeasonCombo.SelectedIndex] != WorldYearSeasonName.Text)
+            {
+                RealmCrafter.Environment.SeasonName[WorldYearSeasonCombo.SelectedIndex] = WorldYearSeasonName.Text;
+                UpdateSunsSeasonList();
+                SetWorldSavedStatus(false);
+            }
+        }
+
+        private void WorldYearSeasonLength_ValueChanged(object sender, EventArgs e)
+        {
+            int Season = WorldYearSeasonCombo.SelectedIndex + 1;
+            if (Season < 12)
+            {
+                int Change = RealmCrafter.Environment.SeasonStartDay[Season];
+                int NewValue;
+                if (Season > 1)
+                {
+                    NewValue = RealmCrafter.Environment.SeasonStartDay[Season - 1] + (int)WorldYearSeasonLength.Value;
+                }
+                else
+                {
+                    NewValue = (int)WorldYearSeasonLength.Value;
+                }
+                if (RealmCrafter.Environment.SeasonStartDay[Season] != NewValue)
+                {
+                    RealmCrafter.Environment.SeasonStartDay[Season] = NewValue;
+                    Change = RealmCrafter.Environment.SeasonStartDay[Season] - Change;
+                    // Move the start day along for all seasons after this one
+                    for (int i = Season + 1; i < 12; ++i)
+                    {
+                        RealmCrafter.Environment.SeasonStartDay[i] += Change;
+                        if (RealmCrafter.Environment.SeasonStartDay[i] <= RealmCrafter.Environment.SeasonStartDay[i - 1])
+                        {
+                            RealmCrafter.Environment.SeasonStartDay[i] =
+                                RealmCrafter.Environment.SeasonStartDay[i - 1] + 1;
+                        }
+                    }
+                    SetWorldSavedStatus(false);
+                    RenderingPanel.Focus();
+                }
+            }
+        }
+
+        private void WorldYearSeasonDawn_ValueChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.SeasonDawnH[WorldYearSeasonCombo.SelectedIndex] != WorldYearSeasonDawn.Value)
+            {
+                RealmCrafter.Environment.SeasonDawnH[WorldYearSeasonCombo.SelectedIndex] =
+                    (int)WorldYearSeasonDawn.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        private void WorldYearSeasonDusk_ValueChanged(object sender, EventArgs e)
+        {
+            if (RealmCrafter.Environment.SeasonDuskH[WorldYearSeasonCombo.SelectedIndex] != WorldYearSeasonDusk.Value)
+            {
+                RealmCrafter.Environment.SeasonDuskH[WorldYearSeasonCombo.SelectedIndex] =
+                    (int)WorldYearSeasonDusk.Value;
+                SetWorldSavedStatus(false);
+                RenderingPanel.Focus();
+            }
+        }
+
+        // World Setup
+        private void WorldSetupRianButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone == null)
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            ushort result = MediaDialogs.GetSound(true, CurrentClientZone.WorldSetupRainSoundId);
+            if (result < 65535)
+            {
+                SetWorldSavedStatus(false);
+                WorldSetupRianButton.Text = NiceSoundName(result);
+                CurrentClientZone.WorldSetupRainSoundId = result;
+            }
+            else
+            {
+                WorldSetupRianButton.Text = "No sound set";
+                SetWorldSavedStatus(false);
+                CurrentClientZone.WorldSetupRainSoundId = 65535;
+            }
+        }
+
+        private void WorldSetupStromButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone == null)
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            ushort result = MediaDialogs.GetSound(true,
+                                                  CurrentClientZone.WorldSetupStromSoundId[
+                                                      WorldSetupStormComboBox.SelectedIndex]);
+            if (result < 65535)
+            {
+                SetWorldSavedStatus(false);
+                WorldSetupStromButton.Text = NiceSoundName(result);
+                CurrentClientZone.WorldSetupStromSoundId[WorldSetupStormComboBox.SelectedIndex] = result;
+            }
+            else
+            {
+                WorldSetupStromButton.Text = "No sound set";
+                SetWorldSavedStatus(false);
+                CurrentClientZone.WorldSetupStromSoundId[WorldSetupStormComboBox.SelectedIndex] = 65535;
+            }
+        }
+
+        private void WorldSetupStormComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WorldSetupStromButton.Text =
+                NiceSoundName(CurrentClientZone.WorldSetupStromSoundId[WorldSetupStormComboBox.SelectedIndex]);
+        }
+
+        private void WorldSetupWindButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone == null)
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            ushort result = MediaDialogs.GetSound(true, CurrentClientZone.WorldSetupWindSoundId);
+            if (result < 65535)
+            {
+                SetWorldSavedStatus(false);
+                WorldSetupWindButton.Text = NiceSoundName(result);
+                CurrentClientZone.WorldSetupWindSoundId = result;
+            }
+            else
+            {
+                WorldSetupWindButton.Text = "No sound set";
+                SetWorldSavedStatus(false);
+                CurrentClientZone.WorldSetupWindSoundId = 65535;
+            }
+        }
+
+        private void WorldSetupSnowTextureButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone == null)
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            ushort result = MediaDialogs.GetTexture(true, CurrentClientZone.WorldSetupSnowTextureId);
+            if (result < 65535)
+            {
+                SetWorldSavedStatus(false);
+                WorldSetupSnowTextureButton.Text = NiceTextureName(result);
+                CurrentClientZone.WorldSetupSnowTextureId = result;
+            }
+            else
+            {
+                WorldSetupSnowTextureButton.Text = "No texture set";
+                SetWorldSavedStatus(false);
+                CurrentClientZone.WorldSetupSnowTextureId = 65535;
+            }
+        }
+
+        private void WorldSetupRainTextureButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentClientZone == null)
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            ushort result = MediaDialogs.GetTexture(true, CurrentClientZone.WorldSetupRainTextureId);
+            if (result < 65535)
+            {
+                SetWorldSavedStatus(false);
+                WorldSetupRainTextureButton.Text = NiceTextureName(result);
+                CurrentClientZone.WorldSetupRainTextureId = result;
+            }
+            else
+            {
+                WorldSetupRainTextureButton.Text = "No texture set";
+                SetWorldSavedStatus(false);
+                CurrentClientZone.WorldSetupRainTextureId = 65535;
+            }
+        }
+
+        private void WorldSetupDefalutZoneCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CurrentClientZone == null)
+            {
+                MessageBox.Show("Please select a zone first!", "No zone selected", MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+            if (DefalutZoneNoSave == true)
+            {
+                return;
+            }
+            SetWorldSavedStatus(false);
+            CurrentClientZone.DefaultZone = WorldSetupDefalutZoneCheckBox.Checked;
+        }
+                public void ZoneUpdateSetupTab()
+        {
+            // Hide all gadgets
+            WorldSetupNoneLabel.Visible = false;
+            WorldObjectEmitterTextureLabel.Visible = false;
+            WorldObjectEmitterTextureButton.Visible = false;
+            WorldObjectTriggerScriptLabel.Visible = false;
+            WorldObjectTriggerFunctionLabel.Visible = false;
+            WorldObjectTerrainBaseButton.Visible = false;
+            WorldObjectTerrainBaseLabel.Visible = false;
+            WorldObjectTerrainDetailButton.Visible = false;
+            WorldObjectTerrainDetailLabel.Visible = false;
+            WorldObjectTerrainScaleLabel.Visible = false;
+            WorldObjectTerrainScaleSpinner.Visible = false;
+            WorldObjectMusicButton.Visible = false;
+            WorldObjectSoundButton.Visible = false;
+            WorldObjectSoundLabel.Visible = false;
+            WorldObjectSoundRepeatLabel.Visible = false;
+            WorldObjectSoundRepeatSpinner.Visible = false;
+            WorldObjectVolumeLabel.Visible = false;
+            WorldObjectVolumePercentLabel.Visible = false;
+            WorldObjectVolumeSpinner.Visible = false;
+            WorldObjectSoundRepeatSecondsLabel.Visible = false;
+            WorldObjectWaterColourButton.Visible = false;
+            WorldObjectWaterColourLabel.Visible = false;
+            WorldObjectWaterDamageLabel.Visible = false;
+            WorldObjectWaterDamageSpinner.Visible = false;
+            WorldObjectWaterDamageTypeLabel.Visible = false;
+            WorldObjectWaterDamageTypeButton.Visible = false;
+            WorldObjectWaterOpacityLabel.Visible = false;
+            WorldObjectWaterOpacitySpinner.Visible = false;
+            WorldObjectWaterTextureButton.Visible = false;
+            WorldObjectWaterTextureLabel.Visible = false;
+            WorldObjectWaterTextureScaleLabel.Visible = false;
+            WorldObjectWaterTextureScaleSpinner.Visible = false;
+            WorldObjectPortalLinkCombo.Visible = false;
+            WorldObjectPortalLinkLabel.Visible = false;
+            WorldObjectPortalLinkNameCombo.Visible = false;
+            WorldObjectPortalLinkNameLabel.Visible = false;
+            WorldObjectPortalNameLabel.Visible = false;
+            WorldObjectSceneryAnimationCombo.Visible = false;
+            WorldObjectSceneryAnimationLabel.Visible = false;
+            WorldObjectSceneryCatchRainCheck.Visible = false;
+            WorldObjectSceneryCollisionCombo.Visible = false;
+            WorldObjectSceneryCollisionLabel.Visible = false;
+            WorldObjectSceneryInventoryLabel.Visible = false;
+            WorldObjectSceneryInventorySpinner.Visible = false;
+            // Add Marian Voicu
+            WorldObjectRunScriptComboBox.Visible = false;
+            WorldObjectRunScriptLabel.Visible = false;
+            // end Add
+            WorldObjectSceneryOwnableCheck.Visible = false;
+            WorldObjectSceneryOwnershipIDLabel.Visible = false;
+            WorldObjectWaypointAButton.Visible = false;
+            WorldObjectWaypointANButton.Visible = false;
+            WorldObjectWaypointBButton.Visible = false;
+            WorldObjectWaypointBNButton.Visible = false;
+            WorldObjectWaypointActor.Visible = false;
+            WorldObjectWaypointAutoMove.Visible = false;
+            WorldObjectWaypointDeathScript.Visible = false;
+            WorldObjectWaypointDelay.Visible = false;
+            WorldObjectWaypointInteractScript.Visible = false;
+            WorldObjectWaypointPause.Visible = false;
+            WorldObjectWaypointQuantity.Visible = false;
+            WorldObjectWaypointSpawnScript.Visible = false;
+            WorldObjectWaypointActorLabel.Visible = false;
+            WorldObjectWaypointAutoMoveLabel.Visible = false;
+            WorldObjectWaypointDeathScriptLabel.Visible = false;
+            WorldObjectWaypointDelayLabel.Visible = false;
+            WorldObjectWaypointInteractScriptLabel.Visible = false;
+            WorldObjectWaypointPauseLabel.Visible = false;
+            //WorldObjectWaypointPauseSecondsLabel.Visible = false;
+            WorldObjectWaypointQuantityLabel.Visible = false;
+            WorldObjectWaypointSpawnScriptLabel.Visible = false;
+
+            // No setup available
+            if (ZoneSelected.Count != 1)
+            {
+                WorldSetupNoneLabel.Visible = true;
+            }
+            else
+            {
+                // Scenery gadgets
+                if (ZoneSelected[0] is Scenery)
+                {
+                    WorldObjectSceneryAnimationCombo.Visible = true;
+                    WorldObjectSceneryAnimationLabel.Visible = true;
+                    WorldObjectSceneryCatchRainCheck.Visible = true;
+                    WorldObjectSceneryCollisionCombo.Visible = true;
+                    WorldObjectSceneryCollisionLabel.Visible = true;
+                    WorldObjectSceneryInventoryLabel.Visible = true;
+                    WorldObjectSceneryInventorySpinner.Visible = true;
+                    WorldObjectSceneryOwnableCheck.Visible = true;
+                    // Add Marian Voicu
+                    WorldObjectRunScriptComboBox.Visible = true;
+                    WorldObjectRunScriptLabel.Visible = true;
+                    // end Add
+                    Scenery S = (Scenery)ZoneSelected[0];
+                    WorldObjectSceneryAnimationCombo.SelectedIndex = S.AnimationMode;
+                    WorldObjectSceneryCatchRainCheck.Checked = S.CatchRain;
+                    if (S.NameScript == "")
+                    {
+                        WorldObjectRunScriptComboBox.Text = "(None)";
+                    }
+                    else
+                    {
+                        WorldObjectRunScriptComboBox.Text = S.NameScript;
+                    }
+                    CollisionType ColType = (CollisionType)Collision.EntityType(S.EN);
+                    if (ColType == CollisionType.PickableNone)
+                    {
+                        ColType = CollisionType.None;
+                    }
+                    WorldObjectSceneryCollisionCombo.SelectedIndex = (int)ColType;
+                    if (S.SceneryID > 0)
+                    {
+                        if (CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1] != null)
+                        {
+                            WorldObjectSceneryOwnableCheck.Checked = true;
+                            WorldObjectSceneryOwnershipIDLabel.Visible = true;
+                            WorldObjectSceneryOwnershipIDLabel.Text = "Ownership ID: " + (S.SceneryID - 1).ToString();
+                            WorldObjectSceneryInventorySpinner.Maximum = 50;
+                            WorldObjectSceneryInventorySpinner.Value =
+                                CurrentServerZone.Instances[0].OwnedScenery[S.SceneryID - 1].InventorySize;
+                        }
+                        else
+                        {
+                            S.SceneryID = 0;
+                            WorldObjectSceneryOwnableCheck.Checked = false;
+                            WorldObjectSceneryInventorySpinner.Value = 0;
+                            WorldObjectSceneryInventorySpinner.Maximum = 0;
+                        }
+                    }
+                    else
+                    {
+                        WorldObjectSceneryOwnableCheck.Checked = false;
+                        WorldObjectSceneryInventorySpinner.Value = 0;
+                        WorldObjectSceneryInventorySpinner.Maximum = 0;
+                    }
+                }
+                // Terrain gadgets
+                else if (ZoneSelected[0] is Terrain)
+                {
+                    WorldObjectTerrainBaseButton.Visible = true;
+                    WorldObjectTerrainBaseLabel.Visible = true;
+                    WorldObjectTerrainDetailButton.Visible = true;
+                    WorldObjectTerrainDetailLabel.Visible = true;
+                    WorldObjectTerrainScaleLabel.Visible = true;
+                    WorldObjectTerrainScaleSpinner.Visible = true;
+                    Terrain T = (Terrain)ZoneSelected[0];
+                    WorldObjectTerrainBaseButton.Text = NiceTextureName(T.BaseTexID);
+                    WorldObjectTerrainDetailButton.Text = NiceTextureName(T.DetailTexID);
+                    if (T.DetailTexScale < (float)WorldObjectTerrainScaleSpinner.Minimum)
+                    {
+                        WorldObjectTerrainScaleSpinner.Value = 1;
+                    }
+                    else
+                    {
+                        WorldObjectTerrainScaleSpinner.Value = (decimal)T.DetailTexScale;
+                    }
+                }
+                // Emitter gadgets
+                else if (ZoneSelected[0] is Emitter)
+                {
+                    WorldObjectEmitterTextureLabel.Visible = true;
+                    WorldObjectEmitterTextureButton.Visible = true;
+                    Emitter E = (Emitter)ZoneSelected[0];
+                    WorldObjectEmitterTextureButton.Text = NiceTextureName(E.TextureID);
+                }
+                // Water gadgets
+                else if (ZoneSelected[0] is Water)
+                {
+                    WorldObjectWaterColourButton.Visible = true;
+                    WorldObjectWaterColourLabel.Visible = true;
+                    WorldObjectWaterDamageLabel.Visible = true;
+                    WorldObjectWaterDamageSpinner.Visible = true;
+                    WorldObjectWaterDamageTypeLabel.Visible = true;
+                    WorldObjectWaterDamageTypeButton.Visible = true;
+                    WorldObjectWaterOpacityLabel.Visible = true;
+                    WorldObjectWaterOpacitySpinner.Visible = true;
+                    WorldObjectWaterTextureButton.Visible = true;
+                    WorldObjectWaterTextureLabel.Visible = true;
+                    WorldObjectWaterTextureScaleLabel.Visible = true;
+                    WorldObjectWaterTextureScaleSpinner.Visible = true;
+                    Water W = (Water)ZoneSelected[0];
+                    WorldObjectWaterColourButton.BackColor = Color.FromArgb(W.Red, W.Green, W.Blue);
+                    WorldObjectWaterDamageSpinner.Value = (decimal)W.ServerWater.Damage;
+                    WorldObjectWaterDamageTypeButton.Text = Item.DamageTypes[W.ServerWater.DamageType];
+                    WorldObjectWaterOpacitySpinner.Value = (decimal)(W.Alpha) / 100m;
+                    WorldObjectWaterTextureButton.Text = NiceTextureName(W.TextureID);
+                    WorldObjectWaterTextureScaleSpinner.Value = (decimal)W.TexScale;
+                }
+                // Sound zone gadgets
+                else if (ZoneSelected[0] is SoundZone)
+                {
+                    WorldObjectMusicButton.Visible = true;
+                    WorldObjectSoundButton.Visible = true;
+                    WorldObjectSoundLabel.Visible = true;
+                    WorldObjectSoundRepeatLabel.Visible = true;
+                    WorldObjectSoundRepeatSpinner.Visible = true;
+                    WorldObjectVolumeLabel.Visible = true;
+                    WorldObjectVolumePercentLabel.Visible = true;
+                    WorldObjectVolumeSpinner.Visible = true;
+                    WorldObjectSoundRepeatSecondsLabel.Visible = true;
+                    SoundZone SZ = (SoundZone)ZoneSelected[0];
+                    string Name = "Unknown sound";
+                    if (SZ.SoundID < 65535)
+                    {
+                        Name = NiceSoundName(SZ.SoundID);
+                    }
+                    else if (SZ.MusicID < 65535)
+                    {
+                        Name = NiceMusicName(SZ.MusicID);
+                    }
+                    WorldObjectSoundLabel.Text = "Sound file: " + Name;
+                    WorldObjectSoundRepeatSpinner.Value = SZ.RepeatTime;
+                    WorldObjectVolumeSpinner.Value = SZ.Volume;
+                }
+                // Trigger gadgets
+                else if (ZoneSelected[0] is Trigger)
+                {
+                    WorldObjectTriggerScriptLabel.Visible = true;
+                    WorldObjectTriggerFunctionLabel.Visible = true;
+                    Trigger T = (Trigger)ZoneSelected[0];
+                    WorldObjectTriggerScriptLabel.Text = "Script: " + CurrentServerZone.TriggerScript[T.ServerID];
+                    WorldObjectTriggerFunctionLabel.Text = "Function: " + CurrentServerZone.TriggerMethod[T.ServerID];
+                }
+                // Waypoint gadgets
+                else if (ZoneSelected[0] is Waypoint)
+                {
+                    WorldObjectWaypointAButton.Visible = true;
+                    WorldObjectWaypointANButton.Visible = true;
+                    WorldObjectWaypointBButton.Visible = true;
+                    WorldObjectWaypointBNButton.Visible = true;
+                    WorldObjectWaypointActor.Visible = true;
+                    WorldObjectWaypointAutoMove.Visible = true;
+                    WorldObjectWaypointDeathScript.Visible = true;
+                    WorldObjectWaypointDelay.Visible = true;
+                    WorldObjectWaypointInteractScript.Visible = true;
+                    WorldObjectWaypointPause.Visible = true;
+                    WorldObjectWaypointQuantity.Visible = true;
+                    WorldObjectWaypointSpawnScript.Visible = true;
+                    WorldObjectWaypointActorLabel.Visible = true;
+                    WorldObjectWaypointAutoMoveLabel.Visible = true;
+                    WorldObjectWaypointDeathScriptLabel.Visible = true;
+                    WorldObjectWaypointDelayLabel.Visible = true;
+                    WorldObjectWaypointInteractScriptLabel.Visible = true;
+                    WorldObjectWaypointPauseLabel.Visible = true;
+                    //WorldObjectWaypointPauseSecondsLabel.Visible = true;
+                    WorldObjectWaypointQuantityLabel.Visible = true;
+                    WorldObjectWaypointSpawnScriptLabel.Visible = true;
+                    Waypoint W = (Waypoint)ZoneSelected[0];
+                    WorldObjectWaypointPause.Value = CurrentServerZone.WaypointPause[W.ServerID];
+                    int SP = CurrentServerZone.GetSpawnPoint(W.ServerID);
+                    if (SP >= 0)
+                    {
+                        WorldObjectWaypointAutoMove.Enabled = true;
+                        WorldObjectWaypointDeathScript.Enabled = true;
+                        WorldObjectWaypointDelay.Enabled = true;
+                        WorldObjectWaypointInteractScript.Enabled = true;
+                        WorldObjectWaypointQuantity.Enabled = true;
+                        WorldObjectWaypointSpawnScript.Enabled = true;
+                        WorldObjectWaypointQuantity.Value = CurrentServerZone.SpawnMax[SP];
+                        WorldObjectWaypointAutoMove.Value = (decimal)CurrentServerZone.SpawnRange[SP];
+                        WorldObjectWaypointDelay.Value = CurrentServerZone.SpawnFrequency[SP];
+                        bool Found = false;
+                        for (int i = 1; i < WorldObjectWaypointActor.Items.Count; ++i)
+                        {
+                            ListBoxItem LBI = (ListBoxItem)WorldObjectWaypointActor.Items[i];
+                            if (CurrentServerZone.SpawnActor[SP] == LBI.Value)
+                            {
+                                WorldObjectWaypointActor.SelectedIndex = i;
+                                Found = true;
+                                break;
+                            }
+                        }
+                        if (!Found)
+                        {
+                            WorldObjectWaypointActor.SelectedIndex = 0;
+                        }
+                        if (!string.IsNullOrEmpty(CurrentServerZone.SpawnScript[SP]))
+                        {
+                            WorldObjectWaypointSpawnScript.SelectedItem = CurrentServerZone.SpawnScript[SP];
+                        }
+                        else
+                        {
+                            WorldObjectWaypointSpawnScript.SelectedIndex = 0;
+                        }
+                        if (!string.IsNullOrEmpty(CurrentServerZone.SpawnActorScript[SP]))
+                        {
+                            WorldObjectWaypointInteractScript.SelectedItem = CurrentServerZone.SpawnActorScript[SP];
+                        }
+                        else
+                        {
+                            WorldObjectWaypointInteractScript.SelectedIndex = 0;
+                        }
+                        if (!string.IsNullOrEmpty(CurrentServerZone.SpawnDeathScript[SP]))
+                        {
+                            WorldObjectWaypointDeathScript.SelectedItem = CurrentServerZone.SpawnDeathScript[SP];
+                        }
+                        else
+                        {
+                            WorldObjectWaypointDeathScript.SelectedIndex = 0;
+                        }
+                    }
+                    else
+                    {
+                        WorldObjectWaypointAutoMove.Enabled = false;
+                        WorldObjectWaypointDeathScript.Enabled = false;
+                        WorldObjectWaypointDelay.Enabled = false;
+                        WorldObjectWaypointInteractScript.Enabled = false;
+                        WorldObjectWaypointQuantity.Enabled = false;
+                        WorldObjectWaypointSpawnScript.Enabled = false;
+                        WorldObjectWaypointActor.SelectedIndex = 0;
+                        WorldObjectWaypointSpawnScript.SelectedIndex = 0;
+                        WorldObjectWaypointInteractScript.SelectedIndex = 0;
+                        WorldObjectWaypointDeathScript.SelectedIndex = 0;
+                    }
+                }
+                // Portal gadgets
+                else if (ZoneSelected[0] is Portal)
+                {
+                    WorldObjectPortalLinkCombo.Visible = true;
+                    WorldObjectPortalLinkLabel.Visible = true;
+                    WorldObjectPortalLinkNameCombo.Visible = true;
+                    WorldObjectPortalLinkNameLabel.Visible = true;
+                    WorldObjectPortalNameLabel.Visible = true;
+                    Portal P = (Portal)ZoneSelected[0];
+                    WorldObjectPortalNameLabel.Text = "Portal name: " + CurrentServerZone.PortalName[P.ServerID];
+                    int Idx = WorldObjectPortalLinkCombo.Items.IndexOf(CurrentServerZone.PortalLinkArea[P.ServerID]);
+                    if (Idx > 0)
+                    {
+                        WorldObjectPortalLinkCombo.SelectedIndex = Idx;
+                    }
+                    else
+                    {
+                        WorldObjectPortalLinkCombo.SelectedIndex = 0;
+                    }
+                    // Update link portal names list
+                    WorldObjectPortalLinkNameCombo.Items.Clear();
+                    WorldObjectPortalLinkNameCombo.Enabled = false;
+                    if (WorldObjectPortalLinkCombo.SelectedIndex > 0)
+                    {
+                        List<string> PortalNames = null;
+                        // Selected zone is current zone
+                        if (CurrentServerZone != null &&
+                            (string)WorldObjectPortalLinkCombo.SelectedItem == CurrentServerZone.Name)
+                        {
+                            PortalNames = ZonePortalNames(CurrentServerZone);
+                        }
+                        // Or another zone (load it temporarily)
+                        else
+                        {
+                            RealmCrafter.ServerZone.Zone LoadedZone =
+                                RealmCrafter.ServerZone.Zone.Load((string)WorldObjectPortalLinkCombo.SelectedItem);
+                            if (LoadedZone != null)
+                            {
+                                PortalNames = ZonePortalNames(LoadedZone);
+                                LoadedZone.Delete();
+                            }
+                        }
+
+                        // Found portal names
+                        if (PortalNames != null)
+                        {
+                            for (int i = 0; i < PortalNames.Count; ++i)
+                            {
+                                WorldObjectPortalLinkNameCombo.Items.Add(PortalNames[i]);
+                            }
+                            WorldObjectPortalLinkNameCombo.Enabled = true;
+                        }
+                    }
+                    Idx = WorldObjectPortalLinkNameCombo.Items.IndexOf(CurrentServerZone.PortalLinkName[P.ServerID]);
+                    if (Idx >= 0)
+                    {
+                        WorldObjectPortalLinkNameCombo.SelectedIndex = Idx;
+                    }
+                }
+            }
+        }
+        public void PlaceObjectInZone(int MouseX, int MouseY)
+        {
+            DialogResult Result;
+
+            // Cancel if no zone loaded
+            if (CurrentClientZone == null && PlaceObject > 0)
+            {
+                MessageBox.Show("You must create or load a zone before placing objects.", "Error");
+                return;
+            }
+
+            #region Get position for placement
+            float PosX, PosY, PosZ;
+            float NormalX = 0f, NormalY = 1f, NormalZ = 0f;
+            Entity E = Collision.CameraPick(Camera, MouseX, MouseY);
+            if (E != null)
+            {
+                PosX = Collision.PickedX();
+                PosY = Collision.PickedY();
+                PosZ = Collision.PickedZ();
+                NormalX = Collision.PickedNX();
+                NormalY = Collision.PickedNY();
+                NormalZ = Collision.PickedNZ();
+            }
+            else
+            {
+                PosX = Camera.X();
+                PosY = Camera.Y();
+                PosZ = Camera.Z();
+            }
+            #endregion
+
+            // Object type
+            bool Found;
+            switch (PlaceObject)
+            {
+                #region Entire new zone
+                case 0:
+                    // Save current world state?
+                    if (!WorldSaved)
+                    {
+                        Result = MessageBox.Show("Save changes to current zone first?", "New zone",
+                                                 MessageBoxButtons.YesNoCancel);
+                        if (Result == DialogResult.Yes)
+                        {
+                            SaveWorld();
+                        }
+                        else if (Result == DialogResult.Cancel)
+                        {
+                            return;
+                        }
+                    }
+
+                    // Get name for new zone
+                    TextEntry TE = new TextEntry();
+                    TE.Text = "Create zone";
+                    TE.Description.Text = "Enter a name for the new zone:";
+                    TE.ShowDialog();
+                    string ZoneName = TE.Result;
+                    TE.Dispose();
+                    if (string.IsNullOrEmpty(ZoneName) || string.IsNullOrEmpty(ZoneName.Replace(" ", "")))
+                    {
+                        return;
+                    }
+
+                    // Check a zone with this name doesn't already exist
+                    string ExistingZoneName;
+                    for (int i = 0; i < WorldZonesTree.GetNodeCount(false); ++i)
+                    {
+                        ExistingZoneName = (string)WorldZonesTree.Nodes[i].Name;
+                        if (ExistingZoneName.ToUpper() == ZoneName.ToUpper())
+                        {
+                            MessageBox.Show("A zone with that name already exists.", "Error");
+                            return;
+                        }
+                    }
+
+                    // Unload current zone, if any
+                    UnloadCurrentZone();
+
+                    // Create new zone
+                    CurrentClientZone = new RealmCrafter.ClientZone.Zone(ZoneName);
+                    CurrentServerZone = new RealmCrafter.ServerZone.Zone(ZoneName);
+                    CurrentClientZone.Save();
+                    CurrentServerZone.Save();
+
+                    // Add to UI
+                    TotalZones++;
+                    ActorStartZoneCombo.Items.Add(ZoneName);
+                    WorldPlacePortalLinkCombo.Items.Add(ZoneName);
+                    WorldObjectPortalLinkCombo.Items.Add(ZoneName);
+                    WorldZoneWeatherLinkCombo.Items.Add(ZoneName);
+                    ProjectZones.Text = "Zones: " + TotalZones.ToString();
+
+                    //reload tree
+                    WorldZonesTree.Nodes.Clear();
+                    TotalZones = 0;
+                    string[] Zones = System.IO.Directory.GetFiles(@"Data\Areas\");
+                    foreach (string _S in Zones)
+                    {
+                        TotalZones++;
+                        string Name = System.IO.Path.GetFileNameWithoutExtension(_S);
+
+                        ActorStartZoneCombo.Items.Add(Name);
+                        WorldPlacePortalLinkCombo.Items.Add(Name);
+                        WorldObjectPortalLinkCombo.Items.Add(Name);
+                        WorldZoneWeatherLinkCombo.Items.Add(Name);
+                        WorldZonesTree.Nodes.Add(Name);
+                        WorldZonesTree.Nodes[TotalZones - 1].Name = Name;
+                    }
+                    for (int i = 0; i < WorldZonesTree.GetNodeCount(false); i++)
+                    {
+                        WorldZonesTree.Nodes[i].Nodes.Add("Scenery objects");
+                        WorldZonesTree.Nodes[i].Nodes[0].Name = "Node0";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Terrains");
+                        WorldZonesTree.Nodes[i].Nodes[1].Name = "Node1";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Emitters");
+                        WorldZonesTree.Nodes[i].Nodes[2].Name = "Node2";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Water areas");
+                        WorldZonesTree.Nodes[i].Nodes[3].Name = "Node3";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Collision boxes");
+                        WorldZonesTree.Nodes[i].Nodes[4].Name = "Node4";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Sound zones");
+                        WorldZonesTree.Nodes[i].Nodes[5].Name = "Node5";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Dynamic lights");
+                        WorldZonesTree.Nodes[i].Nodes[6].Name = "Node6";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Triggers");
+                        WorldZonesTree.Nodes[i].Nodes[7].Name = "Node7";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Waypoints");
+                        WorldZonesTree.Nodes[i].Nodes[8].Name = "Node8";
+                        WorldZonesTree.Nodes[i].Nodes.Add("Portals");
+                        WorldZonesTree.Nodes[i].Nodes[9].Name = "Node9";
+                    }
+                    //end reload
+
+                    // Reset camera
+                    WorldCamDPitch = 0f;
+                    WorldCamDYaw = 0f;
+                    WorldCamPitch = 0f;
+                    WorldCamYaw = 0f;
+                    WorldCamX = 0f;
+                    WorldCamY = 0f;
+                    WorldCamZ = 0f;
+                    break;
+                #endregion
+
+                #region Scenery object
+                case 1:
+                    // Cancel if no mesh selected
+                    if (PlaceSceneryID == 65535)
+                    {
+                        MessageBox.Show("You must select a valid mesh before placement.", "Error");
+                        return;
+                    }
+
+                    // Place mesh
+                    Scenery S = new Scenery(CurrentClientZone, PlaceSceneryID);
+                    S.EN.Position(PosX, PosY, PosZ);
+                    if (WorldPlaceAlignCheck.Checked)
+                    {
+                        S.EN.AlignToVector(NormalX, NormalY, NormalZ, 2);
+                    }
+
+                    if (WorldPlaceGridCheck.Checked)
+                    {
+                        S.EN.Move(0, -S.EN.Y() + GridHeight, 0); // position to mesh
+                    }
+
+                    float Scale = Media.LoadedMeshScales[PlaceSceneryID] * 0.05f;
+                    S.EN.Scale(Scale, Scale, Scale);
+                    Collision.EntityType(S.EN, (byte)CollisionType.Triangle);
+                    Collision.SetCollisionMesh(S.EN);
+                    Collision.EntityPickMode(S.EN, PickMode.Polygon);
+                    // Create undo
+                    if (!SuppressZoneUndo)
+                    {
+                        new Undo(Undo.Actions.Create, S);
+                    }
+                    // Add to tree view and select
+                    string Name_mesh = Media.GetMeshName(S.MeshID);
+                    TreeNode TN =
+                        new TreeNode(
+                            System.IO.Path.GetFileNameWithoutExtension(Name_mesh.Substring(0, Name_mesh.Length - 1)));
+                    TN.Tag = S;
+                    WorldZonesTree.Nodes[nodeSelect].Nodes[0].Nodes.Add(TN);
+                    WorldSelectObject(S, 3);
+                    break;
+                #endregion
+
+                #region Terrain
+                case 2:
+                    MediaAddDialog.InitialDirectory = "";
+                    MediaAddDialog.Filter = @"Bitmap (.bmp)|*.BMP";
+                    MediaAddDialog.FilterIndex = 1;
+                    MediaAddDialog.Multiselect = false;
+                    string OldTitle = MediaAddDialog.Title;
+                    MediaAddDialog.Title = "Select a heightmap";
+                    Result = MediaAddDialog.ShowDialog();
+                    if (Result == DialogResult.OK)
+                    {
+                        // Load bitmap and get terrain detail
+                        string HM = MediaAddDialog.FileName;
+                        System.Drawing.Bitmap B = new Bitmap(HM);
+                        B.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                        if (B.Width > 1024)
+                        {
+                            MessageBox.Show("Heightmaps larger than 1024x1024 are not supported!", "Error");
+                            RenderingPanel.Focus();
+                            return;
+                        }
+                        else if (B.Width != 32 && B.Width != 64 && B.Width != 128 && B.Width != 256 && B.Width != 512 &&
+                                 B.Width != 1024)
+                        {
+                            MessageBox.Show("Heightmaps sizes must be a power of two!", "Error");
+                            RenderingPanel.Focus();
+                            return;
+                        }
+
+                        // Create terrain
+                        Terrain T = new Terrain(CurrentClientZone);
+                        // Get node heights
+                        T.GridSize = B.Width;
+                        T.Heights = new float[T.GridSize + 1, T.GridSize + 1];
+                        for (int TerrainX = 0; TerrainX < T.GridSize; ++TerrainX)
+                        {
+                            for (int TerrainZ = 0; TerrainZ < T.GridSize; ++TerrainZ)
+                            {
+                                T.Heights[TerrainX, TerrainZ] = (float)(B.GetPixel(TerrainX, TerrainZ).R) / 255f;
+                            }
+                        }
+                        // Parent mesh
+                        T.EN = Entity.CreateMesh();
+                        uint Surf = T.EN.CreateSurface();
+                        Entity.AddVertex(Surf, 0f, 0f, 0f, 0f, 0f);
+                        Entity.AddVertex(Surf, (float)T.GridSize, 0f, 0f, 1f, 0f);
+                        Entity.AddVertex(Surf, (float)T.GridSize, 0f, (float)T.GridSize, 1f, 1f);
+                        Entity.AddVertex(Surf, 0f, 0f, (float)T.GridSize, 0f, 1f);
+                        Entity.AddVertex(Surf, 0f, 1f, 0f);
+                        // Child meshes
+                        int Chunks = T.GridSize / Terrain.ChunkDetail;
+                        for (int ChunkX = 0; ChunkX < Chunks; ++ChunkX)
+                        {
+                            for (int ChunkZ = 0; ChunkZ < Chunks; ++ChunkZ)
+                            {
+                                Entity EN = Entity.CreateMesh();
+                                Surf = EN.CreateSurface();
+                                EN.Shader = Shaders.Terrain;
+                                int V1, V3;
+                                float VX, VZ, TrueVX, TrueVZ;
+                                float GridSizeF = (float)T.GridSize + 1f;
+                                // Vertices
+                                for (int TerrainX = 0; TerrainX <= Terrain.ChunkDetail; ++TerrainX)
+                                {
+                                    for (int TerrainZ = 0; TerrainZ <= Terrain.ChunkDetail; ++TerrainZ)
+                                    {
+                                        VX = (float)TerrainX;
+                                        VZ = (float)TerrainZ;
+                                        TrueVX = (float)((ChunkX * Terrain.ChunkDetail) + TerrainX);
+                                        TrueVZ = (float)((ChunkZ * Terrain.ChunkDetail) + TerrainZ);
+                                        Entity.AddVertex(Surf,
+                                                         VX,
+                                                         T.Heights[
+                                                             (ChunkX * Terrain.ChunkDetail) + TerrainX,
+                                                             (ChunkZ * Terrain.ChunkDetail) + TerrainZ],
+                                                         VZ,
+                                                         TrueVX / GridSizeF,
+                                                         1f - (TrueVZ / GridSizeF));
+                                    }
+                                }
+                                // Triangles
+                                for (int TerrainX = 0; TerrainX < Terrain.ChunkDetail; ++TerrainX)
+                                {
+                                    for (int TerrainZ = 0; TerrainZ < Terrain.ChunkDetail; ++TerrainZ)
+                                    {
+                                        V1 = (TerrainX * (Terrain.ChunkDetail + 1)) + TerrainZ;
+                                        V3 = ((TerrainX + 1) * (Terrain.ChunkDetail + 1)) + TerrainZ;
+                                        Entity.AddTriangle(Surf, V1 + 1, V3, V1);
+                                        Entity.AddTriangle(Surf, V1 + 1, V3 + 1, V3);
+                                    }
+                                }
+                                EN.UpdateNormals();
+                                EN.UpdateHardwareBuffers();
+                                Collision.EntityType(EN, (byte)CollisionType.Triangle);
+                                Collision.SetCollisionMesh(EN);
+                                Collision.EntityPickMode(EN, PickMode.Polygon);
+                                EN.Parent(T.EN, true);
+                                EN.Position(ChunkX * Terrain.ChunkDetail, 0f, ChunkZ * Terrain.ChunkDetail);
+                                EN.ExtraData = T;
+                            }
+                        }
+                        // Transform
+                        T.EN.Position(PosX, PosY, PosZ);
+                        T.EN.Scale(1f, 10f, 1f);
+                        // Texturing
+                        T.DetailTexScale = 2f;
+                        T.BaseTexID = 65535;
+                        T.DetailTexID = 65535;
+                        // Set detail etc.
+                        T.Detail = 2000;
+                        T.Morph = true;
+                        T.Shading = false;
+                        // Create undo
+                        if (!SuppressZoneUndo)
+                        {
+                            new Undo(Undo.Actions.Create, T);
+                        }
+                        // Add to tree view and select
+                        TN = new TreeNode("Terrain " + (CurrentClientZone.Terrains.IndexOf(T) + 1).ToString());
+                        TN.Tag = T;
+                        WorldZonesTree.Nodes[nodeSelect].Nodes[1].Nodes.Add(TN);
+                        WorldSelectObject(T, 3);
+                    }
+                    MediaAddDialog.Multiselect = true;
+                    MediaAddDialog.Title = OldTitle;
+                    break;
+                #endregion
+
+                #region Emitter
+                case 3:
+                    string EmitterName = (string)WorldPlaceEmitterCombo.SelectedItem;
+                    if (!string.IsNullOrEmpty(EmitterName))
+                    {
+                        Emitter Emi = new Emitter(CurrentClientZone, EmitterName, Camera, true);
+                        // Get texture
+                        if (Emi.TextureID < 65535)
+                        {
+                            uint Tex = Media.GetTexture(Emi.TextureID, true);
+                            if (Tex != 0)
+                            {
+                                Emi.Config.ChangeTexture(Tex);
+                                Media.UnloadTexture(Emi.TextureID);
+                            }
+                            else
+                            {
+                                Emi.Config.ChangeTexture(DefaultParticleTexture);
+                            }
+                        }
+                        else
+                        {
+                            Emi.Config.ChangeTexture(DefaultParticleTexture);
+                        }
+                        // Create emitter
+                        Entity EmitterEN = RottParticles.General.CreateEmitter(Emi.Config);
+                        EmitterEN.Parent(Emi.EN, false);
+                        Emi.EN.Position(PosX, PosY, PosZ);
+                        // Create undo
+                        if (!SuppressZoneUndo)
+                        {
+                            new Undo(Undo.Actions.Create, Emi);
+                        }
+                        // Add to tree view and select
+                        if (Emi.Config != null)
+                        {
+                            TN = new TreeNode(Emi.Config.Name);
+                        }
+                        else
+                        {
+                            TN = new TreeNode("Unknown emitter");
+                        }
+                        TN.Tag = Emi;
+                        WorldZonesTree.Nodes[nodeSelect].Nodes[2].Nodes.Add(TN);
+                        WorldSelectObject(Emi, 3);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select an emitter to place from the drop down list", "Error");
+                    }
+                    break;
+                #endregion
+
+                #region Water
+                case 4:
+                    // Cancel if no texture selected
+                    if (PlaceWaterID == 65535)
+                    {
+                        MessageBox.Show("You must select a valid texture before placement.", "Error");
+                        return;
+                    }
+
+                    // Place water
+                    Water W = new Water(CurrentClientZone);
+                    WaterArea SW = new WaterArea(CurrentServerZone);
+                    W.ServerWater = SW;
+                    W.TextureID = PlaceWaterID;
+                    W.TexHandle = Media.GetTexture(PlaceWaterID, false);
+                    W.NormalTexHandle = Render.LoadTexture(@"Data\Textures\Water\Shader Water.png");
+                    if (W.TexHandle != 0)
+                    {
+                        Render.ScaleTexture(W.TexHandle, 1f / W.TexScale, 1f / W.TexScale);
+                        W.EN.Texture(W.TexHandle, 1);
+                    }
+                    if (W.NormalTexHandle != 0)
+                    {
+                        Render.ScaleTexture(W.NormalTexHandle, 1f / W.TexScale, 1f / W.TexScale);
+                        W.EN.Texture(W.NormalTexHandle);
+                    }
+
+                    W.EN.Position(PosX, PosY, PosZ);
+                    W.UpdateServerVersion(CurrentServerZone);
+                    Collision.EntityType(W.EN, (byte)CollisionType.Box);
+                    Collision.SetCollisionMesh(W.EN);
+                    Collision.EntityPickMode(W.EN, PickMode.Polygon);
+                    // Create undo
+                    if (!SuppressZoneUndo)
+                    {
+                        new Undo(Undo.Actions.Create, W);
+                    }
+                    // Add to tree view and select
+                    Name_mesh = Media.GetTextureName(PlaceWaterID);
+                    TN =
+                        new TreeNode(
+                            System.IO.Path.GetFileNameWithoutExtension(Name_mesh.Substring(0, Name_mesh.Length - 1)));
+                    TN.Tag = W;
+                    WorldZonesTree.Nodes[nodeSelect].Nodes[3].Nodes.Add(TN);
+                    WorldSelectObject(W, 3);
+                    break;
+                #endregion
+
+                #region Collision box
+                case 5:
+                    // Create box
+                    ColBox CB = new ColBox(CurrentClientZone, true);
+                    CB.EN.Position(PosX, PosY, PosZ);
+                    // Create undo
+                    if (!SuppressZoneUndo)
+                    {
+                        new Undo(Undo.Actions.Create, CB);
+                    }
+                    // Add to tree view and select
+                    TN = new TreeNode("Collision box " + CurrentClientZone.ColBoxes.Count.ToString());
+                    TN.Tag = CB;
+                    WorldZonesTree.Nodes[nodeSelect].Nodes[4].Nodes.Add(TN);
+                    WorldSelectObject(CB, 3);
+                    break;
+                #endregion
+
+                #region Sound zone
+                case 6:
+                    // Create sound zone
+                    SoundZone SZ = new SoundZone(CurrentClientZone, true);
+                    SZ.EN.Texture(OrangeTex);
+                    SZ.EN.Position(PosX, PosY, PosZ);
+                    // Create undo
+                    if (!SuppressZoneUndo)
+                    {
+                        new Undo(Undo.Actions.Create, SZ);
+                    }
+                    // Add to tree view and select
+                    TN = new TreeNode("Unknown sound");
+                    TN.Tag = SZ;
+                    WorldZonesTree.Nodes[nodeSelect].Nodes[5].Nodes.Add(TN);
+                    WorldSelectObject(SZ, 3);
+                    break;
+                #endregion
+
+                #region Dynamic light
+                case 7:
+                    RealmCrafter.ClientZone.Light L = new RealmCrafter.ClientZone.Light(CurrentClientZone, true);
+                    L.EN.Position(PosX, PosY, PosZ);
+
+                    if (WorldPlaceGridCheck.Checked)
+                    {
+                        L.EN.Move(0, -L.EN.Y() + GridHeight, 0); // position to mesh
+                    }
+
+                    Collision.EntityType(L.EN, (byte)CollisionType.Triangle);
+                    Collision.SetCollisionMesh(L.EN);
+                    Collision.EntityPickMode(L.EN, PickMode.Polygon);
+
+                    // Undo
+                    if (!SuppressZoneUndo)
+                    {
+                        new Undo(Undo.Actions.Create, L);
+                    }
+
+                    // Add to tree and select
+                    string tName_mesh = "Light";
+                    TreeNode tTN = new TreeNode(tName_mesh);
+                    tTN.Tag = L;
+                    WorldZonesTree.Nodes[nodeSelect].Nodes[6].Nodes.Add(tTN);
+                    WorldSelectObject(L, 3);
+
+                    break;
+                #endregion
+
+                #region Trigger
+                case 8:
+                    if (WorldPlaceTriggerScriptCombo.SelectedItem != null &&
+                        WorldPlaceTriggerFunctionCombo.SelectedItem != null)
+                    {
+                        // Find a free one
+                        Found = false;
+                        for (int i = 0; i < 150; ++i)
+                        {
+                            if (string.IsNullOrEmpty(CurrentServerZone.TriggerScript[i]))
+                            {
+                                // Set up new trigger
+                                CurrentServerZone.TriggerScript[i] = (string)WorldPlaceTriggerScriptCombo.SelectedItem;
+                                if (WorldPlaceTriggerFunctionCombo.SelectedItem != null)
+                                {
+                                    ListBoxItem LBI = (ListBoxItem)WorldPlaceTriggerFunctionCombo.SelectedItem;
+                                    CurrentServerZone.TriggerMethod[i] = LBI.Name;
+                                }
+                                else
+                                {
+                                    CurrentServerZone.TriggerMethod[i] = "";
+                                }
+                                CurrentServerZone.TriggerSize[i] = 5f;
+                                CurrentServerZone.TriggerX[i] = PosX;
+                                CurrentServerZone.TriggerY[i] = PosY;
+                                CurrentServerZone.TriggerZ[i] = PosZ;
+                                // Create 3D entity
+                                Trigger T = new Trigger(this, i);
+                                T.EN.Position(PosX, PosY, PosZ);
+                                // Create undo
+                                if (!SuppressZoneUndo)
+                                {
+                                    new Undo(Undo.Actions.Create, T);
+                                }
+                                // Add to tree view and select
+                                TN = new TreeNode(CurrentServerZone.TriggerScript[i]);
+                                TN.Tag = T;
+                                WorldZonesTree.Nodes[nodeSelect].Nodes[7].Nodes.Add(TN);
+                                WorldSelectObject(T, 3);
+
+                                Found = true;
+                                break;
+                            }
+                        }
+                        // No spare trigger - tell user
+                        if (!Found)
+                        {
+                            MessageBox.Show("Maximum number of triggers already placed in this zone", "Error");
+                        }
+                    }
+                    // No script/function selected
+                    else
+                    {
+                        MessageBox.Show("Select a script/function for this trigger", "Error");
+                    }
+                    break;
+                #endregion
+
+                #region Portal
+                case 10:
+                    if (!string.IsNullOrEmpty(WorldPlacePortalNameText.Text))
+                    {
+                        // Find a free one
+                        Found = false;
+                        for (int i = 0; i < 100; ++i)
+                        {
+                            if (string.IsNullOrEmpty(CurrentServerZone.PortalName[i]))
+                            {
+                                // Set up new portal
+                                CurrentServerZone.PortalName[i] = WorldPlacePortalNameText.Text;
+                                if (WorldPlacePortalLinkCombo.SelectedItem != null)
+                                {
+                                    CurrentServerZone.PortalLinkArea[i] =
+                                        (string)WorldPlacePortalLinkCombo.SelectedItem;
+                                }
+                                else
+                                {
+                                    CurrentServerZone.PortalLinkArea[i] = "";
+                                }
+                                if (WorldPlacePortalLinkNameCombo.SelectedItem != null)
+                                {
+                                    CurrentServerZone.PortalLinkName[i] =
+                                        (string)WorldPlacePortalLinkNameCombo.SelectedItem;
+                                }
+                                else
+                                {
+                                    CurrentServerZone.PortalLinkName[i] = "";
+                                }
+                                CurrentServerZone.PortalSize[i] = 10f;
+                                CurrentServerZone.PortalX[i] = PosX;
+                                CurrentServerZone.PortalY[i] = PosY;
+                                CurrentServerZone.PortalZ[i] = PosZ;
+                                // Create 3D entity
+                                Portal P = new Portal(this, i);
+                                P.EN.Position(PosX, PosY + 8f, PosZ);
+                                P.EN.Scale(10f, 10f, 10f);
+                                // Create undo
+                                if (!SuppressZoneUndo)
+                                {
+                                    new Undo(Undo.Actions.Create, P);
+                                }
+                                // Add to tree view and select
+                                TN = new TreeNode(CurrentServerZone.PortalName[i]);
+                                TN.Tag = P;
+                                WorldZonesTree.Nodes[nodeSelect].Nodes[9].Nodes.Add(TN);
+                                WorldSelectObject(P, 3);
+
+                                Found = true;
+                                break;
+                            }
+                        }
+                        // No spare portal - tell user
+                        if (!Found)
+                        {
+                            MessageBox.Show("Maximum number of portals already placed in this zone", "Error");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a name for your portal", "Error");
+                    }
+                    break;
+                #endregion
+
+                #region Waypoint
+                case 9:
+                    // Find a free one
+                    Found = false;
+                    for (int i = 0; i < 2000; ++i)
+                    {
+                        if (CurrentServerZone.PrevWaypoint[i] == 2005)
+                        {
+                            // Set up new waypoint
+                            CurrentServerZone.PrevWaypoint[i] = 2000;
+                            CurrentServerZone.NextWaypointA[i] = 2000;
+                            CurrentServerZone.NextWaypointB[i] = 2000;
+                            CurrentServerZone.WaypointX[i] = PosX;
+                            CurrentServerZone.WaypointY[i] = PosY;
+                            CurrentServerZone.WaypointZ[i] = PosZ;
+                            // Create 3D entity
+                            Waypoint WP = new Waypoint(this, i);
+                            WP.EN.Position(PosX, PosY + 3f, PosZ);
+                            WP.EN.Scale(3f, 3f, 3f);
+                            // Create undo
+                            if (!SuppressZoneUndo)
+                            {
+                                new Undo(Undo.Actions.Create, WP);
+                            }
+                            // Add to tree view and select
+                            WaypointEN[i] = WP.EN;
+                            TN = new TreeNode("Waypoint " + Waypoints.Count.ToString());
+                            TN.Tag = WP;
+                            WorldZonesTree.Nodes[nodeSelect].Nodes[8].Nodes.Add(TN);
+                            WorldSelectObject(WP, 3);
+
+                            Found = true;
+                            break;
+                        }
+                    }
+                    // No spare waypoint - tell user
+                    if (!Found)
+                    {
+                        MessageBox.Show("Maximum number of waypoints already placed in this zone", "Error");
+                    }
+                    break;
+                #endregion
+
+                #region Duplicate selection
+                case 11:
+                    /*      // Duplicate all objects and add the new objects to a list
+                    LinkedList<ZoneObject> CreatedObjects = new LinkedList<ZoneObject>();
+                    for (int i = 0; i < ZoneSelected.Count; ++i)
+                    {
+                        ZoneObject ZO = WorldDuplicateObject((ZoneObject) ZoneSelected[i]);
+                        if (ZO != null)
+                        {
+                            CreatedObjects.AddLast(ZO);
+                        }
+                    }
+                    // Clear current selections
+                    while (ZoneSelected.Count > 0)
+                    {
+                        Program.GE.m_ZoneList.ZoneObjectListCheckLastSelection((ZoneObject) ZoneSelected[0], false);
+                    }
+                    // Select all newly created objects
+                    LinkedListNode<ZoneObject> CreatedObjectsNode = CreatedObjects.First;
+                    while (CreatedObjectsNode != null)
+                    {
+                        WorldSelectObject(CreatedObjectsNode.Value, 1);
+                        CreatedObjectsNode = CreatedObjectsNode.Next;
+                    }
+                    CreatedObjects.Clear();*/
+                    break;
+                #endregion
+            }
+
+            SetWorldSavedStatus(false);
+            RenderingPanel.Focus();
+        }
+
+        
+        private void ZoneMenuCopy_Click(object sender, EventArgs e)
+        {
+            /*
+            if (CurrentServerZone != null)
+            {
+                // Save
+                if (!WorldSaved)
+                {
+                    DialogResult Result =
+                        MessageBox.Show("Would you like to save changes to this zone before making a copy?",
+                                        "Realm Crafter", MessageBoxButtons.YesNoCancel);
+                    if (Result == DialogResult.Yes)
+                    {
+                        SaveWorld();
+                    }
+                    else if (Result == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+
+                // Get name for new zone
+                TextEntry TE = new TextEntry();
+                TE.Text = "Duplicate zone";
+                TE.Description.Text = "Enter a name for the new zone:";
+                TE.ShowDialog();
+                if (string.IsNullOrEmpty(TE.Result))
+                {
+                    return;
+                }
+                string ZoneName = TE.Result;
+                TE.Dispose();
+
+                // Check a zone with this name doesn't already exist
+                string ExistingZoneName;
+                for (int i = 0; i < WorldZonesTree.GetNodeCount(false); ++i)
+                {
+                    ExistingZoneName = WorldZonesTree.Nodes[i].Name;
+                    if (ExistingZoneName.ToUpper() == ZoneName.ToUpper())
+                    {
+                        MessageBox.Show("A zone with that name already exists.", "Error");
+                        return;
+                    }
+                }
+
+                // Copy files
+                SafeCopyFile(@"Data\Areas\" + CurrentClientZone.Name + ".dat", @"Data\Areas\" + ZoneName + ".dat");
+                SafeCopyFile(@"Data\Server Data\Areas\" + CurrentServerZone.Name + ".dat",
+                             @"Data\Server Data\Areas\" + ZoneName + ".dat");
+                for (int i = 0; i < 100; ++i)
+                {
+                    SafeCopyFile(
+                        @"Data\Server Data\Areas\Ownerships\" + CurrentServerZone.Name + " (" + i.ToString() +
+                        ") Ownerships.dat",
+                        @"Data\Server Data\Areas\Ownerships\" + ZoneName + " (" + i.ToString() + ") Ownerships.dat");
+                }
+
+                // Add to UI
+                TotalZones++;
+                ActorStartZoneCombo.Items.Add(ZoneName);
+                //WorldPlacePortalLinkCombo.Items.Add(ZoneName);
+                //WorldObjectPortalLinkCombo.Items.Add(ZoneName);
+                //WorldZoneWeatherLinkCombo.Items.Add(ZoneName);
+                ProjectZones.Text = "Zones: " + TotalZones.ToString();
+                // refresh tree
+                TotalZones = 0;
+                //WorldZonesTree.Nodes.Clear();
+                string[] Zones = System.IO.Directory.GetFiles(@"Data\Areas\");
+                foreach (string S in Zones)
+                {
+                    TotalZones++;
+                    string Name = System.IO.Path.GetFileNameWithoutExtension(S);
+                   // WorldZonesTree.Nodes.Add(Name);
+                  //  WorldZonesTree.Nodes[TotalZones - 1].Name = Name;
+                }
+              /*  for (int i = 0; i < WorldZonesTree.GetNodeCount(false); i++)
+                {
+                    WorldZonesTree.Nodes[i].Nodes.Add("Scenery objects");
+                    WorldZonesTree.Nodes[i].Nodes[0].Name = "Node0";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Terrains");
+                    WorldZonesTree.Nodes[i].Nodes[1].Name = "Node1";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Emitters");
+                    WorldZonesTree.Nodes[i].Nodes[2].Name = "Node2";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Water areas");
+                    WorldZonesTree.Nodes[i].Nodes[3].Name = "Node3";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Collision boxes");
+                    WorldZonesTree.Nodes[i].Nodes[4].Name = "Node4";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Sound zones");
+                    WorldZonesTree.Nodes[i].Nodes[5].Name = "Node5";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Dynamic lights");
+                    WorldZonesTree.Nodes[i].Nodes[6].Name = "Node6";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Triggers");
+                    WorldZonesTree.Nodes[i].Nodes[7].Name = "Node7";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Waypoints");
+                    WorldZonesTree.Nodes[i].Nodes[8].Name = "Node8";
+                    WorldZonesTree.Nodes[i].Nodes.Add("Portals");
+                    WorldZonesTree.Nodes[i].Nodes[9].Name = "Node9";
+                }
+            }*/
+        }
+
+        private void ZoneMenuDelete_Click(object sender, EventArgs e)
+        {
+            /*
+            if (CurrentClientZone == null)
+            {
+                return;
+            }
+            DialogResult Result = MessageBox.Show("Really delete this zone?", "Realm Crafter", MessageBoxButtons.YesNo);
+            if (Result == DialogResult.Yes)
+            {
+                // Unload current zone
+                string ZoneName = CurrentClientZone.Name;
+                UnloadCurrentZone();
+
+                // Delete files from disk
+                System.IO.File.Delete(@"Data\Areas\" + ZoneName + ".dat");
+                System.IO.File.Delete(@"Data\Server Data\Areas\" + ZoneName + ".dat");
+                for (int i = 0; i < 100; ++i)
+                {
+                    if (
+                        System.IO.File.Exists(@"Data\Server Data\Areas\Ownerships\" + ZoneName + " (" + i.ToString() +
+                                              ") Ownerships.dat"))
+                    {
+                        System.IO.File.Delete(@"Data\Server Data\Areas\Ownerships\" + ZoneName + " (" + i.ToString() +
+                                              ") Ownerships.dat");
+                    }
+                }
+
+                // Remove from UI
+                TotalZones--;
+                WorldZonesTree.Nodes[nodeSelect].Remove();
+                ActorStartZoneCombo.Items.Remove(ZoneName);
+                WorldPlacePortalLinkCombo.Items.Remove(ZoneName);
+                WorldObjectPortalLinkCombo.Items.Remove(ZoneName);
+                WorldZoneWeatherLinkCombo.Items.Remove(ZoneName);
+                ProjectZones.Text = "Zones: " + TotalZones.ToString();
+            }*/
+        }

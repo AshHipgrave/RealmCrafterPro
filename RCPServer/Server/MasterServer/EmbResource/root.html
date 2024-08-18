@@ -1,0 +1,745 @@
+<html>
+<head>
+<title>Realm Crafter Server Manager</title>
+
+<style type="text/css">
+<!--
+div { font-family: verdana; font-size: 12px; }
+a { font-family: verdana; font-size: 12px; color: #000000}
+td { font-family: verdana; font-size: 12px; }
+
+.LowLoad { font-family: verdana; font-size: 12px; color:#00ff44; }
+.MidLoad { font-family: verdana; font-size: 12px; color:#ff8011; }
+.HighLoad { font-family: verdana; font-size: 12px; color:#ff1100; font-weight: bold}
+.Warnings { font-family: verdana; font-size: 12px; color:#ff1100; font-weight: bold}
+
+/* Terence Ordona, portal[AT]imaputz[DOT]com         */
+/* http://creativecommons.org/licenses/by-sa/2.0/    */
+
+
+/* define height and width of scrollable area. Add 16px to width for scrollbar          */
+div.tableContainer {
+	clear: both;
+	border: 1px solid #963;
+	height: 210px;
+	overflow: auto;
+	width: 100%
+}
+
+div.tableContainerLG {
+	clear: both;
+	border: 1px solid #963;
+	height: 610px;
+	overflow: auto;
+	width: 100%
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainer {
+	overflow: hidden;
+	width: 800px
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+	float: left;
+	width: 100%
+}
+
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainer table {
+	width: 100%
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainerLG {
+	overflow: hidden;
+	width: 800px
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainerLG table {
+	float: left;
+	width: 100%
+}
+
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainerLG table {
+	width: 100%
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+	position: relative
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+html>body thead.fixedHeader tr {
+	display: block
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+	background-image: url('/img/menugrad.jpg');
+	border-top: 2px solid #DC1300;
+	border-left: 1px solid #DC1300;
+	border-bottom: 1px solid #390909;
+	border-right: 1px solid #390909;
+	font-weight: normal;
+	padding-left: 5px;
+	/*padding: 4px 3px;*/
+	height: 21px;
+	text-align: left
+}
+
+/* make the A elements pretty. makes for nice clickable headers                */
+thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+	width: 100%
+}
+
+/* make the A elements pretty. makes for nice clickable headers                */
+/* WARNING: swapping the background on hover may cause problems in WinIE 6.x   */
+thead.fixedHeader a:hover {
+	color: #FFF;
+	display: block;
+	text-decoration: underline;
+	width: 100%
+}
+
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+html>body tbody.scrollContent {
+	display: block;
+	height: 200px;
+	overflow: scroll;
+	width: 100%
+}
+
+html>body tbody.scrollContentLG {
+	display: block;
+	height: 600px;
+	overflow: scroll;
+	width: 100%
+}
+
+/* make TD elements pretty. Provide alternating classes for striping the table */
+/* http://www.alistapart.com/articles/zebratables/                             */
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+	background: #FFF;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContent tr.alternateRow td {
+	background: #EEE;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContent tr.onlineRow td {
+	background: #B5B5B5;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+tbody.scrollContent tr.warningRow td {
+	background: #FFA53F;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+tbody.scrollContent tr.offlineRow td {
+	background: #FF0000;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+tbody.scrollContent tr.RowSelected td {
+	background: #707070;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+/*fdgdfgdf*/
+tbody.scrollContentLG td, tbody.scrollContentLG tr.normalRow td {
+	background: #FFF;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContentLG tr.alternateRow td {
+	background: #EEE;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContentLG tr.onlineRow td {
+	background: #B5B5B5;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+tbody.scrollContentLG tr.warningRow td {
+	background: #FFA53F;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+tbody.scrollContentLG tr.offlineRow td {
+	background: #FF0000;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+tbody.scrollContentLG tr.RowSelected td {
+	background: #707070;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px;
+	cursor: default;
+}
+
+/* define width of TH elements: 1st, 2nd, and 3rd respectively.          */
+/* Add 16px to last TH for scrollbar padding. All other non-IE browsers. */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body thead.fixedHeader th {
+	width: 200px
+}
+
+html>body thead.fixedHeader th + th {
+	width: 150px
+}
+
+html>body thead.fixedHeader th + th + th {
+	width: 150px
+}
+
+html>body thead.fixedHeader th + th + th + th {
+	width: 100px
+}
+
+html>body thead.fixedHeader th + th + th + th + th {
+	width: 100px
+}
+
+html>body thead.fixedHeader th + th + th + th + th + th {
+	width: 100px
+}
+
+/* define width of TD elements: 1st, 2nd, and 3rd respectively.          */
+/* All other non-IE browsers.                                            */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body tbody.scrollContent td {
+	width: 200px
+}
+
+html>body tbody.scrollContent td + td {
+	width: 150px
+}
+
+html>body tbody.scrollContent td + td + td {
+	width: 150px
+}
+
+html>body tbody.scrollContent td + td + td + td {
+	width: 100px
+}
+
+html>body tbody.scrollContent td + td + td + td + td {
+	width: 100px
+}
+
+html>body tbody.scrollContent td + td + td + td + td + td {
+	width: 84px
+}
+
+
+html>body tbody.scrollContentLG td {
+	width: 200px
+}
+
+html>body tbody.scrollContentLG td + td {
+	width: 150px
+}
+
+html>body tbody.scrollContentLG td + td + td {
+	width: 150px
+}
+
+html>body tbody.scrollContentLG td + td + td + td {
+	width: 100px
+}
+
+html>body tbody.scrollContentLG td + td + td + td + td {
+	width: 100px
+}
+
+html>body tbody.scrollContentLG td + td + td + td + td + td {
+	width: 84px
+}
+
+.VertMenuTitle {
+	COLOR: #FFFFFF;
+	FONT-WEIGHT: bold;
+	TEXT-TRANSFORM: uppercase;
+	TEXT-DECORATION: none;
+}
+
+A.CatMenuItem {
+	FONT-SIZE: 12px;
+	FONT-FAMILY: Arial;
+	CURSOR: pointer;
+}
+A.CatMenuItem:link {
+	COLOR: #9F2200;
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION: none;
+}
+A.CatMenuItem:visited {
+	COLOR: #9F2200;
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION: none;
+}
+A.CatMenuItem:hover {
+	COLOR: #6C0300;
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION: none;
+}
+A.CatMenuItem:active {
+	COLOR: #9F2200;
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION: none;
+}
+
+
+-->
+</style>
+
+<script language="javascript">
+
+var http = createRequestObject();
+var http2 = createRequestObject();
+function createRequestObject()
+{
+	var objAjax;
+	var browser = navigator.appName;
+	if(browser == "Microsoft Internet Explorer")
+	{
+		objAjax = new ActiveXObject("Microsoft.XMLHTTP");
+	}else
+	{
+		objAjax = new XMLHttpRequest();
+	}
+	return objAjax;
+}
+
+var LastContext = '';
+
+function contextSwitch(globalID)
+{
+    LastContext = globalID;
+    StopChecker();
+    document.getElementById('loading').style.visibility = 'visible';
+    document.getElementById('loading').style.zIndex = 10000;
+    http2.abort();
+    
+    if(globalID.indexOf("?") > 2)
+        globalID += "&cachetime=" + new Date().getTime();
+    else
+        globalID += "?cachetime=" + new Date().getTime();
+    
+    http2.open('get',globalID);
+    http2.onreadystatechange = updateNewContent;
+    http2.send(null);
+    return false;
+}
+
+function sendTableUpdate(url)
+{
+    if(url.indexOf("?") > 2)
+        url += "&cachetime=" + new Date().getTime();
+    else
+        url += "?cachetime=" + new Date().getTime();
+        
+    http.open('get', url);
+    http.onreadystatechange = updateTables;
+    http.send(null);
+}
+
+function updateNewContent()
+{
+    if(http2.readyState == 4)
+    {
+        var RText = http2.responseText;
+        if(http2.responseText.length > 3 && http2.responseText.substr(0, 2) == 'JS')
+        {
+            var Off = http2.responseText.indexOf('|');
+            if(Off > -1)
+            {
+                var Cmd = http2.responseText.substr(2, Off - 2);
+                RText = http2.responseText.substr(Off + 1);
+                
+                eval(Cmd);
+            }
+        }
+        if(RText.length == 0)
+        {
+            document.getElementById('lostconnection').style.visibility = 'visible';    
+        }else
+        {
+            document.getElementById('lostconnection').style.visibility = 'hidden';
+        }
+        document.getElementById('content').innerHTML = RText;
+        document.getElementById('loading').style.visibility = 'hidden';
+    }else
+    {
+
+    }
+}
+
+function updateTables()
+{
+    if(http.readyState == 4)
+    {
+        var Datas = http.responseText.split("|");
+        
+        for(var i = 0; i < Datas.length; i+=3)
+        {
+            if(Datas[i].length == 0)
+            {
+                continue;
+            }
+            
+            var E = document.getElementById(Datas[i]);
+            
+            if(E != null)
+            {
+                if(Datas[i + 1] != '')
+                {
+                    E.style.backgroundColor = Datas[i + 1];
+                }
+                E.innerHTML = Datas[i + 2];
+            }
+        }
+        
+    }
+}
+
+var CheckerURL = "";
+var CheckerTime = 0;
+
+function StartChecker(url, time)
+{
+	CheckerURL = url;
+	CheckerTime = time;
+	NextTimer();
+}
+
+function NextTimer()
+{
+    if(CheckerURL != "")
+    {
+	    sendTableUpdate(CheckerURL);
+	}
+	
+	if(CheckerTime > 0)
+	{
+		setTimeout('NextTimer();', CheckerTime);
+	}
+}
+
+function StopChecker()
+{
+	CheckerTime = 0;
+}
+
+var WorldServerSelected = -1;
+var ProxyServerSelected = -1;
+var AccountServerSelected = -1;
+var ZoneSelected = -1;
+var WorldPrevColor = '';
+var ProxyPrevColor = '';
+var AccountPrevColor = '';
+var ZonePrevColor = '';
+
+function SelectRow(grid, row)
+{
+	if(grid == 0)
+	{
+		if(WorldServerSelected > -1)
+		{
+			var LR = document.getElementById('d0_r' + WorldServerSelected);
+			
+			if(LR.hasChildNodes())
+			{	
+				for(var i = 0; i < LR.children.length; i++)
+				{
+					LR.children[i].style.backgroundColor = WorldPrevColor;
+				}
+			}
+		}
+		
+		var TR = document.getElementById('d0_r' + row);
+		
+		if(TR.hasChildNodes())
+		{
+			WorldPrevColor = TR.children[0].style.backgroundColor;
+			for(var i = 0; i < TR.children.length; i++)
+			{
+				TR.children[i].style.backgroundColor = "#707070";
+			}
+		}
+		
+		WorldServerSelected = row;
+	}
+	else if(grid == 1)
+	{
+		if(ProxyServerSelected > -1)
+		{
+			var LR = document.getElementById('d1_r' + ProxyServerSelected);
+			
+			if(LR.hasChildNodes())
+			{	
+				for(var i = 0; i < LR.children.length; i++)
+				{
+					LR.children[i].style.backgroundColor = ProxyPrevColor;
+				}
+			}
+		}
+		
+		var TR = document.getElementById('d1_r' + row);
+		
+		if(TR.hasChildNodes())
+		{
+			ProxyPrevColor = TR.children[0].style.backgroundColor;
+			for(var i = 0; i < TR.children.length; i++)
+			{
+				TR.children[i].style.backgroundColor = "#707070";
+			}
+		}
+		
+		ProxyServerSelected = row;
+	}
+	else if(grid == 2)
+	{
+		if(AccountServerSelected > -1)
+		{
+			var LR = document.getElementById('d2_r' + AccountServerSelected);
+			
+			if(LR.hasChildNodes())
+			{	
+				for(var i = 0; i < LR.children.length; i++)
+				{
+					LR.children[i].style.backgroundColor = AccountPrevColor;
+				}
+			}
+		}
+		
+		var TR = document.getElementById('d2_r' + row);
+		
+		if(TR.hasChildNodes())
+		{
+			AccountPrevColor = TR.children[0].style.backgroundColor;
+			for(var i = 0; i < TR.children.length; i++)
+			{
+				TR.children[i].style.backgroundColor = "#707070";
+			}
+		}
+		
+		AccountServerSelected = row;
+	}
+	else if(grid == 3)
+	{
+		if(ZoneSelected > -1)
+		{
+			var LR = document.getElementById('d3_r' + ZoneSelected);
+			
+			if(LR.hasChildNodes())
+			{	
+				for(var i = 0; i < LR.children.length; i++)
+				{
+					LR.children[i].style.backgroundColor = ZonePrevColor;
+				}
+			}
+		}
+		
+		var TR = document.getElementById('d3_r' + row);
+		
+		if(TR.hasChildNodes())
+		{
+			ZonePrevColor = TR.children[0].style.backgroundColor;
+			for(var i = 0; i < TR.children.length; i++)
+			{
+				TR.children[i].style.backgroundColor = "#707070";
+			}
+		}
+		
+		ZoneSelected = row;
+	}
+}
+
+function Loaded()
+{
+  document.onselectstart = function() {return false;};
+  document.onmousedown = function() {return false;};
+}
+
+document.oncontextmenu = new Function("return false;");
+
+
+</script>
+
+</head>
+<body onload="contextSwitch('global');Loaded();" style="background-color: #353535; margin: 0px;">
+
+<!--
+<div id="loading" style="top: 0px; left: 0px; position: absolute; bottom: 0px; right: 0px;">
+    <table style="width: 100%; height: 100%; border: 0px;">
+    <tr><td style="border: 0px;" align="center" valign="middle">
+    <div style="width: 260px; border: 2px solid #353535; background-color: #ffffff" align="center">
+    <img src="/img/loading.gif" style="width: 220px; height: 19px; border: 0px;">
+    </div>
+    </td></tr></table>
+</div>-->
+
+<div id="loading" style="top: 0px; left: 0px; position: absolute; bottom: 0px; right: 0px; width: 100%; height: 100%; background-color: #353535; opacity:0.5; filter: alpha(opacity=50); zoom:1">
+    <table style="width: 100%; height: 100%; border: 0px;">
+    <tr><td style="border: 0px;" align="center" valign="middle">
+    <div style="width: 260px; border: 2px solid #353535; background-color: #ffffff" align="center">
+    
+    <img src="/img/loading.gif" style="width: 220px; height: 19px; border: 0px;">
+    </div>
+    </td></tr></table>
+</div>
+
+<div id="lostconnection" style="top: 0px; left: 0px; position: absolute; bottom: 0px; right: 0px; width: 100%; height: 100%; background-color: #353535; opacity:0.5; filter: alpha(opacity=50); zoom:1; visibility: hidden;">
+    <table style="width: 100%; height: 100%; border: 0px;">
+    <tr><td style="border: 0px;" align="center" valign="middle">
+    <div style="width: 300px; border: 2px solid #353535; background-color: #ffffff; opacity: 1.0; filter: alpha(opacity=100); zoom:1" align="center">
+    
+<table style="width: 100%; height: 100%; border: 0px;" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" valign="top" style="padding-left: 0px;">
+<table cellpadding="0" cellspacing="0" style="width: 300px;">
+<tr><td style="background-image: url('/img/menugrad.jpg'); height: 21px; padding-left: 10px; border-top: 2px solid #DC1300; border-left: 1px solid #DC1300; border-bottom: 1px solid #390909; border-right: 1px solid #390909;" valign="middle" class="VertMenuTitle"><b>Error</b></td></tr>
+<tr><td style="border: 1px solid #000000; padding: 5px;">
+Lost connection to host server!<br />
+<br />
+<a href="#" onclick="contextSwitch(LastContext);" class="CatMenuItem">Retry</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+    </div>
+    </td></tr></table>
+</div>
+
+
+
+<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;">
+	<tr>
+		<td style="width: 100%; height: 70px; border: 0px solid #000000; padding: 10px;" valign="bottom">
+			<img src="/img/Logo.jpg" style="border: 0px;" alt="" /><span style="color: #ffffff;">Server Administration</span>
+		</td>
+	</tr>
+	<!--<tr>
+		<td style="width: 100%; height: 8px; border: 0px solid #000000;" valign="bottom">&nbsp;</td>
+	</tr>-->
+	<tr>
+		<td style="width: 100%; height: 100%; border: 0px solid #000000;">
+			<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;">
+				<tr>
+					<td style="width: 200px; border: 0px solid #000000; background-color: #ffffff;">
+						<div id="menu" style="width: 100%; height: 100%" align="top">
+<!-- Menu Begin -->
+
+<table cellpadding="0" cellspacing="2" style="width: 100%;">
+
+<tr><td style="background-image: url('/img/menugrad.jpg'); height: 21px; padding-left: 10px; border-top: 2px solid #DC1300; border-left: 1px solid #DC1300; border-bottom: 1px solid #390909; border-right: 1px solid #390909;" valign="middle" class="VertMenuTitle"><b>Status</b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('global');" class="CatMenuItem">Global</a><br /></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('servers');" class="CatMenuItem">Cluster Nodes</a><br /></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('zones');" class="CatMenuItem">Zones</a><br /></td></tr>
+<tr><td style="background-image: url('/img/menugrad.jpg'); height: 21px; padding-left: 10px; padding-left: 10px; border-top: 2px solid #DC1300; border-left: 1px solid #DC1300; border-bottom: 1px solid #390909; border-right: 1px solid #390909;" valign="middle" class="VertMenuTitle"><b>Logs</b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('logview');" class="CatMenuItem">Event Log</a><br /></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('scriptexceptions');" class="CatMenuItem">Script Exceptions</a><br /></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('24hplayers');" class="CatMenuItem">24h - Players</a><br /></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('24hbandwidth');" class="CatMenuItem">24h - Bandwidth</a><br /></td></tr>
+<!--<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('24htopplayers');" class="CatMenuItem">24h - Players by Server</a><br /></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="#" onclick="contextSwitch('24htopbandwidth');" class="CatMenuItem">24h - Bandwidth by Server</a><br /></td></tr>-->
+</table>
+
+<!-- Menu End -->
+						</div>
+					</td>
+					<td style="border: 0px solid #000000; background-color: #ffffff;">
+						<div id="content" style="width: 100%; height: 100%;">
+							Content
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+	    <td style="height: 20px; font-size: 10px;" align="center"><span style="color: #ffffff;">Realm Crafter&trade; Professional Server ($ServerVersion)<br />Copyright &copy; 2004-2010 Solstar Games, LLC</span></td>
+	</tr>
+</table>
+
+
+</body>
+
+</html>

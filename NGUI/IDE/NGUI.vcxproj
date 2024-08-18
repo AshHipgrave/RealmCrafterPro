@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AF507049-0640-494D-8496-633363D1AB3F}</ProjectGuid>
+    <RootNamespace>NGUI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Lib\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\BBDX2;$(SolutionDir)\NGUI\Include\NGin;$(SolutionDir)\NGUI\Include\GUI;$(SolutionDir)\BB;$(SolutionDir)\RCT\RCT\Include;$(SolutionDir)\irrKlang\include;$(SolutionDir)\LT\LT\Include;$(SolutionDir)\freetype\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4995;4996;4793;4521;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\Lib\$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\BBDX2;$(SolutionDir)\NGUI\Include\NGin;$(SolutionDir)\NGUI\Include\GUI;$(SolutionDir)\BB;$(SolutionDir)\RCT\RCT\Include;$(SolutionDir)\irrKlang\include;$(SolutionDir)\LT\LT\Include;$(SolutionDir)\freetype\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4995;4996;4793;4521;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\Lib\$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\CButton.cpp" />
+    <ClCompile Include="..\Source\CCheckBox.cpp" />
+    <ClCompile Include="..\Source\CComboBox.cpp" />
+    <ClCompile Include="..\Source\CLabel.cpp" />
+    <ClCompile Include="..\Source\CListBox.cpp" />
+    <ClCompile Include="..\Source\CPictureBox.cpp" />
+    <ClCompile Include="..\Source\CProgressBar.cpp" />
+    <ClCompile Include="..\Source\CRadar.cpp" />
+    <ClCompile Include="..\Source\CScrollBar.cpp" />
+    <ClCompile Include="..\Source\CTabControl.cpp" />
+    <ClCompile Include="..\Source\CTextBox.cpp" />
+    <ClCompile Include="..\Source\CTrackBar.cpp" />
+    <ClCompile Include="..\Source\CWindow.cpp" />
+    <ClCompile Include="..\Source\IControl.cpp" />
+    <ClCompile Include="..\Source\CFont.cpp" />
+    <ClCompile Include="..\Source\CGUIManager.cpp" />
+    <ClCompile Include="..\Source\CPropertySet.cpp" />
+    <ClCompile Include="..\Source\CSkin.cpp" />
+    <ClCompile Include="..\Source\CTimer.cpp" />
+    <ClCompile Include="..\Source\CTimerManager.cpp" />
+    <ClCompile Include="..\Source\XMLWrapper.cpp" />
+    <ClCompile Include="..\Source\irrxml\irrXML.cpp" />
+    <ClCompile Include="..\Source\regex\Matcher.cpp" />
+    <ClCompile Include="..\Source\regex\Pattern.cpp" />
+    <ClCompile Include="..\Source\regex\WCMatcher.cpp" />
+    <ClCompile Include="..\Source\regex\WCPattern.cpp" />
+    <ClCompile Include="..\Source\Matrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\CButton.h" />
+    <CustomBuildStep Include="..\Source\CCheckBox.h" />
+    <CustomBuildStep Include="..\Source\CComboBox.h" />
+    <CustomBuildStep Include="..\Source\CLabel.h" />
+    <CustomBuildStep Include="..\Source\CListBox.h" />
+    <CustomBuildStep Include="..\Source\CPictureBox.h" />
+    <CustomBuildStep Include="..\Source\CProgressBar.h" />
+    <CustomBuildStep Include="..\Source\CRadar.h" />
+    <CustomBuildStep Include="..\Source\CScrollBar.h" />
+    <ClInclude Include="..\Source\CTabControl.h" />
+    <CustomBuildStep Include="..\Source\CTextBox.h" />
+    <CustomBuildStep Include="..\Source\CTrackBar.h" />
+    <CustomBuildStep Include="..\Source\CWindow.h" />
+    <ClInclude Include="..\Source\CFont.h" />
+    <ClInclude Include="..\Source\CGUIManager.h" />
+    <ClInclude Include="..\Source\CPropertySet.h" />
+    <ClInclude Include="..\Source\CSkin.h" />
+    <ClInclude Include="..\Source\CTimer.h" />
+    <ClInclude Include="..\Source\CTimerManager.h" />
+    <ClInclude Include="..\Source\irrxml\CXMLReaderImpl.h" />
+    <ClInclude Include="..\Source\irrxml\fast_atof.h" />
+    <ClInclude Include="..\Source\irrxml\heapsort.h" />
+    <ClInclude Include="..\Source\irrxml\irrArray.h" />
+    <ClInclude Include="..\Source\irrxml\irrString.h" />
+    <ClInclude Include="..\Source\irrxml\irrTypes.h" />
+    <ClInclude Include="..\Source\irrxml\irrXML.h" />
+    <ClInclude Include="..\Source\regex\Matcher.h" />
+    <ClInclude Include="..\Source\regex\Pattern.h" />
+    <ClInclude Include="..\Source\regex\WCMatcher.h" />
+    <ClInclude Include="..\Source\regex\WCPattern.h" />
+    <ClInclude Include="..\Include\NGin\AABB.h" />
+    <ClInclude Include="..\Include\NGin\ArrayList.h" />
+    <ClInclude Include="..\Include\NGin\Color.h" />
+    <ClInclude Include="..\Include\NGin\Dictionary.h" />
+    <ClInclude Include="..\Include\NGin\Globals.h" />
+    <ClInclude Include="..\Include\NGin\IEventHandler.h" />
+    <ClInclude Include="..\Include\NGin\ITimer.h" />
+    <ClInclude Include="..\Include\NGin\ITimerManager.h" />
+    <ClInclude Include="..\Include\NGin\List.h" />
+    <ClInclude Include="..\Include\NGin\Matrix.h" />
+    <ClInclude Include="..\Include\NGin\NGinString.h" />
+    <ClInclude Include="..\Include\NGin\Quaternion.h" />
+    <ClInclude Include="..\Include\NGin\type.h" />
+    <ClInclude Include="..\Include\NGin\TypeDefs.h" />
+    <ClInclude Include="..\Include\NGin\Vector2.h" />
+    <ClInclude Include="..\Include\NGin\Vector3.h" />
+    <ClInclude Include="..\Include\NGin\Vector4.h" />
+    <ClInclude Include="..\Include\NGin\XMLWrapper.h" />
+    <ClInclude Include="..\Include\GUI\IButton.h" />
+    <ClInclude Include="..\Include\GUI\ICheckBox.h" />
+    <ClInclude Include="..\Include\GUI\IComboBox.h" />
+    <ClInclude Include="..\Include\GUI\IControl.h" />
+    <ClInclude Include="..\Include\GUI\IFont.h" />
+    <ClInclude Include="..\Include\GUI\IGUIManager.h" />
+    <ClInclude Include="..\Include\GUI\IGUIMeshBuffer.h" />
+    <ClInclude Include="..\Include\GUI\IGUIRenderer.h" />
+    <ClInclude Include="..\Include\GUI\IGUITexture.h" />
+    <ClInclude Include="..\Include\GUI\ILabel.h" />
+    <ClInclude Include="..\Include\GUI\IListBox.h" />
+    <ClInclude Include="..\Include\GUI\IParameter.h" />
+    <ClInclude Include="..\Include\GUI\IPictureBox.h" />
+    <ClInclude Include="..\Include\GUI\IProgressBar.h" />
+    <ClInclude Include="..\Include\GUI\IRadar.h" />
+    <ClInclude Include="..\Include\GUI\IScrollBar.h" />
+    <ClInclude Include="..\Include\GUI\ISkin.h" />
+    <ClInclude Include="..\Include\GUI\ITabControl.h" />
+    <ClInclude Include="..\Include\GUI\ITextBox.h" />
+    <ClInclude Include="..\Include\GUI\ITrackBar.h" />
+    <ClInclude Include="..\Include\GUI\IWindow.h" />
+    <ClInclude Include="..\Include\GUI\SGUIMeshBuilder.h" />
+    <ClInclude Include="..\Include\GUI\SGUIVertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NGUID3D9\NGUID3D9.vcxproj">
+      <Project>{92cf5307-3b7c-401d-a020-dcd54eb451ae}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

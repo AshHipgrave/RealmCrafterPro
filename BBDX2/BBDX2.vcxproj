@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3BA8CDA-6361-46C2-BA11-81087106B463}</ProjectGuid>
+    <RootNamespace>BBDX2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\SandBox\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\SandBox\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(PHYSXSDK)\Physics\include;$(PHYSXSDK)\PhysXLoader\include;$(PHYSXSDK)\NxCharacter\include;$(PHYSXSDK)\Foundation\include;$(PHYSXSDK)\Cooking\include;$(PHYSXSDK);$(DXSDK_DIR)Include;$(IRRKLANG_SDK)\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)NGUI\Lib;$(PHYSXSDK)\lib\Win32;$(DXSDK_DIR)Lib\x86;$(SolutionDir)freetype\objs\win32\vc2005;$(IRRKLANG_SDK)\bin\win32-visualstudio_lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(PHYSXSDK)\Physics\include;$(PHYSXSDK)\PhysXLoader\include;$(PHYSXSDK)\NxCharacter\include;$(PHYSXSDK)\Foundation\include;$(PHYSXSDK)\Cooking\include;$(PHYSXSDK);$(DXSDK_DIR)Include;$(IRRKLANG_SDK)\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)NGUI\Lib;$(PHYSXSDK)\lib\Win32;$(DXSDK_DIR)Lib\x86;$(SolutionDir)freetype\objs\win32\vc2005;$(IRRKLANG_SDK)\bin\win32-visualstudio_lib;$(LibraryPath)</LibraryPath>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">BBDX</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">BBDX</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProgramFiles)\Microsoft SDKs\Windows\v6.0A\include\;$(SolutionDir)\BBDX2\Irrlicht\Src;$(SolutionDir)\BBDX2\Irrlicht\Include;$(SolutionDir)\BBDX2;$(SolutionDir)\NGUI\Include\NGin;$(SolutionDir)\NGUI\Include\GUI;$(SolutionDir)\BB;$(SolutionDir)\RCT\RCT\Include;$(SolutionDir)\irrKlang\include;$(SolutionDir)\LT\LT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;IRRLICHT_EXPORTS;XX_CRT_SECURE_NO_DEPRECATE;USEPERF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4995;4996;4793;4521;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Advapi32.lib;GDi32.lib;d3d9.lib;d3dx9.lib;user32.lib;irrklang.lib;PhysXLoader.lib;NxCharacter.lib;dbghelp.lib;NGUI.lib;freetype2311MD_D.lib;ws2_32.lib;winmm.lib;%(AdditionalDependencies);psapi.lib</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\SandBox\BBDX.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\irrKlang\bin\win32-visualstudio_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft SDKs\Windows\v6.0A\include\;$(SolutionDir)\BBDX2\Irrlicht\Src;$(SolutionDir)\BBDX2\Irrlicht\Include;$(SolutionDir)\BBDX2;$(SolutionDir)\NGUI\Include\NGin;$(SolutionDir)\NGUI\Include\GUI;$(SolutionDir)\BB;$(SolutionDir)\RCT\RCT\Include;$(SolutionDir)\irrKlang\include;$(SolutionDir)\LT\LT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;IRRLICHT_EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4995;4996;4793;4521;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Advapi32.lib;GDi32.lib;d3d9.lib;d3dx9.lib;user32.lib;irrklang.lib;PhysXLoader.lib;NxCharacter.lib;dbghelp.lib;NGUI.lib;freetype2311MD.lib;ws2_32.lib;winmm.lib;%(AdditionalDependencies);psapi.lib</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\SandBox\BBDX.dll</OutputFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BBDX\ASyncJobModule.h" />
+    <ClInclude Include="BBDX\BBThread.h" />
+    <ClInclude Include="BBDX\DebugFrameProfiler.h" />
+    <ClInclude Include="BBDX\DebugOverlay.h" />
+    <ClInclude Include="BBDX\OverlayEffect.h" />
+    <ClInclude Include="Irrlicht\Include\IEventReceiver.h" />
+    <ClInclude Include="Irrlicht\Include\ILogger.h" />
+    <ClInclude Include="Irrlicht\Include\IOSOperator.h" />
+    <ClInclude Include="Irrlicht\Include\IrrCompileConfig.h" />
+    <ClInclude Include="Irrlicht\Include\irrlicht.h" />
+    <ClInclude Include="Irrlicht\Include\IrrlichtDevice.h" />
+    <ClInclude Include="Irrlicht\Include\irrTypes.h" />
+    <ClInclude Include="Irrlicht\Include\ITimer.h" />
+    <ClInclude Include="Irrlicht\Include\IUnknown.h" />
+    <ClInclude Include="Irrlicht\Include\Keycodes.h" />
+    <ClInclude Include="Irrlicht\Include\SIrrCreationParameters.h" />
+    <ClInclude Include="Irrlicht\Include\SKeyMap.h" />
+    <ClInclude Include="Irrlicht\Include\aabbox3d.h" />
+    <ClInclude Include="Irrlicht\Include\dimension2d.h" />
+    <ClInclude Include="Irrlicht\Include\heapsort.h" />
+    <ClInclude Include="Irrlicht\Include\irrAllocator.h" />
+    <ClInclude Include="Irrlicht\Include\irrArray.h" />
+    <ClInclude Include="Irrlicht\Include\irrlist.h" />
+    <ClInclude Include="Irrlicht\Include\irrMath.h" />
+    <ClInclude Include="Irrlicht\Include\irrString.h" />
+    <ClInclude Include="Irrlicht\Include\line2d.h" />
+    <ClInclude Include="Irrlicht\Include\line3d.h" />
+    <ClInclude Include="Irrlicht\Include\matrix4.h" />
+    <ClInclude Include="Irrlicht\Include\plane3d.h" />
+    <ClInclude Include="Irrlicht\Include\position2d.h" />
+    <ClInclude Include="Irrlicht\Include\quaternion.h" />
+    <ClInclude Include="Irrlicht\Include\rect.h" />
+    <ClInclude Include="Irrlicht\Include\triangle3d.h" />
+    <ClInclude Include="Irrlicht\Include\vector2d.h" />
+    <ClInclude Include="Irrlicht\Include\vector3d.h" />
+    <ClInclude Include="Irrlicht\Include\IAttributeExchangingObject.h" />
+    <ClInclude Include="Irrlicht\Include\IAttributes.h" />
+    <ClInclude Include="Irrlicht\Include\IFileList.h" />
+    <ClInclude Include="Irrlicht\Include\IFileSystem.h" />
+    <ClInclude Include="Irrlicht\Include\IReadFile.h" />
+    <ClInclude Include="Irrlicht\Include\IWriteFile.h" />
+    <ClInclude Include="Irrlicht\Include\EDriverTypes.h" />
+    <ClInclude Include="Irrlicht\Include\IGPUProgrammingServices.h" />
+    <ClInclude Include="Irrlicht\Include\IImage.h" />
+    <ClInclude Include="Irrlicht\Include\IImageLoader.h" />
+    <ClInclude Include="Irrlicht\Include\IMaterialRenderer.h" />
+    <ClInclude Include="Irrlicht\Include\IMaterialRendererServices.h" />
+    <ClInclude Include="Irrlicht\Include\IShaderConstantSetCallBack.h" />
+    <ClInclude Include="Irrlicht\Include\ITexture.h" />
+    <ClInclude Include="Irrlicht\Include\IVideoDriver.h" />
+    <ClInclude Include="Irrlicht\Include\IVideoModeList.h" />
+    <ClInclude Include="Irrlicht\Include\S3DVertex.h" />
+    <ClInclude Include="Irrlicht\Include\scolor.h" />
+    <ClInclude Include="Irrlicht\Include\SExposedVideoData.h" />
+    <ClInclude Include="Irrlicht\Include\SLight.h" />
+    <ClInclude Include="Irrlicht\Include\SMaterial.h" />
+    <ClInclude Include="Irrlicht\Include\ESceneNodeAnimatorTypes.h" />
+    <ClInclude Include="Irrlicht\Include\escenenodetypes.h" />
+    <ClInclude Include="Irrlicht\Include\IAnimatedMesh.h" />
+    <ClInclude Include="Irrlicht\Include\IAnimatedMeshB3d.h" />
+    <ClInclude Include="Irrlicht\Include\IAnimatedMeshMD2.h" />
+    <ClInclude Include="Irrlicht\Include\IAnimatedMeshMS3D.h" />
+    <ClInclude Include="Irrlicht\Include\IAnimatedMeshSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\IAnimatedMeshX.h" />
+    <ClInclude Include="Irrlicht\Include\IBillboardSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\ICameraSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\IDummyTransformationSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\ILightSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\IMesh.h" />
+    <ClInclude Include="Irrlicht\Include\IMeshBuffer.h" />
+    <ClInclude Include="Irrlicht\Include\IMeshCache.h" />
+    <ClInclude Include="Irrlicht\Include\IMeshLoader.h" />
+    <ClInclude Include="Irrlicht\Include\IMeshManipulator.h" />
+    <ClInclude Include="Irrlicht\Include\IMeshSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\IMetaTriangleSelector.h" />
+    <ClInclude Include="Irrlicht\Include\IParticleAffector.h" />
+    <ClInclude Include="Irrlicht\Include\IParticleEmitter.h" />
+    <ClInclude Include="Irrlicht\Include\IParticleSystemSceneNode.h" />
+    <ClInclude Include="Irrlicht\Include\IQ3LevelMesh.h" />
+    <ClInclude Include="Irrlicht\Include\ISceneCollisionManager.h" />
+    <ClInclude Include="Irrlicht\Include\ISceneManager.h" />
+    <ClInclude Include="Irrlicht\Include\iscenenode.h" />
+    <ClInclude Include="Irrlicht\Include\ISceneNodeAnimator.h" />
+    <ClInclude Include="Irrlicht\Include\ISceneNodeAnimatorCollisionResponse.h" />
+    <ClInclude Include="Irrlicht\Include\ISceneNodeAnimatorFactory.h" />
+    <ClInclude Include="Irrlicht\Include\ISceneNodeFactory.h" />
+    <ClInclude Include="Irrlicht\Include\SAnimatedMesh.h" />
+    <ClInclude Include="Irrlicht\Include\SceneParameters.h" />
+    <ClInclude Include="Irrlicht\Include\SMesh.h" />
+    <ClInclude Include="Irrlicht\Include\SMeshBuffer.h" />
+    <ClInclude Include="Irrlicht\Include\SMeshBufferLightMap.h" />
+    <ClInclude Include="Irrlicht\Include\SMeshBufferTangents.h" />
+    <ClInclude Include="Irrlicht\Include\SParticle.h" />
+    <ClInclude Include="Irrlicht\Include\SViewFrustrum.h" />
+    <ClInclude Include="Irrlicht\Src\CAttributeImpl.h" />
+    <ClInclude Include="Irrlicht\Src\CAttributes.h" />
+    <ClInclude Include="Irrlicht\Src\CFileList.h" />
+    <ClInclude Include="Irrlicht\Src\CFileSystem.h" />
+    <ClInclude Include="Irrlicht\Src\CLimitReadFile.h" />
+    <ClInclude Include="Irrlicht\Src\CMemoryReadFile.h" />
+    <ClInclude Include="Irrlicht\Src\CReadFile.h" />
+    <ClInclude Include="Irrlicht\Src\CReadMemory.h" />
+    <ClInclude Include="Irrlicht\Src\CWriteFile.h" />
+    <ClInclude Include="Irrlicht\Src\CIrrDeviceStub.h" />
+    <ClInclude Include="Irrlicht\Src\CIrrDeviceWin32.h" />
+    <ClInclude Include="Irrlicht\Src\CLogger.h" />
+    <ClInclude Include="Irrlicht\Src\COSOperator.h" />
+    <ClInclude Include="Irrlicht\Src\CTimer.h" />
+    <ClInclude Include="Irrlicht\Src\Encryption.h" />
+    <ClInclude Include="Irrlicht\Src\Encryption_L.h" />
+    <ClInclude Include="Irrlicht\Src\fast_atof.h" />
+    <ClInclude Include="Irrlicht\Src\os.h" />
+    <ClInclude Include="CMovieTexture.h" />
+    <ClInclude Include="Irrlicht\Src\CVideoModeList.h" />
+    <ClInclude Include="IMovieTexture.h" />
+    <ClInclude Include="ShaderConstantSet.h" />
+    <ClInclude Include="Irrlicht\Include\SShaderProfile.h" />
+    <ClInclude Include="Irrlicht\Src\CD3D9Driver.h" />
+    <ClInclude Include="Irrlicht\Src\CD3D9Texture.h" />
+    <ClInclude Include="cRT.h" />
+    <ClInclude Include="Irrlicht\Src\CColorConverter.h" />
+    <ClInclude Include="Irrlicht\Src\CFPSCounter.h" />
+    <ClInclude Include="Irrlicht\Src\CNullDriver.h" />
+    <ClInclude Include="Irrlicht\Src\IImagePresenter.h" />
+    <ClInclude Include="Irrlicht\Src\SoftwareDriver2_compile_config.h" />
+    <ClInclude Include="Irrlicht\Src\SoftwareDriver2_helper.h" />
+    <ClInclude Include="CPPEffect.h" />
+    <ClInclude Include="PPChains.h" />
+    <ClInclude Include="Irrlicht\Src\CDefaultSceneNodeAnimatorFactory.h" />
+    <ClInclude Include="Irrlicht\Src\CDefaultSceneNodeFactory.h" />
+    <ClInclude Include="Irrlicht\Src\CMeshCache.h" />
+    <ClInclude Include="Irrlicht\Src\CMeshManipulator.h" />
+    <ClInclude Include="Irrlicht\Src\CSceneManager.h" />
+    <ClInclude Include="Irrlicht\Src\OctTree.h" />
+    <ClInclude Include="Irrlicht\Src\CAnimatedMeshB3d.h" />
+    <ClInclude Include="Irrlicht\Src\CDefaultMeshFormatLoader.h" />
+    <ClInclude Include="Irrlicht\Src\CXAnimationPlayer.h" />
+    <ClInclude Include="Irrlicht\Src\CXFileReader.h" />
+    <ClInclude Include="Irrlicht\Src\CXMeshFileLoader.h" />
+    <ClInclude Include="Irrlicht\Src\dmfsupport.h" />
+    <ClInclude Include="Irrlicht\Src\CAnimatedMeshSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\CCameraFPSSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\CCameraMayaSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\CCameraSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\CDummyTransformationSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\CEmptySceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\CMeshSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\COctTreeSceneNode.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\CXMLReaderImpl.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\fast_atof.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\heapsort.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\irrArray.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\irrString.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\irrTypes.h" />
+    <ClInclude Include="Irrlicht\Src\irrxml\irrXML.h" />
+    <ClInclude Include="BBDX\ExportB3D.h" />
+    <ClInclude Include="BBDX\ToB3D.h" />
+    <ClInclude Include="BBDX\IOThread.h" />
+    <ClInclude Include="BBDX\ThreadLoaders.h" />
+    <ClInclude Include="BBDX\3D_Maths.h" />
+    <ClInclude Include="BBDX\Brush.h" />
+    <ClInclude Include="BBDX\Camera.h" />
+    <ClInclude Include="BBDX\DirectShow.h" />
+    <ClInclude Include="BBDX\Entity_Animation.h" />
+    <ClInclude Include="BBDX\Entity_Collision.h" />
+    <ClInclude Include="BBDX\Entity_Control.h" />
+    <ClInclude Include="BBDX\Entity_Movement.h" />
+    <ClInclude Include="BBDX\Entity_State.h" />
+    <ClInclude Include="BBDX\Global.h" />
+    <ClInclude Include="BBDX\Graphics_Mode.h" />
+    <ClInclude Include="BBDX\Light.h" />
+    <ClInclude Include="BBDX\Mesh.h" />
+    <ClInclude Include="BBDX\Pivot.h" />
+    <ClInclude Include="BBDX\ShaderFunctions.h" />
+    <ClInclude Include="BBDX\Sounds.h" />
+    <ClInclude Include="BBDX\Surface.h" />
+    <ClInclude Include="BBDX\Texture.h" />
+    <ClInclude Include="BBDX\Main.h" />
+    <ClInclude Include="BBDX\Debug.h" />
+    <ClInclude Include="BBDX\LineSceneNode.h" />
+    <ClInclude Include="BBDX\SAQuad.h" />
+    <ClInclude Include="BBDX\SAText.h" />
+    <ClInclude Include="BBDX\GroupedObject.h" />
+    <ClInclude Include="NBBDX.h" />
+    <ClInclude Include="BBDX\Render Targets\cPP_Effect.h" />
+    <CustomBuildStep Include="BBDX\Render Targets\cRenderTarget.h" />
+    <ClInclude Include="BBDX\Render Targets\cRenderTargetManager.h" />
+    <ClInclude Include="BBDX\Render Targets\headers.h" />
+    <ClInclude Include="BBDX\Render Targets\XMLWrapper.h" />
+    <ClInclude Include="Common\JaredsUtils.h" />
+    <ClInclude Include="PhysX\cooking.h" />
+    <ClInclude Include="LockableQueue.h" />
+    <ClInclude Include="PhysX\PhysXBBDX.h" />
+    <ClInclude Include="PhysX\PhysXErrorStream.h" />
+    <ClInclude Include="PhysX\PhysXUserAllocator.h" />
+    <ClInclude Include="PhysX\Stream.h" />
+    <ClInclude Include="PhysX\ThreadCooking.h" />
+    <ClInclude Include="PhysX\Utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BBDX\BBThread.cpp" />
+    <ClCompile Include="BBDX\DebugFrameProfiler.cpp" />
+    <ClCompile Include="BBDX\DebugOverlay.cpp" />
+    <ClCompile Include="Irrlicht\Src\CAttributes.cpp" />
+    <ClCompile Include="Irrlicht\Src\CFileList.cpp" />
+    <ClCompile Include="Irrlicht\Src\CFileSystem.cpp" />
+    <ClCompile Include="Irrlicht\Src\CLimitReadFile.cpp" />
+    <ClCompile Include="Irrlicht\Src\CMemoryReadFile.cpp" />
+    <ClCompile Include="Irrlicht\Src\CReadFile.cpp" />
+    <ClCompile Include="Irrlicht\Src\CReadMemory.cpp" />
+    <ClCompile Include="Irrlicht\Src\CWriteFile.cpp" />
+    <ClCompile Include="Irrlicht\Src\CIrrDeviceStub.cpp" />
+    <ClCompile Include="Irrlicht\Src\CIrrDeviceWin32.cpp" />
+    <ClCompile Include="Irrlicht\Src\CLogger.cpp" />
+    <ClCompile Include="Irrlicht\Src\COSOperator.cpp" />
+    <ClCompile Include="Irrlicht\Src\Irrlicht.cpp" />
+    <ClCompile Include="Irrlicht\Src\os.cpp" />
+    <ClCompile Include="CMovieTexture.cpp" />
+    <ClCompile Include="Irrlicht\Src\CVideoModeList.cpp" />
+    <ClCompile Include="ShaderConstantSet.cpp" />
+    <ClCompile Include="Irrlicht\Src\CD3D9Driver.cpp" />
+    <ClCompile Include="Irrlicht\Src\CD3D9Texture.cpp" />
+    <ClCompile Include="cRT.cpp" />
+    <ClCompile Include="Irrlicht\Src\CColorConverter.cpp" />
+    <ClCompile Include="Irrlicht\Src\CFPSCounter.cpp" />
+    <ClCompile Include="Irrlicht\Src\CNullDriver.cpp" />
+    <ClCompile Include="CPPEffect.cpp" />
+    <ClCompile Include="PPChains.cpp" />
+    <ClCompile Include="Irrlicht\Src\CDefaultSceneNodeAnimatorFactory.cpp" />
+    <ClCompile Include="Irrlicht\Src\CDefaultSceneNodeFactory.cpp" />
+    <ClCompile Include="Irrlicht\Src\CMeshCache.cpp" />
+    <ClCompile Include="Irrlicht\Src\CMeshManipulator.cpp" />
+    <ClCompile Include="Irrlicht\Src\CSceneManager.cpp" />
+    <ClCompile Include="Irrlicht\Src\CAnimatedMeshB3d.cpp" />
+    <ClCompile Include="Irrlicht\Src\CDefaultMeshFormatLoader.cpp" />
+    <ClCompile Include="Irrlicht\Src\CXAnimationPlayer.cpp" />
+    <ClCompile Include="Irrlicht\Src\CXFileReader.cpp" />
+    <ClCompile Include="Irrlicht\Src\CXMeshFileLoader.cpp" />
+    <ClCompile Include="Irrlicht\Src\CAnimatedMeshSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\CCameraFPSSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\CCameraMayaSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\CCameraSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\CDummyTransformationSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\CEmptySceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\CMeshSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\COctTreeSceneNode.cpp" />
+    <ClCompile Include="Irrlicht\Src\irrxml\irrXML.cpp" />
+    <ClCompile Include="BBDX\3DStoB3D.cpp" />
+    <ClCompile Include="BBDX\ExportB3d.cpp" />
+    <ClCompile Include="BBDX\XtoB3d.cpp" />
+    <ClCompile Include="BBDX\IOThread.cpp" />
+    <ClCompile Include="BBDX\ThreadLoaders.cpp" />
+    <ClCompile Include="BBDX\BBDX.cpp" />
+    <ClCompile Include="CommandExport.cpp" />
+    <ClCompile Include="BBDX\GroupedObject.cpp" />
+    <ClCompile Include="BBDX\Render Targets\cPP_Effect.cpp" />
+    <ClCompile Include="BBDX\Render Targets\cRenderTarget.cpp" />
+    <ClCompile Include="BBDX\Render Targets\cRenderTargetManager.cpp" />
+    <ClCompile Include="BBDX\Render Targets\headers.cpp" />
+    <ClCompile Include="BBDX\Render Targets\XMLWrapper.cpp" />
+    <ClCompile Include="JaredsUtilsSEH.cpp" />
+    <ClCompile Include="RemoteDebugging.cpp" />
+    <ClCompile Include="PhysX\cooking.cpp" />
+    <ClCompile Include="PhysX\PhysXBBDX.cpp" />
+    <ClCompile Include="PhysX\PhysXErrorSteam.cpp" />
+    <ClCompile Include="PhysX\PhysXUserAllocator.cpp" />
+    <ClCompile Include="PhysX\Stream.cpp" />
+    <ClCompile Include="PhysX\ThreadCooking.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NGUI\IDE\NGUI.vcxproj">
+      <Project>{af507049-0640-494d-8496-633363d1ab3f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\RCT\RCT\RCT.vcxproj">
+      <Project>{15ad8695-703e-46c7-9dfc-d4697e4db6e0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

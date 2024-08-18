@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{49C1103B-DDE1-4B3D-BB25-79C44CBF8ED9}</ProjectGuid>
+    <RootNamespace>LT</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\SandBox\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\SandBox\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(DXSDK_DIR)Lib\x86;$(SolutionDir)Sandbox;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\BBDX2;$(SolutionDir)\NGUI\Include\NGin;$(SolutionDir)\NGUI\Include\GUI;$(SolutionDir)\BB;$(SolutionDir)\RCT\RCT\Include;$(SolutionDir)\irrKlang\include;$(SolutionDir)\LT\LT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;USE_DLLS;EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;d3dx9d.lib;d3d9.lib;winmm.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\SandBox\$(ProjectName).dll</OutputFile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)\BBDX2;$(SolutionDir)\NGUI\Include\NGin;$(SolutionDir)\NGUI\Include\GUI;$(SolutionDir)\BB;$(SolutionDir)\RCT\RCT\Include;$(SolutionDir)\irrKlang\include;$(SolutionDir)\LT\LT\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;USE_DLLS;_SECURE_SCL=0;EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;d3dx9.lib;d3d9.lib;winmm.lib;kernel32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)\SandBox\$(ProjectName).dll</OutputFile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(SolutionDir)\SandBox\$(ProjectName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Source\CD3D9TreeLeafMeshBuffer.cpp" />
+    <ClCompile Include="Source\CD3D9TreeLODMeshBuffer.cpp" />
+    <ClCompile Include="Source\CD3D9TreeRenderer.cpp" />
+    <ClCompile Include="Source\CD3D9TreeTexture.cpp" />
+    <ClCompile Include="Source\CD3D9TreeTrunkMeshBuffer.cpp" />
+    <ClCompile Include="Source\CTreeInstance.cpp" />
+    <ClCompile Include="Source\CTreeManager.cpp" />
+    <ClCompile Include="Source\CTreeType.cpp" />
+    <ClCompile Include="Source\CTreeZone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="WinMain.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+    <ClInclude Include="Include\IParameter.h" />
+    <ClInclude Include="Include\ITreeInstance.h" />
+    <ClInclude Include="Include\ITreeManager.h" />
+    <ClInclude Include="Include\ITreeMeshBuffer.h" />
+    <ClInclude Include="Include\ITreeRenderer.h" />
+    <ClInclude Include="Include\ITreeTexture.h" />
+    <ClInclude Include="Include\ITreeType.h" />
+    <ClInclude Include="Include\ITreeZone.h" />
+    <ClInclude Include="MyD3DX.h" />
+    <ClInclude Include="Include\STreeCollisionData.h" />
+    <ClInclude Include="Include\STreeLeafVertex.h" />
+    <ClInclude Include="Include\STreeLODVertex.h" />
+    <ClInclude Include="Include\STreeTrunkVertex.h" />
+    <ClInclude Include="Source\CD3D9TreeLeafMeshBuffer.h" />
+    <ClInclude Include="Source\CD3D9TreeLODMeshBuffer.h" />
+    <ClInclude Include="Source\CD3D9TreeRenderer.h" />
+    <ClInclude Include="Source\CD3D9TreeTexture.h" />
+    <ClInclude Include="Source\CD3D9TreeTrunkMeshBuffer.h" />
+    <ClInclude Include="Source\CTreeInstance.h" />
+    <ClInclude Include="Source\CTreeManager.h" />
+    <ClInclude Include="Source\CTreeType.h" />
+    <ClInclude Include="Source\CTreeZone.h" />
+    <ClInclude Include="Source\Frustum.h" />
+    <ClInclude Include="Source\SD3D9TreeLeafVertex.h" />
+    <ClInclude Include="Source\SD3D9TreeLODVertex.h" />
+    <ClInclude Include="Source\SD3D9TreeTrunkVertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NGUI\IDE\NGUI.vcxproj">
+      <Project>{af507049-0640-494d-8496-633363d1ab3f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RCT\RCT\RCT.vcxproj">
+      <Project>{15ad8695-703e-46c7-9dfc-d4697e4db6e0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

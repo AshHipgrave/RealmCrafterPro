@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Temp">
+      <UniqueIdentifier>{fecca885-e4e1-4bc6-aac2-79db8a152f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Information">
+      <UniqueIdentifier>{f15541ee-0b89-4095-bcbf-70b710d28b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom Controls">
+      <UniqueIdentifier>{76797a99-1774-4cdd-a724-2da393942f95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BBDXWrapper">
+      <UniqueIdentifier>{a29ce07f-4f11-4a14-bb6a-1d29918c083d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{c839e4fa-fe88-44b7-a487-6d25d358e4a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ext Callbacks">
+      <UniqueIdentifier>{83835081-9ddf-4fc0-8d75-efc09394e1c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientAreas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientCombat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientLoaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientNet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Default Project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Environment3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gooey Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gooey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gubbins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventories.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Items.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Language.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightFunctionList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Media.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Packets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectiles3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RottParticles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WOWCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CControlEditor2.h">
+      <Filter>Temp</Filter>
+    </ClInclude>
+    <ClInclude Include="Temp.h">
+      <Filter>Temp</Filter>
+    </ClInclude>
+    <ClInclude Include="CBubbleOutput.h">
+      <Filter>Custom Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="COptionsMenu.h">
+      <Filter>Custom Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CControlLayout.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSDKExport.h">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorInstance.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LT.h">
+      <Filter>Source Files\Ext Callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="RCT.h">
+      <Filter>Source Files\Ext Callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="OOWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreen.h">
+      <Filter>Custom Controls</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CControlEditor2.cpp">
+      <Filter>Temp</Filter>
+    </ClCompile>
+    <ClCompile Include="Temp.cpp">
+      <Filter>Temp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBubbleOutput.cpp">
+      <Filter>Custom Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="COptionsMenu.cpp">
+      <Filter>Custom Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="BBDXWrapper\ICamera.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="BBDXWrapper\IEngine.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="BBDXWrapper\IEntity.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="BBDXWrapper\ILight.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="BBDXExport.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="CControlLayout.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSDKExport.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actors3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientAreas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientCombat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientLoaders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientNet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Default Project.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Environment3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gooey Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gooey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gubbins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventories.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Items.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Language.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightFunctionList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainSEH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Media.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectiles3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RottParticles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Spells.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LT.cpp">
+      <Filter>Source Files\Ext Callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="RCT.cpp">
+      <Filter>Source Files\Ext Callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="OOWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashScreen.cpp">
+      <Filter>Custom Controls</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Progress.txt">
+      <Filter>Information</Filter>
+    </None>
+    <None Include="Output\Data\Sphere.b3d" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="BBDXWrapper\ELightType.h">
+      <Filter>BBDXWrapper</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="BBDXWrapper\ICamera.h">
+      <Filter>BBDXWrapper</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="BBDXWrapper\IEngine.h">
+      <Filter>BBDXWrapper</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="BBDXWrapper\IEntity.h">
+      <Filter>BBDXWrapper</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="BBDXWrapper\ILight.h">
+      <Filter>BBDXWrapper</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<control name="ItemButton" sdktype="ZITB" defaultname="itemButton" fullname="Scripting.Forms.ItemButton" defaultevent="Click">
+	<property name="Location" sdkname="ZZLC" type="vector2" default="0, 0" alwaysset="true" />
+	<property name="PositionType" sdkname="ZZPT" type="positiontype" default="Absolute" alwaysset="true" />
+	<property name="Size" sdkname="ZZSZ" type="vector2" default="75, 20" alwaysset="true" />
+	<property name="SizeType" sdkname="ZZST" type="sizetype" default="Absolute" alwaysset="true" />
+	<property name="Enabled" sdkname="ENBL" type="bool" default="true" alwaysset="false" />
+	<property name="Visible" sdkname="VSBL" type="bool" default="true" alwaysset="false" />
+	<property name="Name" sdkname="NAME" type="string" default="button" alwaysset="false" />
+	<property name="Text" sdkname="TEXT" type="string" default="button" alwaysset="true" />
+	<property name="BackColor" sdkname="BCOL" type="color" default="255, 255, 255, 255" alwaysset="false" />
+	<property name="ForeColor" sdkname="FCOL" type="color" default="255, 255, 255, 255" alwaysset="false" />
+	<property name="Skin" sdkname="SKIN" type="int" default="1" alwaysset="false" />
+	
+	<property name="Timer" sdkname="TIME" type="int" default="0" alwaysset="false" />
+	<property name="ItemID" sdkname="ITID" type="int" default="65535" alwaysset="false" />
+	<property name="ItemAmount" sdkname="ITAM" type="int" default="65535" alwaysset="false" />
+	<property name="SpellID" sdkname="SPEL" type="int" default="65535" alwaysset="false" />
+	<property name="BackgroundImage" sdkname="BGIM" type="string" default="" alwaysset="false" />
+	
+	<property name="CanDragToInventory" sdkname="" type="bool" default="false" alwaysset="false" />
+	<property name="CanDragFromInventory" sdkname="" type="bool" default="false" alwaysset="false" />
+	<property name="CanDragFromSpells" sdkname="" type="bool" default="false" alwaysset="false" />
+	
+	<event name="Click" handler="Scripting.Forms.EventHandler" args="object sender, FormEventArgs e" />
+	<event name="RightClick" handler="Scripting.Forms.EventHandler" args="object sender, FormEventArgs e" />
+	<event name="DraggedToInventory" handler="Scripting.Forms.EventHandler" args="object sender, FormEventArgs e" />
+	<event name="DraggedFromInventory" handler="Scripting.Forms.EventHandler" args="object sender, FormEventArgs e" />
+	<event name="DraggedFromSpells" handler="Scripting.Forms.EventHandler" args="object sender, FormEventArgs e" />
+</control>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<userform>
+  <control type="Form">
+    <property name="Location" value="0.5, 0.5" />
+    <property name="PositionType" value="Centered" />
+    <property name="Size" value="300, 150" />
+    <property name="SizeType" value="Absolute" />
+    <property name="Enabled" value="True" />
+    <property name="Visible" value="True" />
+    <property name="Name" value="form" />
+    <property name="Text" value="Party Invite" />
+    <property name="BackColor" value="255, 255, 255, 255" />
+    <property name="ForeColor" value="255, 255, 255, 255" />
+    <property name="Skin" value="1" />
+    <property name="CloseButton" value="True" />
+    <property name="Modal" value="False" />
+    <control type="Label">
+      <property name="Location" value="14, 20" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="label1" />
+      <property name="Text" value="You have been invited to join a party by " />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="20, 48" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="PlayerName" />
+      <property name="Text" value="PlayerName" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="20, 78" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="AcceptButton" />
+      <property name="Text" value="Accept" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="118, 76" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="DeclineButton" />
+      <property name="Text" value="Decline" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+    </control>
+  </control>
+</userform>

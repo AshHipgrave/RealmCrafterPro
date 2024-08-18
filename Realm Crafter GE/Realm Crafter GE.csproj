@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17476635-0B40-4476-B03B-C0D30409AFFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealmCrafter_GE</RootNamespace>
+    <AssemblyName>RC Game Editor</AssemblyName>
+    <StartupObject>RealmCrafter_GE.Program</StartupObject>
+    <ApplicationIcon>Resources\solstar_red.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>DD2CC3F857BF69266C0745257C1F06AF4F036C3A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Realm Crafter GE_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>false</SignManifests>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://www.realmcrafter.com</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Realm Crafter</ProductName>
+    <PublisherName>Solstar Games</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.2.1.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\SandBox\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <NoWarn>0429; 0162</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\SandBox\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0429; 0162</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseToTestProject|AnyCPU' ">
+    <OutputPath>bin\ReleaseToTestProject\</OutputPath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseToTest|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\..\Program Files\Solstar Games\Realm Crafter 2\Projects\Test Proj\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Community.CsharpSqlite">
+      <HintPath>.\Community.CsharpSqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Community.CsharpSqlite.SQLiteClient">
+      <HintPath>.\Community.CsharpSqlite.SQLiteClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="NGUINet">
+      <HintPath>..\SandBox\NGUINet.dll</HintPath>
+    </Reference>
+    <Reference Include="RCT.Net">
+      <HintPath>..\SandBox\RCT.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNet, Version=2.0.3138.25704, Culture=neutral, PublicKeyToken=948d6c9751444115, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ScintillaNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.2.2864.18696, Culture=neutral, PublicKeyToken=d481317c817cec47, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actors\Actors.cs" />
+    <Compile Include="Actors\Actors3D.cs" />
+    <Compile Include="Actors\ActorTextureSet.cs" />
+    <Compile Include="Actors\Animations.cs" />
+    <Compile Include="Actors\GubbinActorTemplate.cs" />
+    <Compile Include="Actors\GubbinAnimationType.cs" />
+    <Compile Include="Actors\GubbinTemplate.cs" />
+    <Compile Include="Dockable Forms\GubbinEditor\ActorGubbinPropertyInterface.cs" />
+    <Compile Include="Dockable Forms\GubbinEditor\BoneTypeEditor.cs" />
+    <Compile Include="Dockable Forms\GubbinEditor\EmitterTypeEditor.cs" />
+    <Compile Include="Dockable Forms\GubbinEditor\GubbinEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\GubbinEditor.Designer.cs">
+      <DependentUpon>GubbinEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\GubbinSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\GubbinSelector.Designer.cs">
+      <DependentUpon>GubbinSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\GubbinSetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\GubbinSetEditor.Designer.cs">
+      <DependentUpon>GubbinSetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\MeshTypeEditor.cs" />
+    <Compile Include="Dockable Forms\GubbinEditor\NewActorTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\GubbinEditor\NewActorTemplate.Designer.cs">
+      <DependentUpon>NewActorTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\Interface\InterfaceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\Interface\InterfaceEditor.designer.cs">
+      <DependentUpon>InterfaceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\Interface\InterfaceHierarchyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\Interface\InterfaceHierarchyWindow.designer.cs">
+      <DependentUpon>InterfaceHierarchyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\NewWorldCreateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\NewWorldCreateWindow.Designer.cs">
+      <DependentUpon>NewWorldCreateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\PostProcess\ParamTypes\cParam_Float.cs" />
+    <Compile Include="Dockable Forms\PostProcess\ParamTypes\cParam_Int.cs" />
+    <Compile Include="Dockable Forms\PostProcess\ParamTypes\Param_Float4.cs" />
+    <Compile Include="Dockable Forms\PostProcess\PostProcess.cs" />
+    <Compile Include="Dockable Forms\PostProcess\PostProcessEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\PostProcess\PostProcessEditor.designer.cs">
+      <DependentUpon>PostProcessEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\PostProcess\PostProcessPropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\PostProcess\PostProcessPropertyWindow.designer.cs">
+      <DependentUpon>PostProcessPropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\EditorControl.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\EditorControl.Extra.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\EditorControlInstance.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\EditorEvent.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\EditorEventInstance.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\EditorProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\EditorProperties.Designer.cs">
+      <DependentUpon>EditorProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\EditorProperty.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\EditorPropertyInstance.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\FormEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\FormEditor.Designer.cs">
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\NewScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\NewScriptForm.Designer.cs">
+      <DependentUpon>NewScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\NodeLengthSorter.cs" />
+    <Compile Include="Dockable Forms\ScriptEditor\ProjectFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ProjectFiles.Designer.cs">
+      <DependentUpon>ProjectFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ScriptEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ScriptForm.Designer.cs">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\TemplateNewScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\TemplateNewScript.Designer.cs">
+      <DependentUpon>TemplateNewScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\Toolbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\Toolbox.Designer.cs">
+      <DependentUpon>Toolbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ToolListHeading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ToolListHeading.designer.cs">
+      <DependentUpon>ToolListHeading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ToolListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\ScriptEditor\ToolListItem.designer.cs">
+      <DependentUpon>ToolListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\SimpleScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\SimpleScriptEditor.Designer.cs">
+      <DependentUpon>SimpleScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldCreateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldCreateWindow.Designer.cs">
+      <DependentUpon>WorldCreateWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldTerrainEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldTerrainEditor.Designer.cs">
+      <DependentUpon>WorldTerrainEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DuplicateZoneTerrain.cs" />
+    <Compile Include="FileChunk.cs" />
+    <Compile Include="Forms\ActorTextureSetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActorTextureSetEditor.Designer.cs">
+      <DependentUpon>ActorTextureSetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AutoTextureDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutoTextureDialog.designer.cs">
+      <DependentUpon>AutoTextureDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BuildManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BuildManager.Designer.cs">
+      <DependentUpon>BuildManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigureParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigureParameter.Designer.cs">
+      <DependentUpon>ConfigureParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateTerrainDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateTerrainDialog.Designer.cs">
+      <DependentUpon>CreateTerrainDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrassTypePropertyInterface.cs" />
+    <Compile Include="Forms\GrassTypesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrassTypesEditor.designer.cs">
+      <DependentUpon>GrassTypesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GrassTypesSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GrassTypesSelector.designer.cs">
+      <DependentUpon>GrassTypesSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HelpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LODEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LODEditor.Designer.cs">
+      <DependentUpon>LODEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MediaManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MediaManager.Designer.cs">
+      <DependentUpon>MediaManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectWindow.Designer.cs">
+      <DependentUpon>ProjectWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RCTImportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RCTImportDialog.Designer.cs">
+      <DependentUpon>RCTImportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RCTImportPlugins.cs" />
+    <Compile Include="Forms\ShaderManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShaderManager.Designer.cs">
+      <DependentUpon>ShaderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShaderManagerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShaderManagerEdit.Designer.cs">
+      <DependentUpon>ShaderManagerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShaderProfileEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShaderProfileEdit.Designer.cs">
+      <DependentUpon>ShaderProfileEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorldYearSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorldYearSetup.Designer.cs">
+      <DependentUpon>WorldYearSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorldZoneSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorldZoneSetup.Designer.cs">
+      <DependentUpon>WorldZoneSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttributesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttributesEditor.Designer.cs">
+      <DependentUpon>AttributesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GMoveTool.cs" />
+    <Compile Include="GRotateTool.cs" />
+    <Compile Include="GScaleTool.cs" />
+    <Compile Include="InterfaceControls\cButton.cs">
+    </Compile>
+    <Compile Include="InterfaceControls\cCheckBox.cs" />
+    <Compile Include="InterfaceControls\cComboBox.cs" />
+    <Compile Include="InterfaceControls\cControl.cs">
+    </Compile>
+    <Compile Include="InterfaceControls\cGUI_Sounds.cs" />
+    <Compile Include="InterfaceControls\cImage.cs" />
+    <Compile Include="InterfaceControls\cInterfaceControls.cs" />
+    <Compile Include="InterfaceControls\cLabel.cs" />
+    <Compile Include="InterfaceControls\cListBox.cs" />
+    <Compile Include="InterfaceControls\cMainInterface.cs" />
+    <Compile Include="InterfaceControls\cPictureBox.cs" />
+    <Compile Include="InterfaceControls\cProgressBar.cs" />
+    <Compile Include="InterfaceControls\cRadar.cs" />
+    <Compile Include="InterfaceControls\cScrollBar.cs" />
+    <Compile Include="InterfaceControls\cTextBox.cs" />
+    <Compile Include="InterfaceControls\cTrackBar.cs" />
+    <Compile Include="InterfaceControls\cWindow.cs" />
+    <Compile Include="KeyBinding\CameraKeys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyBinding\CameraKeys.Designer.cs">
+      <DependentUpon>CameraKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBinding\KeyBindings.cs" />
+    <Compile Include="LightFunction\LightFunction.cs" />
+    <Compile Include="LightFunction\LightFunctionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionDialog.designer.cs">
+      <DependentUpon>LightFunctionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionList.designer.cs">
+      <DependentUpon>LightFunctionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionListEditor.cs" />
+    <Compile Include="LightFunction\LightFunctionListEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionListEditorForm.designer.cs">
+      <DependentUpon>LightFunctionListEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionNamePrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionNamePrompt.designer.cs">
+      <DependentUpon>LightFunctionNamePrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionProperty.cs" />
+    <Compile Include="LightFunction\LightFunctionTime.cs" />
+    <Compile Include="LightFunction\LightFunctionTimeEditor.cs" />
+    <Compile Include="LightFunction\LightFunctionTimeEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionTimeEditorForm.designer.cs">
+      <DependentUpon>LightFunctionTimeEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightFunction\LightFunctionTimeOptionsConverter.cs" />
+    <Compile Include="MoveTool.cs" />
+    <Compile Include="RotateTool.cs" />
+    <Compile Include="ScaleTool.cs" />
+    <Compile Include="SDK\MediaDialogsWrapper.cs" />
+    <Compile Include="SDK\PacketReader.cs" />
+    <Compile Include="SDK\PacketWriter.cs" />
+    <Compile Include="SDK\SDKPlugins.cs" />
+    <Compile Include="ServerObjects.cs" />
+    <Compile Include="TransformTool.cs" />
+    <Compile Include="Tree\GETreeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tree\GETreeManager.Designer.cs">
+      <DependentUpon>GETreeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tree\NamePrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tree\NamePrompt.Designer.cs">
+      <DependentUpon>NamePrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tree\TreeBoundingBox.cs" />
+    <Compile Include="Tree\TreeCollectionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tree\TreeCollectionEditor.Designer.cs">
+      <DependentUpon>TreeCollectionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tree\TreeCollectionEditorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tree\TreeCollectionEditorList.Designer.cs">
+      <DependentUpon>TreeCollectionEditorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tree\TreeEditorLeaf.cs" />
+    <Compile Include="Tree\TreeEditorLeafBox.cs" />
+    <Compile Include="Tree\TreeEditorLeafGroup.cs" />
+    <Compile Include="Tree\TreeEditorMeshTrunk.cs" />
+    <Compile Include="Tree\TreeEditorPhysCapsule.cs" />
+    <Compile Include="Tree\TreeEditorPhysCube.cs" />
+    <Compile Include="Tree\TreeEditorPhysObj.cs" />
+    <Compile Include="Tree\TreeEditorPhysSphere.cs" />
+    <Compile Include="Tree\TreeEditorProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tree\TreeEditorProperties.Designer.cs">
+      <DependentUpon>TreeEditorProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tree\TreeEditorQuadTrunk.cs" />
+    <Compile Include="Tree\TreeEditorRender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tree\TreeEditorRender.Designer.cs">
+      <DependentUpon>TreeEditorRender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tree\TreeEditorSwayCenter.cs" />
+    <Compile Include="Tree\TreeEditorTree.cs" />
+    <Compile Include="Tree\TreeEditorTrunk.cs" />
+    <Compile Include="Tree\TreePropertiesUpdater.cs" />
+    <Compile Include="WorldPropertyInterfaces\BlankPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\CollisionBoxPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\DescriberVerbScript.cs">
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\EmitterPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\LightPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\MenuControlPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\PlacerAreaInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\PlacerNodeInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\PortalPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyActorsList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyDirFileNames.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyEmitterList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyMusicList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyPortalList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertySoundList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyTextureList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyUIs\Basic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\PropertyUIs\Basic.Designer.cs">
+      <DependentUpon>Basic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\PropertyMeshList.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyUIs\PropertyTextureSelection.cs">
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\PropertyUIs\PropertyTextureSelection.Designer.cs">
+      <DependentUpon>PropertyTextureSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\PropertyWaterShaders.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyZoneList.cs" />
+    <Compile Include="WorldPropertyInterfaces\SoundPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\TerrainPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyTriggerEntryMethodList.cs" />
+    <Compile Include="WorldPropertyInterfaces\TreePropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\TriggerPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\WaypointPropertyInterface.cs" />
+    <Compile Include="WorldPropertyInterfaces\PropertyDamageTypeList.cs" />
+    <Compile Include="Blitz.cs" />
+    <Compile Include="Actors\Character.cs" />
+    <Compile Include="RC Crash Handler\CrashManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RC Crash Handler\CrashManager.Designer.cs">
+      <DependentUpon>CrashManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rendering\LinePrim.cs" />
+    <Compile Include="Rendering\PickMode.cs" />
+    <Compile Include="Rendering\Renderer.cs" />
+    <Compile Include="Rendering\Renderer.EntityParameters.cs" />
+    <Compile Include="Rendering\RenderWrapper.cs" />
+    <Compile Include="Rendering\RottParticles.cs" />
+    <Compile Include="RC Crash Handler\ThreadExceptionHandler.cs" />
+    <Compile Include="Undo.cs" />
+    <Compile Include="Utilities\Fullscreen\FullScreen.cs" />
+    <Compile Include="Utilities\Fullscreen\HandleTaskBar.cs" />
+    <Compile Include="Zones\ClientZone.cs" />
+    <Compile Include="Forms\Damage Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Damage Types.Designer.cs">
+      <DependentUpon>Damage Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Editor Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Editor Options.Designer.cs">
+      <DependentUpon>Editor Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Zones\Environment.cs" />
+    <Compile Include="Zones\Environment3D.cs" />
+    <Compile Include="Forms\FontEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FontEditor.Designer.cs">
+      <DependentUpon>FontEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GE.Designer.cs">
+      <DependentUpon>GE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetKeyState.cs" />
+    <Compile Include="Forms\Gubbin Remapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gubbin Remapping.Designer.cs">
+      <DependentUpon>Gubbin Remapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actors\Inventories.cs" />
+    <Compile Include="Actors\Items.cs" />
+    <Compile Include="Media.cs" />
+    <Compile Include="Forms\MediaDialogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Actors\Abilities.cs" />
+    <Compile Include="Projectiles.cs" />
+    <Compile Include="Forms\ProjectilesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectilesEditor.Designer.cs">
+      <DependentUpon>ProjectilesEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dockable Forms\Interface\InterfaceEditor.resx">
+      <DependentUpon>InterfaceEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\Interface\InterfaceHierarchyWindow.resx">
+      <DependentUpon>InterfaceHierarchyWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\NewWorldCreateWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewWorldCreateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\PostProcess\PostProcessEditor.resx">
+      <DependentUpon>PostProcessEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\PostProcess\PostProcessPropertyWindow.resx">
+      <DependentUpon>PostProcessPropertyWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\NewScriptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\ProjectFiles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\ScriptEditorForm.resx">
+      <DependentUpon>ScriptEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\ScriptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\TemplateNewScript.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TemplateNewScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\Toolbox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Toolbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\ToolListHeading.resx">
+      <DependentUpon>ToolListHeading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\ToolListItem.resx">
+      <DependentUpon>ToolListItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\SimpleScriptEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SimpleScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\WorldCreateWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldCreateWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\WorldTerrainEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldTerrainEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AutoTextureDialog.resx">
+      <DependentUpon>AutoTextureDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BuildManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BuildManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigureParameter.resx">
+      <DependentUpon>ConfigureParameter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateTerrainDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateTerrainDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrassTypesEditor.resx">
+      <DependentUpon>GrassTypesEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GrassTypesSelector.resx">
+      <DependentUpon>GrassTypesSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LODEditor.resx">
+      <DependentUpon>LODEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediaManager.resx">
+      <DependentUpon>MediaManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectWindow.resx">
+      <DependentUpon>ProjectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShaderManager.resx">
+      <DependentUpon>ShaderManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShaderManagerEdit.resx">
+      <DependentUpon>ShaderManagerEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShaderProfileEdit.resx">
+      <DependentUpon>ShaderProfileEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorldYearSetup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldYearSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorldZoneSetup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldZoneSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttributesEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AttributesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Damage Types.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Damage Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Editor Options.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Editor Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FontEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FontEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GE.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gubbin Remapping.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Gubbin Remapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MediaDialogs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MediaDialogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectilesEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectilesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyBinding\CameraKeys.resx">
+      <DependentUpon>CameraKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightFunction\LightFunctionDialog.resx">
+      <DependentUpon>LightFunctionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightFunction\LightFunctionList.resx">
+      <DependentUpon>LightFunctionList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightFunction\LightFunctionListEditorForm.resx">
+      <DependentUpon>LightFunctionListEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightFunction\LightFunctionNamePrompt.resx">
+      <DependentUpon>LightFunctionNamePrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightFunction\LightFunctionTimeEditorForm.resx">
+      <DependentUpon>LightFunctionTimeEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InterfaceGuiElements.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InterfaceGuiElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash Screen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Splash Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TextEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TextureFlags.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextureFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\WorldPropertyWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldPropertyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\WorldViewRenderer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldViewRenderer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\WorldZoneList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldZoneList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RC Crash Handler\CrashManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CrashManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\GETreeManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GETreeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\NamePrompt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NamePrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\TreeCollectionEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeCollectionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\TreeCollectionEditorList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TreeCollectionEditorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\TreeEditorProperties.resx">
+      <DependentUpon>TreeEditorProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tree\TreeEditorRender.resx">
+      <DependentUpon>TreeEditorRender.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\InterfaceGuiElements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InterfaceGuiElements.Designer.cs">
+      <DependentUpon>InterfaceGuiElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\SceneryPropertyInterface.cs">
+    </Compile>
+    <Compile Include="WorldPropertyInterfaces\PropertyScriptList.cs" />
+    <Compile Include="Zones\ServerZone.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Sound.cs" />
+    <Compile Include="Forms\Splash Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash Screen.Designer.cs">
+      <DependentUpon>Splash Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TextEntry.Designer.cs">
+      <DependentUpon>TextEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TextureFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TextureFlags.Designer.cs">
+      <DependentUpon>TextureFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timer.cs" />
+    <Compile Include="WorldPropertyInterfaces\WaterPropertyInterface.cs" />
+    <Compile Include="Dockable Forms\WorldPropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldPropertyWindow.Designer.cs">
+      <DependentUpon>WorldPropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldViewRenderer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldZoneList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dockable Forms\WorldZoneList.Designer.cs">
+      <DependentUpon>WorldZoneList.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Resources\Info.PNG" />
+    <None Include="Resources\save_32.png" />
+    <None Include="Resources\D.png" />
+    <None Include="Resources\In.png" />
+    <None Include="Resources\L.png" />
+    <None Include="Resources\Out.png" />
+    <None Include="Resources\R.png" />
+    <None Include="Resources\Play.PNG" />
+    <None Include="Crash Manager\company_logo.jpg" />
+    <Content Include="RCAutoComplete.txt">
+    </Content>
+    <Content Include="RCFunctions.txt">
+    </Content>
+    <Content Include="RCReserved.txt">
+    </Content>
+    <None Include="Resources\128-status.png" />
+    <None Include="Resources\504-database_tables.png" />
+    <None Include="Resources\629-index.png" />
+    <None Include="Resources\texture_library_48.png" />
+    <None Include="Resources\connect_points_48.png" />
+    <None Include="Resources\enviroinment_map_write_48.png" />
+    <None Include="Resources\flip_y_48.png" />
+    <None Include="Resources\jaggies_48.png" />
+    <None Include="Resources\motion_path_48.png" />
+    <None Include="Resources\plane_down_48.png" />
+    <None Include="Resources\show_wireframe_48.png" />
+    <None Include="Resources\terrain_48.png" />
+    <None Include="Resources\texture_library_32.png" />
+    <None Include="Resources\connect_points_32.png" />
+    <None Include="Resources\enviroinment_map_write_32.png" />
+    <None Include="Resources\flip_y_32.png" />
+    <None Include="Resources\jaggies_32.png" />
+    <None Include="Resources\motion_path_32.png" />
+    <None Include="Resources\plane_down_32.png" />
+    <None Include="Resources\show_wireframe_32.png" />
+    <None Include="Resources\plug_in_48.png" />
+    <None Include="Resources\texture_editor_48.png" />
+    <None Include="Resources\lighting_32.png" />
+    <None Include="Resources\aa_filter_write_48.png" />
+    <None Include="Resources\gear_48.png" />
+    <None Include="Resources\gui_48.png" />
+    <None Include="Resources\BringToFrontHS.png" />
+    <Content Include="Resources\BrowseIcon.png" />
+    <None Include="Resources\deleteicon.png" />
+    <Content Include="Resources\PlayIcon.png" />
+    <None Include="Resources\SendToBackHS.png" />
+    <Content Include="Resources\StopIcon.png" />
+    <None Include="Resources\ViewSource.png" />
+    <None Include="Resources\ViewDesigner.png" />
+    <EmbeddedResource Include="Dockable Forms\GubbinEditor\GubbinEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GubbinEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\GubbinEditor\GubbinSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GubbinSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\GubbinEditor\GubbinSetEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GubbinSetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\GubbinEditor\NewActorTemplate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewActorTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\EditorProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditorProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dockable Forms\ScriptEditor\FormEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Toolminus.png" />
+    <EmbeddedResource Include="Resources\Toolplus.png" />
+    <Content Include="Resources\solstar_red.ico" />
+    <None Include="ScriptEditorIcons\060-undo.png" />
+    <None Include="ScriptEditorIcons\061-redo.png" />
+    <None Include="ScriptEditorIcons\032-cut.png" />
+    <None Include="ScriptEditorIcons\033-copy.png" />
+    <None Include="ScriptEditorIcons\034-paste.png" />
+    <None Include="ScriptEditorIcons\087-zoom_in.png" />
+    <None Include="ScriptEditorIcons\088-zoom_out.png" />
+    <None Include="ScriptEditorIcons\039-save.png" />
+    <None Include="ScriptEditorIcons\Saveall.png" />
+    <None Include="ScriptEditorIcons\707-invoice.png" />
+    <None Include="ScriptEditorIcons\041-printer.png" />
+    <None Include="ScriptEditorIcons\042-print_preview.png" />
+    <Content Include="Tree\SwayIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WeifenLuo.WinFormsUI.Docking.dll" />
+    <None Include="Resources\Splash.PNG" />
+    <None Include="Resources\Stop.PNG" />
+    <None Include="Resources\U.png" />
+    <None Include="Resources\Undo.png" />
+    <None Include="Tree\EditorLeaf.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\EditorLeafOrtho.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\EditorPhysics.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\EditorTransform.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\EditorTrunk.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\EditorTrunkOrtho.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\Leaf.fx" />
+    <None Include="Tree\LOD.fx" />
+    <None Include="Tree\PhysicsCapsule.b3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\PhysicsCube.b3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\PhysicsSphere.b3d">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tree\tree1.b3d" />
+    <None Include="VTune\Realm Crafter GE.vpj" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LT\LT.Net\LT.Net.vcxproj">
+      <Project>{15E11078-5403-4605-B44B-C6978A8D850B}</Project>
+      <Name>LT.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RCT.Net\RCTPlugin\RCTPlugin.csproj">
+      <Project>{4E64A1A4-957F-4164-8777-B3C28C3B6F29}</Project>
+      <Name>RCTPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDKCompiler\SDKCompiler.csproj">
+      <Project>{43A8FF0A-ABF8-4174-8FA6-7AF542850194}</Project>
+      <Name>SDKCompiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDKNet\SDKNet.vcxproj">
+      <Project>{E124B6E3-0D54-4034-8D92-0165DFDDCBB1}</Project>
+      <Name>SDKNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDKPlugin\SDKPlugin.csproj">
+      <Project>{68464370-B5D0-46EC-AEA7-3C190F0E25E6}</Project>
+      <Name>SDKPlugin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

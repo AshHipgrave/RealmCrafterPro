@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A81531E-DE2F-4BC3-88B9-337D3CD0CC13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scripting</RootNamespace>
+    <AssemblyName>Scripting</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\..\Program Files %28x86%29\Solstar Games\Realm Crafter 2\Projects\Demo Game\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Scripting.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Release\Scripting.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountBase.cs" />
+    <Compile Include="AccountNameResult.cs" />
+    <Compile Include="Actor.cs" />
+    <Compile Include="ActorDialog.cs" />
+    <Compile Include="ActorInfo.cs" />
+    <Compile Include="ActorInfoRequest.cs" />
+    <Compile Include="ActorInfoRequestState.cs" />
+    <Compile Include="ActorInfoState.cs" />
+    <Compile Include="ActorInstanceData.cs" />
+    <Compile Include="ActorType.cs" />
+    <Compile Include="AIModes.cs" />
+    <Compile Include="BBBinaryReader.cs" />
+    <Compile Include="BBBinaryWriter.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemType.cs" />
+    <Compile Include="Math\ShaderParameterType.cs" />
+    <Compile Include="Math\ShaderParameter.cs" />
+    <Compile Include="Math\Vector4.cs" />
+    <Compile Include="PartyInstance.cs" />
+    <Compile Include="Scenery.cs" />
+    <Compile Include="SceneryInstance.cs" />
+    <Compile Include="WaitItemRequest.cs" />
+    <Compile Include="WaitKillRequest.cs" />
+    <Compile Include="WaitSpeakRequest.cs" />
+    <Compile Include="DialogEventArgs.cs" />
+    <Compile Include="WorldEnvironment.cs" />
+    <Compile Include="Forms\Button.cs" />
+    <Compile Include="Forms\CheckBox.cs" />
+    <Compile Include="Forms\ComboBox.cs" />
+    <Compile Include="Forms\Control.cs" />
+    <Compile Include="Forms\EventHandlers.cs" />
+    <Compile Include="Forms\Form.cs" />
+    <Compile Include="Forms\FormEventArgs.cs" />
+    <Compile Include="Forms\IPropertyArrayBase.cs" />
+    <Compile Include="Forms\Label.cs" />
+    <Compile Include="Forms\ListBox.cs" />
+    <Compile Include="Forms\Panel.cs" />
+    <Compile Include="Forms\PositionType.cs" />
+    <Compile Include="Forms\ProgressBar.cs" />
+    <Compile Include="Forms\PropertyArray.cs" />
+    <Compile Include="Forms\PropertyHelper.cs" />
+    <Compile Include="Forms\SizeType.cs" />
+    <Compile Include="Forms\TextAlign.cs" />
+    <Compile Include="Forms\TextBox.cs" />
+    <Compile Include="Forms\TrackBar.cs" />
+    <Compile Include="IAccountDatabase.cs" />
+    <Compile Include="IChatProcessor.cs" />
+    <Compile Include="InputType.cs" />
+    <Compile Include="Internals\IScriptingCoreCommands.cs" />
+    <Compile Include="ItemInstance.cs" />
+    <Compile Include="ItemSlot.cs" />
+    <Compile Include="LoadCompleteEventArgs.cs" />
+    <Compile Include="Math\SectorVector.cs" />
+    <Compile Include="Math\Vector2.cs" />
+    <Compile Include="Math\Vector3.cs" />
+    <Compile Include="PacketReader.cs" />
+    <Compile Include="PacketWriter.cs" />
+    <Compile Include="ProgressBar.cs" />
+    <Compile Include="ScriptBase.cs" />
+    <Compile Include="ScriptExceptionArgs.cs" />
+    <Compile Include="RCScript.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptInstance.cs" />
+    <Compile Include="ScriptManager.cs" />
+    <Compile Include="SpeechType.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="WaitTimeRequest.cs" />
+    <Compile Include="WeaponType.cs" />
+    <Compile Include="ZoneInstance.cs" />
+    <Compile Include="ZoneInstanceRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

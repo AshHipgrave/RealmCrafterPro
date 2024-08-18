@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<userform>
+  <control type="Form">
+    <property name="Location" value="0.5, 0.5" />
+    <property name="PositionType" value="Centered" />
+    <property name="Size" value="260, 130" />
+    <property name="SizeType" value="Absolute" />
+    <property name="Enabled" value="True" />
+    <property name="Visible" value="True" />
+    <property name="Name" value="form" />
+    <property name="Text" value="Chest Script" />
+    <property name="BackColor" value="255, 255, 255, 255" />
+    <property name="ForeColor" value="255, 255, 255, 255" />
+    <property name="Skin" value="1" />
+    <property name="CloseButton" value="True" />
+    <property name="Modal" value="False" />
+    <event name="Closed" value="form_Closed" />
+    <control type="Button">
+      <property name="Location" value="160, 58" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 23" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="CancelButton" />
+      <property name="Text" value="Close" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="CancelButton_Click" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="79, 58" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 23" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="BuyButton" />
+      <property name="Text" value="Buy" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="BuyButton_Click" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="12, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="91, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="label1" />
+      <property name="Text" value="Current Owner:" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="12, 30" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="label2" />
+      <property name="Text" value="Cost:" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="114, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="OwnerLabel" />
+      <property name="Text" value="None" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="114, 30" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="CostLabel" />
+      <property name="Text" value="0" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+  </control>
+</userform>

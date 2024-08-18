@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<terraintools>
+  <toolitem name="RaiseLowerRadius" value="16" />
+  <toolitem name="RaiseLowerHardness" value="48" />
+  <toolitem name="RaiseLowerStength" value="37" />
+  <toolitem name="SetHeightRadius" value="5" />
+  <toolitem name="SetHeightHeight" value="0" />
+  <toolitem name="SmoothRadius" value="1" />
+  <toolitem name="PaintRadius" value="1" />
+  <toolitem name="PaintHardness" value="71" />
+  <toolitem name="PaintStrength" value="7" />
+  <toolitem name="PaintHoleRadius" value="2" />
+  <toolitem name="GrassRadius" value="1" />
+  <toolitem name="RampRadius" value="3" />
+  <toolitem name="TextureMin0" value="1" />
+  <toolitem name="TextureMin1" value="1" />
+  <toolitem name="TextureMin2" value="1" />
+  <toolitem name="TextureMin3" value="1" />
+  <toolitem name="TextureMin4" value="1" />
+  <toolitem name="TextureMax0" value="0" />
+  <toolitem name="TextureMax1" value="0" />
+  <toolitem name="TextureMax2" value="0" />
+  <toolitem name="TextureMax3" value="0" />
+  <toolitem name="TextureMax4" value="0" />
+  <toolitem name="AutoTextureMin0" value="1" />
+  <toolitem name="AutoTextureMin1" value="0.914481520652771" />
+  <toolitem name="AutoTextureMin2" value="0.621984601020813" />
+  <toolitem name="AutoTextureMin3" value="0.665192008018494" />
+  <toolitem name="AutoTextureMin4" value="0.460722029209137" />
+  <toolitem name="AutoTextureMax0" value="0.578064858913422" />
+  <toolitem name="AutoTextureMax1" value="0.555279672145844" />
+  <toolitem name="AutoTextureMax2" value="0.0805087685585022" />
+  <toolitem name="AutoTextureMax3" value="0.0143395066261292" />
+  <toolitem name="AutoTextureMax4" value="0.174226105213165" />
+  <toolitem name="AutoTextureHeightMin0" value="0" />
+  <toolitem name="AutoTextureHeightMin1" value="0" />
+  <toolitem name="AutoTextureHeightMin2" value="-1" />
+  <toolitem name="AutoTextureHeightMin3" value="-1" />
+  <toolitem name="AutoTextureHeightMin4" value="0" />
+  <toolitem name="AutoTextureHeightMax0" value="0" />
+  <toolitem name="AutoTextureHeightMax1" value="0" />
+  <toolitem name="AutoTextureHeightMax2" value="0" />
+  <toolitem name="AutoTextureHeightMax3" value="0" />
+  <toolitem name="AutoTextureHeightMax4" value="0" />
+</terraintools>

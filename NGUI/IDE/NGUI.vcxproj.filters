@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\GUI">
+      <UniqueIdentifier>{bec9da8c-0e08-4396-a3d3-1c2867b2ade4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GUI\Controls">
+      <UniqueIdentifier>{e5518136-a21b-433f-916f-72436f738070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GUI\Core">
+      <UniqueIdentifier>{dce1014c-89ad-4110-a55e-a4095353e9ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Time">
+      <UniqueIdentifier>{bf491ec5-a9ec-498e-a3a8-fb00e27ad659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\XML">
+      <UniqueIdentifier>{1e523260-bc5a-405f-9908-1597a493937c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\XML\IrrXML">
+      <UniqueIdentifier>{f6c9af3f-0f2f-4f38-9dc7-f0440caa6664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Regex">
+      <UniqueIdentifier>{fc1c5922-c6aa-424f-8c00-114e2b7804cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\NGin">
+      <UniqueIdentifier>{c8174f84-b0e3-460d-a19f-846601d0220d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source\Include\NGin">
+      <UniqueIdentifier>{32cdd7dc-ecb7-416d-a9d1-b3304b6c2d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Include\GUI">
+      <UniqueIdentifier>{3d8c7bf0-0f50-4c60-bb18-7bb1315efcec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\CButton.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CCheckBox.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CComboBox.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CLabel.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CListBox.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CPictureBox.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CProgressBar.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CRadar.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CScrollBar.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CTabControl.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CTextBox.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CTrackBar.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CWindow.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\IControl.cpp">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CFont.cpp">
+      <Filter>Source\GUI\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CGUIManager.cpp">
+      <Filter>Source\GUI\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CPropertySet.cpp">
+      <Filter>Source\GUI\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CSkin.cpp">
+      <Filter>Source\GUI\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CTimer.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\CTimerManager.cpp">
+      <Filter>Source\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\XMLWrapper.cpp">
+      <Filter>Source\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\irrxml\irrXML.cpp">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\regex\Matcher.cpp">
+      <Filter>Source\Regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\regex\Pattern.cpp">
+      <Filter>Source\Regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\regex\WCMatcher.cpp">
+      <Filter>Source\Regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\regex\WCPattern.cpp">
+      <Filter>Source\Regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Matrix.cpp">
+      <Filter>Source\NGin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\CButton.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CTabControl.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CFont.h">
+      <Filter>Source\GUI\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CGUIManager.h">
+      <Filter>Source\GUI\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CPropertySet.h">
+      <Filter>Source\GUI\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CSkin.h">
+      <Filter>Source\GUI\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CTimer.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CTimerManager.h">
+      <Filter>Source\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\CXMLReaderImpl.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\fast_atof.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\heapsort.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\irrArray.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\irrString.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\irrTypes.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\irrxml\irrXML.h">
+      <Filter>Source\XML\IrrXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\regex\Matcher.h">
+      <Filter>Source\Regex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\regex\Pattern.h">
+      <Filter>Source\Regex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\regex\WCMatcher.h">
+      <Filter>Source\Regex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\regex\WCPattern.h">
+      <Filter>Source\Regex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\AABB.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\ArrayList.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Color.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Dictionary.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Globals.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\IEventHandler.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\ITimer.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\ITimerManager.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\List.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Matrix.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\NGinString.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Quaternion.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\type.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\TypeDefs.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Vector2.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Vector3.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\Vector4.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\NGin\XMLWrapper.h">
+      <Filter>Source\Include\NGin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IButton.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\ICheckBox.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IComboBox.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IControl.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IFont.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IGUIManager.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IGUIMeshBuffer.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IGUIRenderer.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IGUITexture.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\ILabel.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IListBox.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IParameter.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IPictureBox.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IProgressBar.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IRadar.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IScrollBar.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\ISkin.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\ITabControl.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\ITextBox.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\ITrackBar.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\IWindow.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\SGUIMeshBuilder.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GUI\SGUIVertex.h">
+      <Filter>Source\Include\GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\Source\CCheckBox.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CComboBox.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CLabel.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CListBox.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CPictureBox.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CProgressBar.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CRadar.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CScrollBar.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CTextBox.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CTrackBar.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\Source\CWindow.h">
+      <Filter>Source\GUI\Controls</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>

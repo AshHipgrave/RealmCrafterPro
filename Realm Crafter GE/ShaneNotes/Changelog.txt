@@ -1,0 +1,21 @@
+This file will document application feature changes
+
+World View enhancements
+[Feature] Hotkeys for switching modes, F1 for Move, F2 for Rotate, F3 for scale
+[Feature] New 5-mouse button support to switch between Move, Rotate, Scale
+[Feature] World View docked interface
+[Feature] Changed object properties to a fully fledged property grid. Every element of the selected object
+		 is now editable for the property grid
+
+General fixes
+[Feature] Added mousewheel support to the aniamtion window to zoom in and out around the actor
+[Bug] Fixed font loading
+[Modification] Changed world view grid colour to blue
+[Modification] Allowed the entire editor to be maximisable and resizable 
+			   a minimum size exists to ensure no elements are hidden.
+[Modification] Modified Mesh Modification Reset Preview button to reset character orientation
+[Added] Added reset view buttons to Actor preview and Actor animation window
+[Modification] Changed behaviour of animation window, animation is automatically chosen when selected
+[Modification] Added all supported files to media dialogs
+[Bug] Animation window crash when no actor selected and mouse is clicked on the render panel
+

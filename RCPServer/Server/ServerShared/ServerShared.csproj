@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C34C5CEA-D49E-41C4-B38C-782628D71B2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServerShared</RootNamespace>
+    <AssemblyName>ServerShared</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\..\Program Files %28x86%29\Solstar Games\Realm Crafter 2\Projects\Demo Game\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Community.CsharpSqlite">
+      <HintPath>.\Community.CsharpSqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Community.CsharpSqlite.SQLiteClient">
+      <HintPath>.\Community.CsharpSqlite.SQLiteClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActorInfo.cs" />
+    <Compile Include="ActorTextureSet.cs" />
+    <Compile Include="ENet\Account.cs" />
+    <Compile Include="ActionBarData.cs" />
+    <Compile Include="Actor.cs" />
+    <Compile Include="ActorDialog.cs" />
+    <Compile Include="ActorEffect.cs" />
+    <Compile Include="ActorEnvironment.cs" />
+    <Compile Include="ActorInstance.cs" />
+    <Compile Include="ActorInstance.Scripting.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="AreaInstance.Scripting.cs" />
+    <Compile Include="Attribute.cs" />
+    <Compile Include="Attributes.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="FileChunk.cs" />
+    <Compile Include="InteractiveScenery.cs" />
+    <Compile Include="InteractiveSceneryInstance.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="DamageType.cs" />
+    <Compile Include="DroppedItem.cs" />
+    <Compile Include="ENet\RCEnet.cs" />
+    <Compile Include="Faction.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemInstance.cs" />
+    <Compile Include="ItemInstance.Scripting.cs" />
+    <Compile Include="ItemSlots.cs" />
+    <Compile Include="ItemTypes.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="LanguageString.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MemorizingSpell.cs" />
+    <Compile Include="MessageTypes.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="ProgressBar.cs" />
+    <Compile Include="Projectile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestLog.cs" />
+    <Compile Include="ScriptingCoreCommands.cs" />
+    <Compile Include="SecretString.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="SlotNames.cs" />
+    <Compile Include="Spell.cs" />
+    <Compile Include="SuperGlobals.cs" />
+    <Compile Include="WaitItemRequest.cs" />
+    <Compile Include="WaitKillRequest.cs" />
+    <Compile Include="WaitSpeakRequest.cs" />
+    <Compile Include="WaitTimeRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scripting\Scripting.csproj">
+      <Project>{6A81531E-DE2F-4BC3-88B9-337D3CD0CC13}</Project>
+      <Name>Scripting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<control name="ComboBox" sdktype="CCOM" defaultname="comboBox" fullname="Scripting.Forms.ComboBox" defaultevent="SelectedIndexChanged">
+	<property name="Location" sdkname="ZZLC" type="vector2" default="0, 0" alwaysset="true" />
+	<property name="PositionType" sdkname="ZZPT" type="positiontype" default="Absolute" alwaysset="true" />
+	<property name="Size" sdkname="ZZSZ" type="vector2" default="75, 20" alwaysset="true" />
+	<property name="SizeType" sdkname="ZZST" type="sizetype" default="Absolute" alwaysset="true" />
+	<property name="Enabled" sdkname="ENBL" type="bool" default="true" alwaysset="false" />
+	<property name="Visible" sdkname="VSBL" type="bool" default="true" alwaysset="false" />
+	<property name="Name" sdkname="NAME" type="string" default="comboBox" alwaysset="false" />
+	<property name="Text" sdkname="TEXT" type="string" default="" alwaysset="false" />
+	<property name="BackColor" sdkname="BCOL" type="color" default="255, 255, 255, 255" alwaysset="false" />
+	<property name="ForeColor" sdkname="FCOL" type="color" default="255, 255, 255, 255" alwaysset="false" />
+	<property name="Skin" sdkname="SKIN" type="int" default="1" alwaysset="false" />
+	
+	<property name="SelectedIndex" sdkname="SLIN" type="int" default="-1" alwaysset="false" />
+	<property name="Items" sdkname="STIT" type="stringarray" default="" alwaysset="true" />
+	
+	<event name="SelectedIndexChanged" handler="Scripting.Forms.EventHandler" args="object sender, FormEventArgs e" />
+</control>

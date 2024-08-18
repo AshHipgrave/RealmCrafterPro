@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09919FA8-081D-4A86-88CC-97AC897A0414}</ProjectGuid>
+    <RootNamespace>SDK</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(RCP_SDK)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(RCP_SDK)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)BB\output;$(SolutionDir)freetype\objs\win32\vc2005;$(SolutionDir)NGUI\Lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)freetype\objs\win32\vc2005;$(SolutionDir)NGUI\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Main\;$(ProjectDir)\..\NGUI\Include\GUI\;$(ProjectDir)\..\NGUI\Include\NGin\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;RC_SDK</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>freetype2311MD_D.lib;NGUI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(RCP_SDK)\SDK.dll</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Main\;$(ProjectDir)\..\NGUI\Include\GUI\;$(ProjectDir)\..\NGUI\Include\NGin\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SECURE_SCL=0;_CRT_SECURE_NO_DEPRECATE;RC_SDK;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>freetype2311MD.lib;NGUI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(RCP_SDK)\SDK.dll</OutputFile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(RCP_SDK)\SDK.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ProgramDatabaseFile>$(RCP_SDK)\SDK.pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Main\ASyncJobModule.h" />
+    <ClInclude Include="Main\BB.h" />
+    <ClInclude Include="Main\BBDX.h" />
+    <ClInclude Include="Main\CPacketReader.h" />
+    <ClInclude Include="Main\CPacketWriter.h" />
+    <ClInclude Include="Main\ICameraController.h" />
+    <ClInclude Include="Main\IChatBox.h" />
+    <ClInclude Include="Main\IControlEditor.h" />
+    <ClInclude Include="Main\IControlHost.h" />
+    <ClInclude Include="Main\IControlHostManager.h" />
+    <ClInclude Include="Main\IControlLayout.h" />
+    <ClInclude Include="Main\IEnvironment.h" />
+    <ClInclude Include="Main\IGameMenu.h" />
+    <ClInclude Include="Main\IItemButton.h" />
+    <ClInclude Include="Main\IMouseItem.h" />
+    <ClInclude Include="Main\IMouseToolTip.h" />
+    <ClInclude Include="Main\IPlayerActionBar.h" />
+    <ClInclude Include="Main\IPlayerInventory.h" />
+    <ClInclude Include="Main\IPlayerSpells.h" />
+    <ClInclude Include="Main\IServerSelector.h" />
+    <ClInclude Include="Main\RealmCrafter.h" />
+    <ClInclude Include="Main\SControlFactoryEventArgs.h" />
+    <ClInclude Include="Main\SDKMain.h" />
+    <ClInclude Include="Main\SectorVector.h" />
+    <ClInclude Include="Main\IPlayerAttributeBars.h" />
+    <ClInclude Include="Main\IPlayerCompass.h" />
+    <ClInclude Include="Main\IPlayerHelp.h" />
+    <ClInclude Include="Main\IPlayerMap.h" />
+    <ClInclude Include="Main\IPlayerParty.h" />
+    <ClInclude Include="Main\IPlayerQuestLog.h" />
+    <ClInclude Include="Main\IPlayerStats.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerAttributeBars.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerCompass.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerHelp.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerMap.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerParty.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerQuestLog.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerStats.h" />
+    <ClInclude Include="Source\CControlHostManager.h" />
+    <ClInclude Include="Source\Custom GUI\CButtonHost.h" />
+    <ClInclude Include="Source\Custom GUI\CCheckBoxHost.h" />
+    <ClInclude Include="Source\Custom GUI\CComboBoxHost.h" />
+    <ClInclude Include="Source\Custom GUI\CItemButton.h" />
+    <ClInclude Include="Source\Custom GUI\CItemButtonHost.h" />
+    <ClInclude Include="Source\Custom GUI\CLabelHost.h" />
+    <ClInclude Include="Source\Custom GUI\CListBoxHost.h" />
+    <ClInclude Include="Source\Custom GUI\CPictureBoxHost.h" />
+    <ClInclude Include="Source\Custom GUI\CProgressBarHost.h" />
+    <ClInclude Include="Source\Custom GUI\CSelectionSize.h" />
+    <ClInclude Include="Source\Custom GUI\CSelectionSizeHost.h" />
+    <ClInclude Include="Source\Custom GUI\CTextBoxHost.h" />
+    <ClInclude Include="Source\Custom GUI\CTrackBarHost.h" />
+    <ClInclude Include="Source\Custom GUI\CWindowHost.h" />
+    <ClInclude Include="Source\DemoGame\CDemoEnvironment.h" />
+    <ClInclude Include="Source\Fixed GUI\CChatBox.h" />
+    <ClInclude Include="Source\Fixed GUI\CControlEditor.h" />
+    <ClInclude Include="Source\Fixed GUI\CGameMenu.h" />
+    <ClInclude Include="Source\Fixed GUI\CMouseItem.h" />
+    <ClInclude Include="Source\Fixed GUI\CMouseToolTip.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerActionBar.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerInventory.h" />
+    <ClInclude Include="Source\Fixed GUI\CPlayerSpells.h" />
+    <ClInclude Include="Source\Fixed GUI\CServerSelector.h" />
+    <ClInclude Include="Source\CCameraController.h" />
+    <ClInclude Include="Source\CDefaultEnvironment.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\RealmCrafter.cpp" />
+    <ClCompile Include="Main\SDKMain.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerAttributeBars.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerCompass.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerHelp.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerMap.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerParty.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerQuestLog.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerStats.cpp" />
+    <ClCompile Include="Source\CControlHostManager.cpp" />
+    <ClCompile Include="Source\DemoGame\CDemoEnvironment.cpp" />
+    <ClCompile Include="Source\IControlHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CButtonHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CCheckBoxHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CComboBoxHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CItemButton.cpp" />
+    <ClCompile Include="Source\Custom GUI\CItemButtonHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CLabelHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CListBoxHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CPictureBoxHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CProgressBarHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CSelectionSize.cpp" />
+    <ClCompile Include="Source\Custom GUI\CSelectionSizeHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CTextBoxHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CTrackBarHost.cpp" />
+    <ClCompile Include="Source\Custom GUI\CWindowHost.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CChatBox.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CControlEditor.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CGameMenu.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CMouseItem.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CMouseToolTip.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerActionBar.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerInventory.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CPlayerSpells.cpp" />
+    <ClCompile Include="Source\Fixed GUI\CServerSelector.cpp" />
+    <ClCompile Include="Source\CCameraController.cpp" />
+    <ClCompile Include="Source\CDefaultEnvironment.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

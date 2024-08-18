@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<userform>
+  <control type="Form">
+    <property name="Location" value="0.5, 0.5" />
+    <property name="PositionType" value="Centered" />
+    <property name="Size" value="320, 140" />
+    <property name="SizeType" value="Absolute" />
+    <property name="Enabled" value="True" />
+    <property name="Visible" value="True" />
+    <property name="Name" value="form" />
+    <property name="Text" value="Chest Script" />
+    <property name="BackColor" value="255, 255, 255, 255" />
+    <property name="ForeColor" value="255, 255, 255, 255" />
+    <property name="Skin" value="1" />
+    <property name="CloseButton" value="True" />
+    <property name="Modal" value="False" />
+    <event name="Closed" value="form_Closed" />
+    <control type="ItemButton">
+      <property name="Location" value="12, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="48, 48" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="itemButton1" />
+      <property name="Text" value="button" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Timer" value="0" />
+      <property name="ItemID" value="65535" />
+      <property name="ItemAmount" value="65535" />
+      <property name="SpellID" value="65535" />
+      <property name="BackgroundImage" value="" />
+      <property name="CanDragToInventory" value="True" />
+      <property name="CanDragFromInventory" value="True" />
+      <property name="CanDragFromSpells" value="False" />
+      <event name="RightClick" value="Item_RightClick" />
+      <event name="DraggedToInventory" value="Item_RightClick" />
+      <event name="DraggedFromInventory" value="Item_DraggedFromInventory" />
+    </control>
+    <control type="ItemButton">
+      <property name="Location" value="70, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="48, 48" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="itemButton2" />
+      <property name="Text" value="button" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Timer" value="0" />
+      <property name="ItemID" value="65535" />
+      <property name="ItemAmount" value="65535" />
+      <property name="SpellID" value="65535" />
+      <property name="BackgroundImage" value="" />
+      <property name="CanDragToInventory" value="True" />
+      <property name="CanDragFromInventory" value="True" />
+      <property name="CanDragFromSpells" value="False" />
+      <event name="RightClick" value="Item_RightClick" />
+      <event name="DraggedToInventory" value="Item_RightClick" />
+      <event name="DraggedFromInventory" value="Item_DraggedFromInventory" />
+    </control>
+    <control type="ItemButton">
+      <property name="Location" value="128, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="48, 48" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="itemButton3" />
+      <property name="Text" value="button" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Timer" value="0" />
+      <property name="ItemID" value="65535" />
+      <property name="ItemAmount" value="65535" />
+      <property name="SpellID" value="65535" />
+      <property name="BackgroundImage" value="" />
+      <property name="CanDragToInventory" value="True" />
+      <property name="CanDragFromInventory" value="True" />
+      <property name="CanDragFromSpells" value="False" />
+      <event name="RightClick" value="Item_RightClick" />
+      <event name="DraggedToInventory" value="Item_RightClick" />
+      <event name="DraggedFromInventory" value="Item_DraggedFromInventory" />
+    </control>
+    <control type="ItemButton">
+      <property name="Location" value="186, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="48, 48" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="itemButton4" />
+      <property name="Text" value="button" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Timer" value="0" />
+      <property name="ItemID" value="65535" />
+      <property name="ItemAmount" value="65535" />
+      <property name="SpellID" value="65535" />
+      <property name="BackgroundImage" value="" />
+      <property name="CanDragToInventory" value="True" />
+      <property name="CanDragFromInventory" value="True" />
+      <property name="CanDragFromSpells" value="False" />
+      <event name="RightClick" value="Item_RightClick" />
+      <event name="DraggedToInventory" value="Item_RightClick" />
+      <event name="DraggedFromInventory" value="Item_DraggedFromInventory" />
+    </control>
+    <control type="ItemButton">
+      <property name="Location" value="244, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="48, 48" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="itemButton5" />
+      <property name="Text" value="button" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Timer" value="0" />
+      <property name="ItemID" value="65535" />
+      <property name="ItemAmount" value="65535" />
+      <property name="SpellID" value="65535" />
+      <property name="BackgroundImage" value="" />
+      <property name="CanDragToInventory" value="True" />
+      <property name="CanDragFromInventory" value="True" />
+      <property name="CanDragFromSpells" value="False" />
+      <event name="RightClick" value="Item_RightClick" />
+      <event name="DraggedToInventory" value="Item_RightClick" />
+      <event name="DraggedFromInventory" value="Item_DraggedFromInventory" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="217, 72" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 23" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="CancelButton" />
+      <property name="Text" value="Close" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="CancelButton_Click" />
+    </control>
+  </control>
+</userform>

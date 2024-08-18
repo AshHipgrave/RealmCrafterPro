@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<configuration>
+  <config name="privateaddress" value="127.0.0.1" />
+  <config name="privateport" value="24003" />
+  <config name="publicaddress" value="" />
+  <config name="publicport" value="" />
+  <config name="masteraddress" value="127.0.0.1" />
+  <config name="masterport" value="25001" />
+  <config name="masterproxyaddress" value="" />
+  <config name="masterproxyport" value="" />
+  <config name="adminusername" value="" />
+  <config name="adminpassword" value="" />
+</configuration>

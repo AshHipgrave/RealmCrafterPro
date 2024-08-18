@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source\GUI Controls">
+      <UniqueIdentifier>{36a91d1f-0750-4301-a366-00c612ff3196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GUI Controls\Custom GUI">
+      <UniqueIdentifier>{0cc89afb-dce3-4b77-b97e-d8802de9a248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GUI Controls\Fixed GUI">
+      <UniqueIdentifier>{ed544eba-54fc-4b1b-8be9-49ac0f6daa68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Camera Controls">
+      <UniqueIdentifier>{531306bb-26c0-4607-aaa8-98fc1c214f6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Environments">
+      <UniqueIdentifier>{510747ba-1eed-4e2b-8bb3-20720edba407}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main\BB.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\BBDX.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\CPacketReader.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\CPacketWriter.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ICameraController.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IChatBox.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IControlEditor.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IControlHost.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IControlHostManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IControlLayout.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IEnvironment.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IGameMenu.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IItemButton.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IMouseItem.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IMouseToolTip.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerActionBar.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerInventory.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerSpells.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IServerSelector.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\RealmCrafter.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\SControlFactoryEventArgs.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\SDKMain.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\SectorVector.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CControlHostManager.h">
+      <Filter>Source\GUI Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CButtonHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CCheckBoxHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CComboBoxHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CItemButton.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CItemButtonHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CLabelHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CListBoxHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CPictureBoxHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CProgressBarHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CSelectionSize.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CSelectionSizeHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CTextBoxHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CTrackBarHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Custom GUI\CWindowHost.h">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CChatBox.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CControlEditor.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CGameMenu.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CMouseItem.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CMouseToolTip.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerActionBar.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerInventory.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerSpells.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CServerSelector.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCameraController.h">
+      <Filter>Source\Camera Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CDefaultEnvironment.h">
+      <Filter>Source\Environments</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DemoGame\CDemoEnvironment.h">
+      <Filter>Source\Environments</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\ASyncJobModule.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerAttributeBars.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerStats.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerCompass.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerHelp.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerMap.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerParty.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Fixed GUI\CPlayerQuestLog.h">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerAttributeBars.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerStats.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerCompass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerHelp.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerMap.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerParty.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\IPlayerQuestLog.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main\RealmCrafter.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\SDKMain.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CControlHostManager.cpp">
+      <Filter>Source\GUI Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IControlHost.cpp">
+      <Filter>Source\GUI Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CButtonHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CCheckBoxHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CComboBoxHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CItemButton.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CItemButtonHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CLabelHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CListBoxHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CPictureBoxHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CProgressBarHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CSelectionSize.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CSelectionSizeHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CTextBoxHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CTrackBarHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Custom GUI\CWindowHost.cpp">
+      <Filter>Source\GUI Controls\Custom GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CChatBox.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CControlEditor.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CGameMenu.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CMouseItem.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CMouseToolTip.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerActionBar.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerInventory.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerSpells.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CServerSelector.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCameraController.cpp">
+      <Filter>Source\Camera Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CDefaultEnvironment.cpp">
+      <Filter>Source\Environments</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DemoGame\CDemoEnvironment.cpp">
+      <Filter>Source\Environments</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerAttributeBars.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerQuestLog.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerCompass.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerHelp.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerMap.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerParty.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fixed GUI\CPlayerStats.cpp">
+      <Filter>Source\GUI Controls\Fixed GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

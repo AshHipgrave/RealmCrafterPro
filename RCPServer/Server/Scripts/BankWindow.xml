@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="us-ascii"?>
+<userform>
+  <control type="Form">
+    <property name="Location" value="0.5, 0.5" />
+    <property name="PositionType" value="Centered" />
+    <property name="Size" value="550, 500" />
+    <property name="SizeType" value="Absolute" />
+    <property name="Enabled" value="True" />
+    <property name="Visible" value="True" />
+    <property name="Name" value="BankWindow" />
+    <property name="Text" value="Bank" />
+    <property name="BackColor" value="255, 242, 242, 242" />
+    <property name="ForeColor" value="255, 255, 255, 255" />
+    <property name="Skin" value="1" />
+    <property name="CloseButton" value="True" />
+    <property name="Modal" value="False" />
+    <control type="Label">
+      <property name="Location" value="19, 14" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="48, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="label1" />
+      <property name="Text" value="Money:" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="TextBox">
+      <property name="Location" value="139, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="87, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="MoneyAmount" />
+      <property name="Text" value="0" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="PasswordCharacter" value="" />
+      <property name="ValidationExpression" value="" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="76, 14" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="57, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="MoneyCount" />
+      <property name="Text" value="0" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Top" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="240, 11" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="DepositButton" />
+      <property name="Text" value="Deposit" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="DepositMoney" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="325, 12" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="WithdrawButton" />
+      <property name="Text" value="Withdraw" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Middle" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="WithdrawMoney" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="97, 42" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="49, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="Previous" />
+      <property name="Text" value="&lt;&lt;" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="Previous_Click" />
+    </control>
+    <control type="Button">
+      <property name="Location" value="159, 42" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="49, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="Next" />
+      <property name="Text" value="&gt;&gt;" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="UseBorder" value="True" />
+      <property name="UpImage" value="" />
+      <property name="HoverImage" value="" />
+      <property name="DownImage" value="" />
+      <event name="Click" value="Next_Click" />
+    </control>
+    <control type="Label">
+      <property name="Location" value="18, 42" />
+      <property name="PositionType" value="Absolute" />
+      <property name="Size" value="75, 20" />
+      <property name="SizeType" value="Absolute" />
+      <property name="Enabled" value="True" />
+      <property name="Visible" value="True" />
+      <property name="Name" value="PageLabel" />
+      <property name="Text" value="Pages" />
+      <property name="BackColor" value="255, 255, 255, 255" />
+      <property name="ForeColor" value="255, 255, 255, 255" />
+      <property name="Skin" value="1" />
+      <property name="Align" value="Default" />
+      <property name="VAlign" value="Default" />
+      <property name="Multiline" value="False" />
+      <property name="InlineStringProcessing" value="True" />
+      <property name="ForceScissoring" value="False" />
+      <property name="ScissorRegion" value="0, 0" />
+      <property name="ScrollOffset" value="0, 0" />
+    </control>
+  </control>
+</userform>

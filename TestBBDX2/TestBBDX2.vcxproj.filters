@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="BBDXWrapper">
+      <UniqueIdentifier>{9e7ddcf0-2aef-468d-a9f8-7b1ed9b2e287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NxVehicle">
+      <UniqueIdentifier>{abfed78e-dd51-4b2b-8fcb-4fd8adb55d8e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\RCClient\BBDXWrapper\ELightType.h">
+      <Filter>BBDXWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RCClient\BBDXWrapper\ICamera.h">
+      <Filter>BBDXWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RCClient\BBDXWrapper\IEngine.h">
+      <Filter>BBDXWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RCClient\BBDXWrapper\IEntity.h">
+      <Filter>BBDXWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RCClient\BBDXWrapper\ILight.h">
+      <Filter>BBDXWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="OOWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\RCClient\BBDXWrapper\ICamera.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RCClient\BBDXWrapper\IEngine.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RCClient\BBDXWrapper\IEntity.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RCClient\BBDXWrapper\ILight.cpp">
+      <Filter>BBDXWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OOWrapper.cpp" />
+    <ClCompile Include="mainInstancingTest.cpp" />
+  </ItemGroup>
+</Project>

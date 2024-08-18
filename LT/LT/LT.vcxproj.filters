@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Trees">
+      <UniqueIdentifier>{a7b2f5d0-7d1e-44df-9cea-1238e2499b84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CD3D9TreeLeafMeshBuffer.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CD3D9TreeLODMeshBuffer.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CD3D9TreeRenderer.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CD3D9TreeTexture.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CD3D9TreeTrunkMeshBuffer.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CTreeInstance.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CTreeManager.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CTreeType.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CTreeZone.cpp">
+      <Filter>Trees</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\IParameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeMeshBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ITreeZone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyD3DX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\STreeCollisionData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\STreeLeafVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\STreeLODVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\STreeTrunkVertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CD3D9TreeLeafMeshBuffer.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CD3D9TreeLODMeshBuffer.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CD3D9TreeRenderer.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CD3D9TreeTexture.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CD3D9TreeTrunkMeshBuffer.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CTreeInstance.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CTreeManager.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CTreeType.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CTreeZone.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Frustum.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SD3D9TreeLeafVertex.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SD3D9TreeLODVertex.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SD3D9TreeTrunkVertex.h">
+      <Filter>Trees</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="WinMain.h">
+      <Filter>Source Files</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>
