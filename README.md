@@ -42,11 +42,11 @@ According to the SVN log and file modification times, this code is from 31st May
 * Create an environment variable named `RCP_SDK` and point it to `<Checkout_Root>\Sandbox`
 * Open `RC Pro.sln`
 * Right-click the solution and select `Build Solution`
-* Once complete, navigate to `<CheckoutDir>\Sandbox` and run `Realm Crafter GE.exe` to start the editor
+* Once complete, navigate to `<Checkout_Root>\Sandbox` and run `Realm Crafter GE.exe` to start the editor
 
 # Demo project
 
-The [Releases]() page contains a demo project Solstar Games provided to licensees to showcase some of the engine's features and provide a starting point for projects.
+The [Releases](https://github.com/AshHipgrave/RealmCrafterPro/releases) page contains a demo project Solstar Games provided to licensees to showcase some of the engine's features and provide a starting point for projects.
 
 # License
 
