@@ -31,18 +31,18 @@ According to the SVN log and file modification times, this code is from 31st May
 * [irrKlang Pro 1.6.0](https://www.ambiera.com/irrklang/irrklang_pro.html)
 	* Create an `IRRKLANG_SDK` environment variable pointing to your irrKlang installation folder
 	* The free version can be used but you'll need to make the following modifications to the BBDX2 project so that it uses the irrKlang DLL file and not the static library:
-		* Navigate to `Properties` > `Configuration` > `VC++ Directories` > Edit `Library Directories` and replace _"$(IRRKLANG_SDK)\bin\win32-visualstudio_lib"_ with _"$(IRRKLANG_SDK)\lib\win32-visualstudio"_
+		* Navigate to `Properties` > `Configuration` > `VC++ Directories` > Edit `Library Directories` and replace `$(IRRKLANG_SDK)\bin\win32-visualstudio_lib` with `$(IRRKLANG_SDK)\lib\win32-visualstudio`
 * [Realm Crafter Pro 2.53 Retail](https://github.com/AshHipgrave/RealmCrafterPro/releases/download/svn-unmodified/Realm.Crafter.PRO.2.53.Beta.FULL.VERSION.exe)
 
 ## Compiling
 
 * Install all of the prerequisites
-* Copy the _"Data"_ folder from _"C:\Program Files (x86)\Solstar Games\Realm Crafter 2\Data\Default Project"_ to _"<Checkout_Root>\Sandbox"_
+* Copy the `Data` folder from `C:\Program Files (x86)\Solstar Games\Realm Crafter 2\Data\Default Project` to `<Checkout_Root>\Sandbox`
 * Run `<Checkout_Root>\Sandbox\SQLiteConvert.bat`
 * Create an environment variable named `RCP_SDK` and point it to `<Checkout_Root>\Sandbox`
 * Open `RC Pro.sln`
-* Right-click the solution and select _"Build Solution"_
-* Once complete, navigate to _"<CheckoutDir>\Sandbox"_ and run _"Realm Crafter GE.exe"_ to start the editor
+* Right-click the solution and select `Build Solution`
+* Once complete, navigate to `<CheckoutDir>\Sandbox` and run `Realm Crafter GE.exe` to start the editor
 
 # Demo project
 
